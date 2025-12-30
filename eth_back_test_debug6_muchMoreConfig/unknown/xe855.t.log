@@ -1,0 +1,11 @@
+Compiling 19 files with Solc 0.8.30
+Solc 0.8.30 finished in 2.15s
+Error: Compiler run failed:
+Error: Unknown exception during compilation: /solidity/liblangutil/ErrorReporter.cpp(143): Throw in function void solidity::langutil::ErrorReporter::fatalError(solidity::langutil::ErrorId, solidity::langutil::Error::Type, const solidity::langutil::SourceLocation&, const std::string&)
+Dynamic exception type: boost::wrapexcept<solidity::langutil::FatalError>
+std::exception::what: Expected end of source but got identifier
+[solidity::util::tag_comment*] = Expected end of source but got identifier
+Unknown exception during compilation: /solidity/liblangutil/ErrorReporter.cpp(143): Throw in function void solidity::langutil::ErrorReporter::fatalError(solidity::langutil::ErrorId, solidity::langutil::Error::Type, const solidity::langutil::SourceLocation&, const std::string&)
+Dynamic exception type: boost::wrapexcept<solidity::langutil::FatalError>
+std::exception::what: Expected end of source but got identifier
+[solidity::util::tag_comment*] = Expected end of source but got identifier

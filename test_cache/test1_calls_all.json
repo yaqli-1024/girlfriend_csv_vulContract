@@ -1,0 +1,36 @@
+
+=== test1_calls_all ===
+[
+  "vm.createSelectFork(\"http://localhost:18545\", 18992907); // tx.blockNumber - 1",
+  "// vm.createSelectFork(\"http://localhost:18545\", bytes32(0x33e3c94e8e0359b7a98b74a02454a52fad2a8fb7faee02f888807bc60f688628));",
+  "",
+  "// https://explorer.phalcon.xyz/tx/eth/0x33e3c94e8e0359b7a98b74a02454a52fad2a8fb7faee02f888807bc60f688628",
+  "this.x33e3c94e();"
+]
+
+
+=== test1_calls_all ===
+[
+  "vm.createSelectFork(\"http://localhost:18545\", 18992907); // tx.blockNumber - 1",
+  "// vm.createSelectFork(\"http://localhost:18545\", bytes32(0x33e3c94e8e0359b7a98b74a02454a52fad2a8fb7faee02f888807bc60f688628));",
+  "",
+  "// https://explorer.phalcon.xyz/tx/eth/0x33e3c94e8e0359b7a98b74a02454a52fad2a8fb7faee02f888807bc60f688628",
+  "this.x33e3c94e();",
+  "// https://explorer.phalcon.xyz/tx/eth/0x67d6c554314c9b306d683afb3bc4a10e70509ceb0fdf8415a5e270a91fae52de",
+  "this.x67d6c554();"
+]
+
+
+=== test1_calls_all ===
+[
+  "vm.createSelectFork(\"http://localhost:18545\", 18992907); // tx.blockNumber - 1",
+  "// vm.createSelectFork(\"http://localhost:18545\", bytes32(0x33e3c94e8e0359b7a98b74a02454a52fad2a8fb7faee02f888807bc60f688628));",
+  "",
+  "// https://explorer.phalcon.xyz/tx/eth/0x33e3c94e8e0359b7a98b74a02454a52fad2a8fb7faee02f888807bc60f688628",
+  "this.x33e3c94e();",
+  "// https://explorer.phalcon.xyz/tx/eth/0x67d6c554314c9b306d683afb3bc4a10e70509ceb0fdf8415a5e270a91fae52de",
+  "this.x67d6c554();",
+  "// https://explorer.phalcon.xyz/tx/eth/0x04e16a79ff928db2fa88619cdd045cdfc7979a61d836c9c9e585b3d6f6d8bc31",
+  "x0826c023();"
+]
+

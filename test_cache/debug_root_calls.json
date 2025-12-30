@@ -1,0 +1,93 @@
+[
+  {
+    "ty": "Interface",
+    "sol_ty": "call",
+    "caller": "0xb90cf1d740b206b6d80854bc525e609dc42b45dc",
+    "target": "0x91c49Cc7FBfE8f70AceEb075952cD64817f9d82c",
+    "fn_signature": "x33e3c94e()",
+    "ret_signature": "",
+    "fn_call": "x33e3c94e();",
+    "raw_input": "",
+    "raw_output": "",
+    "value": "0x0",
+    "sub_calls": [],
+    "memory_vars": [],
+    "named_addresses": {},
+    "struct_defs": {},
+    "return_vars": {},
+    "return_data": [],
+    "ret_decode_call": null,
+    "salt": null,
+    "comment": "// https://explorer.phalcon.xyz/tx/eth/0x33e3c94e8e0359b7a98b74a02454a52fad2a8fb7faee02f888807bc60f688628",
+    "target_is_contract": true,
+    "vm_state": {
+      "forked_rpc": "http://localhost:18545",
+      "tx_hash": "0x33e3c94e8e0359b7a98b74a02454a52fad2a8fb7faee02f888807bc60f688628",
+      "block_number": "18992895",
+      "block_timestamp": "1705087619"
+    },
+    "inner_create_vars": []
+  }
+]
+
+[
+  {
+    "ty": "Interface",
+    "sol_ty": "call",
+    "caller": "0xb90cf1d740b206b6d80854bc525e609dc42b45dc",
+    "target": "0x91c49Cc7FBfE8f70AceEb075952cD64817f9d82c",
+    "fn_signature": "x33e3c94e()",
+    "ret_signature": "",
+    "fn_call": "x33e3c94e();",
+    "raw_input": "",
+    "raw_output": "",
+    "value": "0x0",
+    "sub_calls": [],
+    "memory_vars": [],
+    "named_addresses": {},
+    "struct_defs": {},
+    "return_vars": {},
+    "return_data": [],
+    "ret_decode_call": null,
+    "salt": null,
+    "comment": "// https://explorer.phalcon.xyz/tx/eth/0x33e3c94e8e0359b7a98b74a02454a52fad2a8fb7faee02f888807bc60f688628",
+    "target_is_contract": true,
+    "vm_state": {
+      "forked_rpc": "http://localhost:18545",
+      "tx_hash": "0x33e3c94e8e0359b7a98b74a02454a52fad2a8fb7faee02f888807bc60f688628",
+      "block_number": "18992895",
+      "block_timestamp": "1705087619"
+    },
+    "inner_create_vars": []
+  },
+  {
+    "ty": "Interface",
+    "sol_ty": "call",
+    "caller": "0xb90cf1d740b206b6d80854bc525e609dc42b45dc",
+    "target": "0x91c49Cc7FBfE8f70AceEb075952cD64817f9d82c",
+    "fn_signature": "x67d6c554()",
+    "ret_signature": "",
+    "fn_call": "x67d6c554();",
+    "raw_input": "",
+    "raw_output": "",
+    "value": "0x0",
+    "sub_calls": [],
+    "memory_vars": [],
+    "named_addresses": {},
+    "struct_defs": {},
+    "return_vars": {},
+    "return_data": [],
+    "ret_decode_call": null,
+    "salt": null,
+    "comment": "// https://explorer.phalcon.xyz/tx/eth/0x67d6c554314c9b306d683afb3bc4a10e70509ceb0fdf8415a5e270a91fae52de",
+    "target_is_contract": true,
+    "vm_state": {
+      "forked_rpc": "http://localhost:18545",
+      "tx_hash": "0x67d6c554314c9b306d683afb3bc4a10e70509ceb0fdf8415a5e270a91fae52de",
+      "block_number": "18992903",
+      "block_timestamp": "1705087715"
+    },
+    "inner_create_vars": []
+  }
+]
+

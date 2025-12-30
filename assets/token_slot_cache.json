@@ -1,0 +1,378 @@
+{
+  "0x004375dff511095cc5a197a54140a24efef3a416": [
+    1,
+    false
+  ],
+  "0x046d77260c6d385313671b29d6ac4983f8fa53cd": [
+    1,
+    false
+  ],
+  "0x09176f68003c06f190ecdf40890e3324a9589557": [
+    0,
+    false
+  ],
+  "0x09c1ead57d24886bd3ec5fd4d0311681e04b3b24": [
+    1,
+    false
+  ],
+  "0x0a8143ef65b0ce4c2fad195165ef13772ff6cca0": [
+    0,
+    false
+  ],
+  "0x0d8775f648430679a709e98d2b0cb6250d2887ef": [
+    1,
+    false
+  ],
+  "0x177ba0cac51bfc7ea24bad39d81dcefd59d74faa": [
+    0,
+    false
+  ],
+  "0x186ef81fd8e77eec8bffc3039e7ec41d5fc0b457": [
+    0,
+    false
+  ],
+  "0x18aaa7115705e8be94bffebde57af9bfc265b998": [
+    52,
+    false
+  ],
+  "0x1abaea1f7c830bd89acc67ec4af516284b1bc33c": [
+    9,
+    false
+  ],
+  "0x25126f207db7dc427415ea640ce0187767403907": [
+    62,
+    false
+  ],
+  "0x266830230bf10a58ca64b7347499fd361a011a02": [
+    3,
+    false
+  ],
+  "0x2920f7d6134f4669343e70122ca9b8f19ef8fa5d": [
+    0,
+    false
+  ],
+  "0x2c537e5624e4af88a7ae4060c022609376c8d0eb": [
+    9,
+    false
+  ],
+  "0x31adda225642a8f4d7e90d4152be6661ab22a5a2": [
+    51,
+    false
+  ],
+  "0x32296969ef14eb0c6d29669c550d4a0449130230": [
+    0,
+    false
+  ],
+  "0x3565a68666fd3a6361f06f84637e805b727b4a47": [
+    0,
+    false
+  ],
+  "0x4306b12f8e824ce1fa9604bbd88f2ad4f0fe3c54": [
+    3,
+    false
+  ],
+  "0x45804880de22913dafe09f4980848ece6ecbaf78": [
+    1,
+    false
+  ],
+  "0x46161158b1947d9149e066d6d31af1283b2d377c": [
+    8,
+    false
+  ],
+  "0x4a82b580365cff9b146281ab72500957a849abdc": [
+    0,
+    false
+  ],
+  "0x4c19596f5aaff459fa38b0f7ed92f11ae6543784": [
+    2,
+    false
+  ],
+  "0x4d224452801aced8b2f0aebe155379bb5d594381": [
+    0,
+    false
+  ],
+  "0x5655c442227371267c165101048e4838a762675d": [
+    51,
+    false
+  ],
+  "0x56de8bc61346321d4f2211e3ac3c0a7f00db9b76": [
+    0,
+    false
+  ],
+  "0x5de8ab7e27f6e7a1fff3e5b337584aa43961beef": [
+    0,
+    false
+  ],
+  "0x5e8422345238f34275888049021821e8e08caa1f": [
+    0,
+    false
+  ],
+  "0x5f0a4a59c8b39cddbcf0c683a6374655b4f5d76e": [
+    51,
+    false
+  ],
+  "0x5f86558387293b6009d7896a61fcc86c17808d62": [
+    51,
+    false
+  ],
+  "0x5fdbcd61bc9bd4b6d3fd1f49a5d253165ea11750": [
+    14,
+    false
+  ],
+  "0x637f415687b7b2545ef2cd8dcc1614e1cc175850": [
+    0,
+    false
+  ],
+  "0x64acd987a8603eeaf1ee8e87addd512908599aec": [
+    0,
+    false
+  ],
+  "0x656c00e1bcd96f256f224ad9112ff426ef053733": [
+    51,
+    false
+  ],
+  "0x658b0f629b9e3753aa555c189d0cb19c1ed59632": [
+    52,
+    false
+  ],
+  "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2": [
+    0,
+    false
+  ],
+  "0x6c74ebb3d9b4a1e77558f1871cd9c8ef07b4dfb2": [
+    8,
+    false
+  ],
+  "0x6cfaf95457d7688022fc53e7abe052ef8dfbbdba": [
+    0,
+    false
+  ],
+  "0x6f3f35a268b3af45331471eabf3f9881b601f5aa": [
+    0,
+    false
+  ],
+  "0x70e8de73ce538da2beed35d14187f6959a8eca96": [
+    7,
+    false
+  ],
+  "0x72e2f4830b9e45d52f80ac08cb2bec0fef72ed9c": [
+    3,
+    false
+  ],
+  "0x76e222b07c53d28b89b0bac18602810fc22b49a8": [
+    0,
+    false
+  ],
+  "0x780126be5fd821e0d1ad1704bcbc9d2c628921d5": [
+    4,
+    false
+  ],
+  "0x79a7d3559d73ea032120a69e59223d4375deb595": [
+    4,
+    false
+  ],
+  "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0": [
+    0,
+    false
+  ],
+  "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0": [
+    0,
+    false
+  ],
+  "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9": [
+    0,
+    false
+  ],
+  "0x820ba67398c3ea745eb8766fd3f444a92d4de316": [
+    1,
+    false
+  ],
+  "0x8390a1da07e376ef7add4be859ba74fb83aa02d5": [
+    1,
+    false
+  ],
+  "0x853d955acef822db058eb8505911ed77f175b99e": [
+    0,
+    false
+  ],
+  "0x865377367054516e17014ccded1e7d814edc9ce4": [
+    6,
+    false
+  ],
+  "0x898ca9b3ef8b6a30da5fc7202f70e7992b3602b3": [
+    51,
+    false
+  ],
+  "0x8cc0f052fff7ead7f2edcccac895502e884a8a71": [
+    1,
+    false
+  ],
+  "0x8f9bd4f6b88c46657aab889f1150b0521203c61e": [
+    51,
+    false
+  ],
+  "0x9813037ee2218799597d83d4a5b6f3b6778218d9": [
+    0,
+    false
+  ],
+  "0x98d149e227c75d38f623a9aa9f030fb222b3faa3": [
+    0,
+    false
+  ],
+  "0x9e3d5b091e7728080d9b2e1aaf20ee63db6b65bb": [
+    2,
+    false
+  ],
+  "0x9e52db44d62a8c9762fa847bd2eba9d0585782d1": [
+    0,
+    false
+  ],
+  "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2": [
+    1,
+    false
+  ],
+  "0x9fa69536d1cda4a04cfb50688294de75b505a9ae": [
+    1,
+    false
+  ],
+  "0xaaee1a9723aadb7afa2810263653a34ba2c21c7a": [
+    6,
+    false
+  ],
+  "0xae78736cd615f374d3085123a210448e74fc6393": [
+    1,
+    false
+  ],
+  "0xb2b68f7785daecf337749491c4a5ff9de3c964ef": [
+    0,
+    false
+  ],
+  "0xb40b073d7e47986d3a45ca7fd30772c25a2ad57f": [
+    4,
+    false
+  ],
+  "0xb53dc33bb39efe6e9db36d7ef290d6679facbec7": [
+    0,
+    false
+  ],
+  "0xbb9bc244d798123fde783fcc1c72d3bb8c189413": [
+    20,
+    false
+  ],
+  "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d": [
+    1,
+    false
+  ],
+  "0xbcb8b7fc9197feda75c101fa69d3211b5a30dcd9": [
+    1,
+    false
+  ],
+  "0xbe9895146f7af43049ca1c1ae358b0541ea49704": [
+    9,
+    false
+  ],
+  "0xc00e94cb662c3520282e6f5717214004a7f26888": [
+    1,
+    false
+  ],
+  "0xc08512927d12348f6620a698105e1baac6ecd911": [
+    51,
+    false
+  ],
+  "0xc353bf07405304aeab75f4c2fac7e88d6a68f98e": [
+    51,
+    false
+  ],
+  "0xc374f7ec85f8c7de3207a10bb1978ba104bda3b2": [
+    0,
+    false
+  ],
+  "0xc411db5f5eb3f7d552f9b8454b2d74097ccde6e3": [
+    0,
+    false
+  ],
+  "0xc4ff55a4329f84f9bf0f5619998ab570481ebb48": [
+    0,
+    false
+  ],
+  "0xcadc0acd4b445166f12d2c07eac6e2544fbe2eef": [
+    9,
+    false
+  ],
+  "0xd06527d5e56a3495252a528c4987003b712860ee": [
+    14,
+    false
+  ],
+  "0xd63b340f6e9cccf0c997c83c8d036fa53b113546": [
+    0,
+    false
+  ],
+  "0xda446fad08277b4d2591536f204e018f32b6831c": [
+    9,
+    false
+  ],
+  "0xdb694cb2b58f66c5e79ff272df37ecb46dc31add": [
+    65,
+    false
+  ],
+  "0xdd90112eaf865e4e0030000803ebbb4d84f14617": [
+    0,
+    false
+  ],
+  "0xe03af00fabe8401560c1ff7d242d622a5b601573": [
+    0,
+    false
+  ],
+  "0xe1eb8d840107f93c1944e1347dc006b3e3cf7ffb": [
+    1,
+    false
+  ],
+  "0xe22eacac57a1adfa38dca1100ef17654e91efd35": [
+    0,
+    false
+  ],
+  "0xe86df1970055e9caee93dae9b7d5fd71595d0e18": [
+    1,
+    false
+  ],
+  "0xebf2096e01455108badcbaf86ce30b6e5a72aa52": [
+    7,
+    false
+  ],
+  "0xed5af388653567af2f388e6224dc7c4b3241c544": [
+    5,
+    false
+  ],
+  "0xf2919d1d80aff2940274014bef534f7791906ff2": [
+    0,
+    false
+  ],
+  "0xf5140fc35c6f94d02d7466f793feb0216082d7e5": [
+    14,
+    false
+  ],
+  "0xf573e6740045b5387f6d36a26b102c2adf639af5": [
+    0,
+    false
+  ],
+  "0xf5c6d9fc73991f687f158fe30d4a77691a9fd4d8": [
+    0,
+    false
+  ],
+  "0xf819d9cb1c2a819fd991781a822de3ca8607c3c9": [
+    0,
+    false
+  ],
+  "0xfa6de2697d59e88ed7fc4dfe5a33dac43565ea41": [
+    0,
+    false
+  ],
+  "0xff20817765cb7f73d4bde2e66e067e58d11095c2": [
+    21,
+    false
+  ],
+  "0xffee5ecde135a7b10a0ac0e6e617798e6ad3d0d6": [
+    0,
+    false
+  ]
+}

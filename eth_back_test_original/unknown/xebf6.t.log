@@ -1,0 +1,63 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 812.03ms
+Compiler run successful!
+
+Ran 2 tests for test/xebf6.t.sol:X150f
+[FAIL: EvmError: Revert] test1() (gas: 1040429520)
+Logs:
+  0xebf6bfdef7c5c13a303f71e5eea9b13917c0b478db8a8ad86397cd3781e6df5d
+
+Traces:
+  [4365] X150f::setUp()
+    ├─ [0] console::log("0xebf6bfdef7c5c13a303f71e5eea9b13917c0b478db8a8ad86397cd3781e6df5d") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [1040429520] X150f::test1()
+    ├─ [0] VM::createSelectFork("<rpc url>", 17301807 [1.73e7])
+    │   └─ ← [Return] 0
+    ├─ [1040424064] X150f::x0771cfaf()
+    │   ├─ [14269] 0xdAC17F958D2ee523a2206206994597C13D831ec7::transfer(0x9316b7a2CBf0762E974029D48a4Ca678a89c64DA, 400134937976 [4.001e11])
+    │   │   └─ ← [InvalidFEOpcode] EvmError: InvalidFEOpcode
+    │   └─ ← [Revert] EvmError: Revert
+    └─ ← [Revert] EvmError: Revert
+
+Backtrace:
+  at 0xdAC17F958D2ee523a2206206994597C13D831ec7.transfer
+  at X150f.x0771cfaf
+  at X150f.test1
+
+[FAIL: EvmError: Revert] test2() (gas: 1040429518)
+Logs:
+  0xebf6bfdef7c5c13a303f71e5eea9b13917c0b478db8a8ad86397cd3781e6df5d
+
+Traces:
+  [4365] X150f::setUp()
+    ├─ [0] console::log("0xebf6bfdef7c5c13a303f71e5eea9b13917c0b478db8a8ad86397cd3781e6df5d") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [1040429518] X150f::test2()
+    ├─ [0] VM::createSelectFork("<rpc url>", 17299114 [1.729e7])
+    │   └─ ← [Return] 0
+    ├─ [1040424084] X150f::x0771cfaf()
+    │   ├─ [14269] 0xdAC17F958D2ee523a2206206994597C13D831ec7::transfer(0x9316b7a2CBf0762E974029D48a4Ca678a89c64DA, 400134937976 [4.001e11])
+    │   │   └─ ← [InvalidFEOpcode] EvmError: InvalidFEOpcode
+    │   └─ ← [Revert] EvmError: Revert
+    └─ ← [Revert] EvmError: Revert
+
+Backtrace:
+  at 0xdAC17F958D2ee523a2206206994597C13D831ec7.transfer
+  at X150f.x0771cfaf
+  at X150f.test2
+
+Suite result: FAILED. 0 passed; 2 failed; 0 skipped; finished in 23.57ms (45.22ms CPU time)
+
+Ran 1 test suite in 28.03ms (23.57ms CPU time): 0 tests passed, 2 failed, 0 skipped (2 total tests)
+
+Failing tests:
+Encountered 2 failing tests in test/xebf6.t.sol:X150f
+[FAIL: EvmError: Revert] test1() (gas: 1040429520)
+[FAIL: EvmError: Revert] test2() (gas: 1040429518)
+
+Encountered a total of 2 failing tests, 0 tests succeeded

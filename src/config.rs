@@ -4,7 +4,9 @@ use anyhow::Result;
 use rand::seq::SliceRandom;
 use serde::Deserialize;
 
-pub const ETH_SCAN_API_URL: &str = "https://api.etherscan.io/api";
+// pub const ETH_SCAN_API_URL: &str = "https://api.etherscan.io/api";
+pub const ETH_SCAN_API_URL: &str = "https://api.etherscan.io/v2/api";
+
 pub const BSC_SCAN_API_URL: &str = "https://api.bscscan.com/api";
 pub const POLYGON_SCAN_API_URL: &str = "https://api.polygonscan.com/api";
 pub const ARBITRUM_SCAN_API_URL: &str = "https://api.arbiscan.io/api";

@@ -1,0 +1,17 @@
+
+=== generated_test2_calls ===
+[
+  "vm.createSelectFork(\"http://localhost:18545\", 18992895); // tx.blockNumber - 1",
+  "// https://explorer.phalcon.xyz/tx/eth/0x33e3c94e8e0359b7a98b74a02454a52fad2a8fb7faee02f888807bc60f688628",
+  "this.x33e3c94e();"
+]
+
+
+=== generated_test2_calls ===
+[
+  "vm.warp(1705087715);",
+  "vm.roll(18992903);",
+  "// https://explorer.phalcon.xyz/tx/eth/0x67d6c554314c9b306d683afb3bc4a10e70509ceb0fdf8415a5e270a91fae52de",
+  "this.x67d6c554();"
+]
+

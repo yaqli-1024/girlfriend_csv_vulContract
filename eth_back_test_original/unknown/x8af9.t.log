@@ -1,0 +1,194 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 852.18ms
+Compiler run successful with warnings:
+Warning (9302): Return value of low-level calls not used.
+   --> test/x8af9.t.sol:123:13:
+    |
+123 |             address(tx.origin).call{value: 127797499079942863577}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:165:5:
+    |
+165 |     function scaledBalanceToBalance(uint256) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:172:5:
+    |
+172 |     function stakedTokenAddress() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:181:5:
+    |
+181 |     function allowance(address, address) public returns (uint256) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:185:5:
+    |
+185 |     function balanceOf(address) public returns (uint256) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:189:5:
+    |
+189 |     function approve(address, uint256) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:196:5:
+    |
+196 |     function transferFrom(address, address, uint256) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:233:5:
+    |
+233 |     function allowance(address, address) public returns (uint256) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:237:5:
+    |
+237 |     function stakedTokenAddress() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:246:5:
+    |
+246 |     function approve(address, uint256) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:255:5:
+    |
+255 |     function balanceOf(address) public returns (uint256) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:259:5:
+    |
+259 |     function transferFrom(address, address, uint256) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:266:5:
+    |
+266 |     function scaledBalanceToBalance(uint256) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:286:5:
+    |
+286 |     function stakedTokenAddress() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:293:5:
+    |
+293 |     function balanceOf(address) public returns (uint256) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:318:5:
+    |
+318 |     function allowance(address, address) public returns (uint256) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:322:5:
+    |
+322 |     function approve(address, uint256) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:329:5:
+    |
+329 |     function transferFrom(address, address, uint256) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8af9.t.sol:336:5:
+    |
+336 |     function scaledBalanceToBalance(uint256) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 1 test for test/x8af9.t.sol:Xb2e8
+[FAIL: EvmError: Revert] test() (gas: 1024244055)
+Logs:
+  0x8af9b5fb3e2e3df8659ffb2e0f0c1f4c90d5a80f4f6fccef143b823ce673fb60
+  I(xae7a).balanceOf(xbaa8)	-> 64176037513415148812 (64.1760 ether)
+
+Traces:
+  [4365] Xb2e8::setUp()
+    ├─ [0] console::log("0x8af9b5fb3e2e3df8659ffb2e0f0c1f4c90d5a80f4f6fccef143b823ce673fb60") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [1024244055] Xb2e8::test()
+    ├─ [0] VM::createSelectFork("<rpc url>", 18448167 [1.844e7])
+    │   └─ ← [Return] 0
+    ├─ [442620] → new X09f2@0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f
+    │   └─ ← [Return] 2197 bytes of code
+    ├─ [442620] → new X18d0@0x2e234DAe75C793f67A35089C9d99245E1C58470b
+    │   └─ ← [Return] 2197 bytes of code
+    ├─ [442620] → new Xe26d@0xF62849F9A0B5Bf2913b396098F7c7019b51A820a
+    │   └─ ← [Return] 2197 bytes of code
+    ├─ [631] X09f2::mint(Xb2e8: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 10000000000000000000000 [1e22])
+    │   └─ ← [Return]
+    ├─ [631] X18d0::mint(Xb2e8: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 10000000000000000000000 [1e22])
+    │   └─ ← [Return]
+    ├─ [631] Xe26d::mint(Xb2e8: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 10000000000000000000000 [1e22])
+    │   └─ ← [Return]
+    ├─ [956] X09f2::approve(0xbAa87546cF87b5De1b0b52353A86792D40b8BA70, 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    ├─ [956] X18d0::approve(0xbAa87546cF87b5De1b0b52353A86792D40b8BA70, 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    ├─ [956] Xe26d::approve(0xbAa87546cF87b5De1b0b52353A86792D40b8BA70, 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    ├─ [33968] 0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84::balanceOf(0xbAa87546cF87b5De1b0b52353A86792D40b8BA70)
+    │   ├─ [8263] 0xb8FFC3Cd6e7Cf5a098A1c92F48009765B24088Dc::getApp(0xf1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f, 0x3ca7c3e38968823ccb4c78ea688df41356f182ae1d159e4ee608d30d68cef320)
+    │   │   ├─ [2820] 0x2b33CF282f867A7FF693A66e11B0FcC5552e4425::getApp(0xf1f3eb40f5bc1ad1344716ced8b8a0431d840b5783aea1fd01786bc26f35ac0f, 0x3ca7c3e38968823ccb4c78ea688df41356f182ae1d159e4ee608d30d68cef320) [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000017144556fd3424edc8fc8a4c940b2d04936d17eb
+    │   │   └─ ← [Return] 0x00000000000000000000000017144556fd3424edc8fc8a4c940b2d04936d17eb
+    │   ├─ [15088] 0x17144556fd3424EDC8Fc8A4C940B2D04936d17eb::balanceOf(0xbAa87546cF87b5De1b0b52353A86792D40b8BA70) [delegatecall]
+    │   │   └─ ← [Return] 64176037513415148812 [6.417e19]
+    │   └─ ← [Return] 64176037513415148812 [6.417e19]
+    ├─ [0] console::log("I(xae7a).balanceOf(xbaa8)\t->", "64176037513415148812 (64.1760 ether)") [staticcall]
+    │   └─ ← [Stop]
+    ├─ [1022702044] 0xbAa87546cF87b5De1b0b52353A86792D40b8BA70::withdraw(X09f2: [0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f], 64176037513415148812 [6.417e19])
+    │   ├─ [1022697014] 0x4D5B4B9Ccf52bBcFE7B71b3038D8577293779E0C::withdraw(X09f2: [0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f], 64176037513415148812 [6.417e19]) [delegatecall]
+    │   │   ├─ [812] X09f2::balanceOf(Xb2e8: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   │   │   └─ ← [Return] 10000000000000000000000 [1e22]
+    │   │   ├─ [926] X09f2::allowance(Xb2e8: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0xbAa87546cF87b5De1b0b52353A86792D40b8BA70) [staticcall]
+    │   │   │   └─ ← [Return] 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77]
+    │   │   ├─ [1063] X09f2::scaledBalanceOf(0xbAa87546cF87b5De1b0b52353A86792D40b8BA70) [staticcall]
+    │   │   │   └─ ← [StateChangeDuringStaticCall] EvmError: StateChangeDuringStaticCall
+    │   │   ├─  storage changes:
+    │   │   │   @ 301: 1 → 2
+    │   │   └─ ← [Revert] EvmError: Revert
+    │   └─ ← [Revert] EvmError: Revert
+    ├─  storage changes:
+    │   @ 31: 1 → 0x00000000000000000000005615deb798bb3e4dfa0139dfa1b3d433cc23b72f01
+    │   @ 32: 0 → 0x000000000000000000000000f62849f9a0b5bf2913b396098f7c7019b51a820a
+    │   @ 33: 0 → 0x0000000000000000000000002e234dae75c793f67a35089c9d99245e1c58470b
+    └─ ← [Revert] EvmError: Revert
+
+Backtrace:
+  at X09f2.scaledBalanceOf
+  at 0x4D5B4B9Ccf52bBcFE7B71b3038D8577293779E0C.withdraw
+  at 0xbAa87546cF87b5De1b0b52353A86792D40b8BA70.withdraw
+  at Xb2e8.test
+
+Suite result: FAILED. 0 passed; 1 failed; 0 skipped; finished in 77.95ms (76.96ms CPU time)
+
+Ran 1 test suite in 82.78ms (77.95ms CPU time): 0 tests passed, 1 failed, 0 skipped (1 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/x8af9.t.sol:Xb2e8
+[FAIL: EvmError: Revert] test() (gas: 1024244055)
+
+Encountered a total of 1 failing tests, 0 tests succeeded

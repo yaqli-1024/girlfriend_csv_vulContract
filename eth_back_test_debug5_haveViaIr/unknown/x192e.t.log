@@ -1,0 +1,38 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 556.44ms
+Error: Compiler run failed:
+Warning (9302): Return value of low-level calls not used.
+   --> test/x192e.t.sol:391:9:
+    |
+391 |         address(tx.origin).call("");
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x192e.t.sol:395:9:
+    |
+395 |         address(tx.origin).call("");
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x192e.t.sol:415:9:
+    |
+415 |         address(tx.origin).call("");
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x192e.t.sol:459:13:
+    |
+459 |             x9522.call{value: 170739008724604193}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x192e.t.sol:540:13:
+    |
+540 |             x690b.call{value: 4720766793716038}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error (6675): Member "exchange" not unique after argument-dependent lookup in contract I.
+   --> test/x192e.t.sol:545:13:
+    |
+545 |             I(x838a).exchange(0, 1, 4849465769994420713, 0);
+    |             ^^^^^^^^^^^^^^^^^

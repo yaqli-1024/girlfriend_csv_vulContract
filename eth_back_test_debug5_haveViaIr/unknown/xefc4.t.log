@@ -1,0 +1,9 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 1.27s
+Error: Compiler run failed:
+Error: Cannot swap Variable value32 with Variable headStart: too deep in the stack by 17 slots in [ RET value33 value32 value31 value30 value29 value28 value27 value26 value25 value24 value23 value22 value21 value20 value19 value18 value17 value16 value15 value14 value13 value12 value11 value10 value9 value8 value7 value6 value5 value4 value3 value2 value1 value0 headStart ]
+No memoryguard was present. Consider using memory-safe assembly only and annotating it via 'assembly ("memory-safe") { ... }'.
+   --> test/xefc4.t.sol:629:30:
+    |
+629 |     address constant xc02a = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
+    |                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -1,0 +1,56 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 607.96ms
+Compiler run successful with warnings:
+Warning (9302): Return value of low-level calls not used.
+  --> test/x1fe5.t.sol:51:9:
+   |
+51 |         x80cb.delegatecall(abi.encodeWithSignature("redeem(uint256,address)", 676562, x8b5a));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Ran 2 tests for test/x1fe5.t.sol:Xbdb5
+[PASS] test() (gas: 36261)
+Logs:
+  0x1fe5a53405d00ce2f3e15b214c7486c69cbc5bf165cf9596e86f797f62e81914
+
+Traces:
+  [4387] Xbdb5::setUp()
+    ├─ [0] console::log("0x1fe5a53405d00ce2f3e15b214c7486c69cbc5bf165cf9596e86f797f62e81914") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [36261] Xbdb5::test()
+    ├─ [0] VM::createSelectFork("<rpc url>", 16696239 [1.669e7])
+    │   └─ ← [Return] 0
+    ├─ [27063] 0x80cB73074A6965F60DF59BF8fA3CE398Ffa2702c::redeem(676562 [6.765e5], 0x8B5A8333eC272c9Bca1E43F4d009E9B2FAd5EFc9) [delegatecall]
+    │   ├─  storage changes:
+    │   │   @ 151: 0 → 2
+    │   └─ ← [Revert] EXCEED_TOTAL_BALANCE
+    └─ ← [Return] 0x000000000000000000000000000000000000000000000000000003210af3a19d
+
+[PASS] test3() (gas: 39459)
+Logs:
+  0x1fe5a53405d00ce2f3e15b214c7486c69cbc5bf165cf9596e86f797f62e81914
+
+Traces:
+  [4387] Xbdb5::setUp()
+    ├─ [0] console::log("0x1fe5a53405d00ce2f3e15b214c7486c69cbc5bf165cf9596e86f797f62e81914") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [39459] Xbdb5::test3()
+    ├─ [0] VM::createSelectFork("<rpc url>", 16696239 [1.669e7])
+    │   └─ ← [Return] 0
+    ├─ [0] VM::warp(1677217811 [1.677e9])
+    │   └─ ← [Return]
+    ├─ [0] VM::roll(16696240 [1.669e7])
+    │   └─ ← [Return]
+    ├─ [27063] 0x80cB73074A6965F60DF59BF8fA3CE398Ffa2702c::redeem(676562 [6.765e5], 0x8B5A8333eC272c9Bca1E43F4d009E9B2FAd5EFc9) [delegatecall]
+    │   ├─  storage changes:
+    │   │   @ 151: 0 → 2
+    │   └─ ← [Revert] EXCEED_TOTAL_BALANCE
+    └─ ← [Return] 0x000000000000000000000000000000000000000000000000000003210af3a19d
+
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 18.82ms (35.25ms CPU time)
+
+Ran 1 test suite in 20.02ms (18.82ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)

@@ -1,0 +1,3 @@
+Warning: Found unknown `rpc_endpoints` config for profile `default` defined in foundry.toml.
+Error: solc exited with signal: 11 (SIGSEGV) (core dumped)
+<empty output>

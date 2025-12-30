@@ -1,0 +1,35 @@
+{}
+
+{
+  "(address,uint256,address,address,address,(uint8,address,bytes,bool))": {
+    "name": "S2",
+    "props": [
+      "address p1",
+      "uint256 p2",
+      "address p3",
+      "address p4",
+      "address p5",
+      "S3 p6"
+    ]
+  },
+  "(uint256,uint256,uint256,uint256,uint256)": {
+    "name": "S1",
+    "props": [
+      "uint256 p1",
+      "uint256 p2",
+      "uint256 p3",
+      "uint256 p4",
+      "uint256 p5"
+    ]
+  },
+  "(uint8,address,bytes,bool)": {
+    "name": "S3",
+    "props": [
+      "uint8 p1",
+      "address p2",
+      "bytes p3",
+      "bool p4"
+    ]
+  }
+}
+

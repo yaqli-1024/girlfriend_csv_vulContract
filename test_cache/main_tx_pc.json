@@ -1,0 +1,30 @@
+{
+  "ty": "Interface",
+  "sol_ty": "call",
+  "caller": "0xB90CF1d740B206B6d80854BC525E609Dc42B45Dc",
+  "target": "0x91c49Cc7FBfE8f70AceEb075952cD64817f9d82c",
+  "fn_signature": "x0826c023()",
+  "ret_signature": "",
+  "fn_call": "x0826c023();",
+  "raw_input": "0x0826c023",
+  "raw_output": "",
+  "value": "0x0",
+  "sub_calls": [],
+  "memory_vars": [],
+  "named_addresses": {},
+  "struct_defs": {},
+  "return_vars": {},
+  "return_data": [],
+  "ret_decode_call": null,
+  "salt": null,
+  "comment": "// https://explorer.phalcon.xyz/tx/eth/0x04e16a79ff928db2fa88619cdd045cdfc7979a61d836c9c9e585b3d6f6d8bc31",
+  "target_is_contract": true,
+  "vm_state": {
+    "forked_rpc": "http://localhost:18545",
+    "tx_hash": "0x04e16a79ff928db2fa88619cdd045cdfc7979a61d836c9c9e585b3d6f6d8bc31",
+    "block_number": "18992907",
+    "block_timestamp": "1705087763"
+  },
+  "inner_create_vars": []
+}
+

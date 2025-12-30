@@ -1,0 +1,49 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 641.05ms
+Compiler run successful with warnings:
+Warning (2072): Unused local variable.
+  --> test/x8c3f.t.sol:45:9:
+   |
+45 |         uint256 v2 = I(xbcb8).balanceOf(r);
+   |         ^^^^^^^^^^
+
+
+Ran 1 test for test/x8c3f.t.sol:X2df9
+[FAIL: only sender] test() (gas: 26064)
+Logs:
+  0x8c3f442fc6d640a6ff3ea0b12be64f1d4609ea94edd2966f42c01cd9bdcf04b5
+  I(xbcb8).balanceOf(xd286)	-> 321154865567124596801893 (321154.8655 ether)
+
+Traces:
+  [4365] X2df9::setUp()
+    ├─ [0] console::log("0x8c3f442fc6d640a6ff3ea0b12be64f1d4609ea94edd2966f42c01cd9bdcf04b5") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [26064] X2df9::test()
+    ├─ [0] VM::createSelectFork("<rpc url>", 15725066 [1.572e7])
+    │   └─ ← [Return] 0
+    ├─ [2624] 0xBcB8b7FC9197fEDa75C101fA69d3211b5a30dCD9::balanceOf(0xd2869042E12a3506100af1D192b5b04D65137941)
+    │   └─ ← [Return] 321154865567124596801893 [3.211e23]
+    ├─ [0] console::log("I(xbcb8).balanceOf(xd286)\t->", "321154865567124596801893 (321154.8655 ether)") [staticcall]
+    │   └─ ← [Stop]
+    ├─ [6316] 0xd2869042E12a3506100af1D192b5b04D65137941::migrateStake(0x9bdb04493aF17eB318A23BfeFe43f07b3E58EcFb, 321154865567124596801893 [3.211e23])
+    │   ├─ [3058] 0x9bdb04493aF17eB318A23BfeFe43f07b3E58EcFb::migrateWithdraw(X2df9: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 321154865567124596801893 [3.211e23])
+    │   │   └─ ← [Revert] only sender
+    │   └─ ← [Revert] only sender
+    └─ ← [Revert] only sender
+
+Backtrace:
+  at 0x9bdb04493aF17eB318A23BfeFe43f07b3E58EcFb.migrateWithdraw
+  at 0xd2869042E12a3506100af1D192b5b04D65137941.migrateStake
+  at X2df9.test
+
+Suite result: FAILED. 0 passed; 1 failed; 0 skipped; finished in 29.96ms (29.31ms CPU time)
+
+Ran 1 test suite in 1.06s (29.96ms CPU time): 0 tests passed, 1 failed, 0 skipped (1 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/x8c3f.t.sol:X2df9
+[FAIL: only sender] test() (gas: 26064)
+
+Encountered a total of 1 failing tests, 0 tests succeeded

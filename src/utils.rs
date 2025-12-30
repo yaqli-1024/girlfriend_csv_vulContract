@@ -45,8 +45,8 @@ pub fn prettify_value(value: &str) -> String {
 // used to generate `vm.createSelectFork`
 pub fn get_vm_fork_rpc(chain: &str) -> String {
     let endpoint = match chain.to_lowercase().as_str() {
-        "mainnet" => "https://rpc.ankr.com/eth",
-        "eth" => "https://rpc.ankr.com/eth",
+        "mainnet" => "http://localhost:18545",
+        "eth" => "http://localhost:18545",
         "bsc" => "https://rpc.ankr.com/bsc",
         "polygon" => "https://rpc.ankr.com/polygon",
         "arbitrum" => "https://rpc.ankr.com/arbitrum",

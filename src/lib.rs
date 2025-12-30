@@ -6,7 +6,9 @@ pub mod utils;
 
 mod abi;
 mod call;
-mod contract;
+pub mod contract;
+//TODO：加入一个新的模块slot_cache
+pub mod slot_cache;
 mod kv;
 mod tx;
 

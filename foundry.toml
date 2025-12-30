@@ -1,9 +1,97 @@
+# # 原配置（配置v1.0）
+# [profile.default]
+# src = "src"
+# out = "out"
+# libs = ["lib"]
+# evm_version = 'shanghai'
+# # 原配置结束
+
+# (12.25)调试：好几种配置）（配置v2.0）
 [profile.default]
+# src = "src"
+# out = "out"
+# libs = ["lib"]
+# evm_version = "shanghai"
+# solc_version = "0.8.28"
+# via_ir = true
+# optimizer = true
+# optimizer_runs = 200
+# -------------------------------------------------
 src = "src"
 out = "out"
 libs = ["lib"]
-evm_version = 'shanghai'
+evm_version = "shanghai"
+solc_version = "0.8.30"
+via_ir = false
 
-rpc_endpoints = { mainnet = "https://rpc.ankr.com/eth", eth = "https://rpc.ankr.com/eth", optimism = "https://rpc.ankr.com/optimism", fantom = "https://rpc.ankr.com/fantom", arbitrum = "https://rpc.ankr.com/arbitrum", bsc = "https://rpc.ankr.com/bsc", moonriver = "https://moonriver.public.blastapi.io", gnosis = "https://rpc.ankr.com/gnosis", avax = "https://rpc.ankr.com/avalanche", polygon = "https://rpc.ankr.com/polygon", goerli = "https://rpc.ankr.com/eth_goerli", era = "https://mainnet.era.zksync.io", zksync = "https://mainnet.era.zksync.io" }
+# 关 via-ir（绕开 Yul / IR 路径崩溃）
+[profile.ir28_noir]
+src = "src"
+out = "out"
+libs = ["lib"]
+evm_version = "shanghai"
+solc_version = "0.8.28"
+via_ir = false
+
+# 更老一点的 solc + via-ir（常见能救一部分 SIGSEGV）
+[profile.ir26]
+src = "src"
+out = "out"
+libs = ["lib"]
+evm_version = "shanghai"
+solc_version = "0.8.26"
+via_ir = true
+optimizer = true
+optimizer_runs = 200
+
+# via-ir 但关优化器（兜底）
+[profile.ir26_noopt]
+src = "src"
+out = "out"
+libs = ["lib"]
+evm_version = "shanghai"
+solc_version = "0.8.26"
+via_ir = true
+optimizer = false
+
+# via-ir 试一下30版本
+[profile.ir30]
+src = "src"
+out = "out"
+libs = ["lib"]
+evm_version = "shanghai"
+solc_version = "0.8.30"
+via_ir = true
+optimizer = true
+optimizer_runs = 200
+
+# 试一下30版本（无via ir）
+[profile.ir30_noopt]
+src = "src"
+out = "out"
+libs = ["lib"]
+evm_version = "shanghai"
+solc_version = "0.8.30"
+via_ir = false
+# (12.25)调试结束
+
+
+# [rpc_endpoints]
+# rpc_endpoints = { mainnet = "http://localhost:18545", eth = "http://localhost:18545", optimism = "https://rpc.ankr.com/optimism", fantom = "https://rpc.ankr.com/fantom", arbitrum = "https://rpc.ankr.com/arbitrum", bsc = "https://rpc.ankr.com/bsc", moonriver = "https://moonriver.public.blastapi.io", gnosis = "https://rpc.ankr.com/gnosis", avax = "https://rpc.ankr.com/avalanche", polygon = "https://rpc.ankr.com/polygon", goerli = "https://rpc.ankr.com/eth_goerli", era = "https://mainnet.era.zksync.io", zksync = "https://mainnet.era.zksync.io" }
+
+[rpc_endpoints]
+mainnet = "http://localhost:18545"
+eth = "http://localhost:18545"
+optimism = "https://rpc.ankr.com/optimism"
+fantom = "https://rpc.ankr.com/fantom"
+arbitrum = "https://rpc.ankr.com/arbitrum"
+bsc = "https://rpc.ankr.com/bsc"
+moonriver = "https://moonriver.public.blastapi.io"
+gnosis = "https://rpc.ankr.com/gnosis"
+avax = "https://rpc.ankr.com/avalanche"
+polygon = "https://rpc.ankr.com/polygon"
+goerli = "https://rpc.ankr.com/eth_goerli"
+era = "https://mainnet.era.zksync.io"
+zksync = "https://mainnet.era.zksync.io"
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

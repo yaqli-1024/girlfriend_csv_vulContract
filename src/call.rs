@@ -1,9 +1,10 @@
 use alloy_primitives::U256;
 use serde_json::Value;
+use serde::{Serialize};   // 在 call.rs 顶部加（如果没有的话）
 
 use crate::utils::{checksum, hash_to_name};
 
-#[derive(Debug, Default, Clone)]
+#[derive(Debug, Default, Clone, Serialize)]
 pub struct Call {
     pub ty: String,
     pub caller: String,

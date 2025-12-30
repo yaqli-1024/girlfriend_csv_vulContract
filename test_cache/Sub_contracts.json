@@ -1,0 +1,159 @@
+{
+  "x130f": {
+    "x91c4": {
+      "name": "X91c4",
+      "var_name": "x91c4",
+      "addr": "0x91c49Cc7FBfE8f70AceEb075952cD64817f9d82c",
+      "is_receiver": true,
+      "is_inner": false,
+      "salt": null,
+      "initcode_hash": null,
+      "str_constructor_args": ""
+    }
+  },
+  "x0307": {
+    "x91c4": {
+      "name": "X91c4",
+      "var_name": "x91c4",
+      "addr": "0x91c49Cc7FBfE8f70AceEb075952cD64817f9d82c",
+      "is_receiver": true,
+      "is_inner": false,
+      "salt": null,
+      "initcode_hash": null,
+      "str_constructor_args": ""
+    }
+  },
+  "x3a0e": {
+    "x91c4": {
+      "name": "X91c4",
+      "var_name": "x91c4",
+      "addr": "0x91c49Cc7FBfE8f70AceEb075952cD64817f9d82c",
+      "is_receiver": true,
+      "is_inner": false,
+      "salt": null,
+      "initcode_hash": null,
+      "str_constructor_args": ""
+    }
+  },
+  "x0b1b": {
+    "x91c4": {
+      "name": "X91c4",
+      "var_name": "x91c4",
+      "addr": "0x91c49Cc7FBfE8f70AceEb075952cD64817f9d82c",
+      "is_receiver": true,
+      "is_inner": false,
+      "salt": null,
+      "initcode_hash": null,
+      "str_constructor_args": ""
+    }
+  },
+  "x51ff": {
+    "x91c4": {
+      "name": "X91c4",
+      "var_name": "x91c4",
+      "addr": "0x91c49Cc7FBfE8f70AceEb075952cD64817f9d82c",
+      "is_receiver": true,
+      "is_inner": false,
+      "salt": null,
+      "initcode_hash": null,
+      "str_constructor_args": ""
+    }
+  },
+  "xd68e": {
+    "x91c4": {
+      "name": "X91c4",
+      "var_name": "x91c4",
+      "addr": "0x91c49Cc7FBfE8f70AceEb075952cD64817f9d82c",
+      "is_receiver": true,
+      "is_inner": false,
+      "salt": null,
+      "initcode_hash": null,
+      "str_constructor_args": ""
+    }
+  },
+  "x91c4": {
+    "x3a0e": {
+      "name": "X3a0e",
+      "var_name": "x3a0e",
+      "addr": "0x3A0EeeDd13582A27f61741388D3435f7291E889B",
+      "is_receiver": false,
+      "is_inner": true,
+      "salt": null,
+      "initcode_hash": null,
+      "str_constructor_args": ""
+    },
+    "x130f": {
+      "name": "X130f",
+      "var_name": "x130f",
+      "addr": "0x130F573C04dad56990A26CEF055B6358D98BCbDc",
+      "is_receiver": false,
+      "is_inner": true,
+      "salt": null,
+      "initcode_hash": null,
+      "str_constructor_args": ""
+    },
+    "x51ff": {
+      "name": "X51ff",
+      "var_name": "x51ff",
+      "addr": "0x51ffb04E815C0514203606c8Eaeca7ADA651263a",
+      "is_receiver": false,
+      "is_inner": true,
+      "salt": null,
+      "initcode_hash": null,
+      "str_constructor_args": ""
+    },
+    "x15b9": {
+      "name": "X15b9",
+      "var_name": "x15b9",
+      "addr": "0x15b9485D154d7101a478F40AD5d2284dCe9e5E14",
+      "is_receiver": false,
+      "is_inner": true,
+      "salt": null,
+      "initcode_hash": null,
+      "str_constructor_args": ""
+    },
+    "xd68e": {
+      "name": "Xd68e",
+      "var_name": "xd68e",
+      "addr": "0xd68e5E90AAaFcf519d47ecdB9932831edb40F467",
+      "is_receiver": false,
+      "is_inner": true,
+      "salt": null,
+      "initcode_hash": null,
+      "str_constructor_args": ""
+    },
+    "x0307": {
+      "name": "X0307",
+      "var_name": "x0307",
+      "addr": "0x0307FDe47eeF656d39cd0964bf03A1655fF40Dd7",
+      "is_receiver": false,
+      "is_inner": true,
+      "salt": null,
+      "initcode_hash": null,
+      "str_constructor_args": ""
+    },
+    "x0b1b": {
+      "name": "X0b1b",
+      "var_name": "x0b1b",
+      "addr": "0x0b1bd248640dCe2bA11b8573B4ba24E7dD1B89d4",
+      "is_receiver": false,
+      "is_inner": true,
+      "salt": null,
+      "initcode_hash": null,
+      "str_constructor_args": ""
+    }
+  },
+  "x15b9": {
+    "x91c4": {
+      "name": "X91c4",
+      "var_name": "x91c4",
+      "addr": "0x91c49Cc7FBfE8f70AceEb075952cD64817f9d82c",
+      "is_receiver": true,
+      "is_inner": false,
+      "salt": null,
+      "initcode_hash": null,
+      "str_constructor_args": ""
+    }
+  }
+}
+

@@ -1,0 +1,129 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 1.13s
+Compiler run successful with warnings:
+Warning (9302): Return value of low-level calls not used.
+   --> test/x8b74.t.sol:144:9:
+    |
+144 |         address(tx.origin).call{value: 1724175115775667014558}("");
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x8b74.t.sol:202:9:
+    |
+202 |         uint256 v1 = I(x3565).balanceOf(r);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x8b74.t.sol:205:9:
+    |
+205 |         uint256 v2 = I(xae7a).balanceOf(r);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x8b74.t.sol:225:9:
+    |
+225 |         uint256 v4 = I(xae7a).balanceOf(r);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x8b74.t.sol:228:9:
+    |
+228 |         uint256 v5 = I(xc02a).balanceOf(r);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x8b74.t.sol:233:13:
+    |
+233 |             uint256 v6 = I(xc02a).balanceOf(r);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x8b74.t.sol:256:13:
+    |
+256 |             uint256 v9 = I(xc02a).balanceOf(r);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x8b74.t.sol:260:13:
+    |
+260 |             uint256 v10 = I(xbe98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x8b74.t.sol:287:13:
+    |
+287 |             uint256 v14 = I(xae78).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x8b74.t.sol:328:13:
+    |
+328 |             uint256 v1 = I(x3565).balanceOf(r);
+    |             ^^^^^^^^^^
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x8b74.t.sol:338:5:
+    |
+338 |     function _constructor_() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 2 tests for test/x8b74.t.sol:X7435
+[FAIL: EvmError: Revert] test1() (gas: 12138)
+Logs:
+  0x8b74995d1d61d3d7547575649136b8765acb22882960f0636941c44ec7bbe146
+
+Traces:
+  [4365] X7435::setUp()
+    ├─ [0] console::log("0x8b74995d1d61d3d7547575649136b8765acb22882960f0636941c44ec7bbe146") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [12138] X7435::test1()
+    ├─ [0] VM::createSelectFork("<rpc url>", 17740954 [1.774e7])
+    │   └─ ← [Return] 0
+    ├─ [6638] X7435::x813f6cb1()
+    │   ├─ [2467] 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2::withdraw(3150068704875924998 [3.15e18])
+    │   │   └─ ← [Revert] EvmError: Revert
+    │   └─ ← [Revert] EvmError: Revert
+    └─ ← [Revert] EvmError: Revert
+
+Backtrace:
+  at 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2.withdraw
+  at X7435.x813f6cb1
+  at X7435.test1
+
+[FAIL: EvmError: Revert] test2() (gas: 12116)
+Logs:
+  0x8b74995d1d61d3d7547575649136b8765acb22882960f0636941c44ec7bbe146
+
+Traces:
+  [4365] X7435::setUp()
+    ├─ [0] console::log("0x8b74995d1d61d3d7547575649136b8765acb22882960f0636941c44ec7bbe146") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [12116] X7435::test2()
+    ├─ [0] VM::createSelectFork("<rpc url>", 17740946 [1.774e7])
+    │   └─ ← [Return] 0
+    ├─ [6638] X7435::x813f6cb1()
+    │   ├─ [2467] 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2::withdraw(3150068704875924998 [3.15e18])
+    │   │   └─ ← [Revert] EvmError: Revert
+    │   └─ ← [Revert] EvmError: Revert
+    └─ ← [Revert] EvmError: Revert
+
+Backtrace:
+  at 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2.withdraw
+  at X7435.x813f6cb1
+  at X7435.test2
+
+Suite result: FAILED. 0 passed; 2 failed; 0 skipped; finished in 28.42ms (51.38ms CPU time)
+
+Ran 1 test suite in 34.74ms (28.42ms CPU time): 0 tests passed, 2 failed, 0 skipped (2 total tests)
+
+Failing tests:
+Encountered 2 failing tests in test/x8b74.t.sol:X7435
+[FAIL: EvmError: Revert] test1() (gas: 12138)
+[FAIL: EvmError: Revert] test2() (gas: 12116)
+
+Encountered a total of 2 failing tests, 0 tests succeeded

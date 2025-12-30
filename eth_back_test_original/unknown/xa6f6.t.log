@@ -1,0 +1,111 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 993.05ms
+Compiler run successful with warnings:
+Warning (5159): "selfdestruct" has been deprecated. Note that, starting from the Cancun hard fork, the underlying opcode no longer deletes the code and data associated with an account and only transfers its Ether to the beneficiary, unless executed in the same transaction in which the contract was created (see EIP-6780). Any use in newly deployed contracts is strongly discouraged even if the new behavior is taken into account. Future changes to the EVM might further reduce the functionality of the opcode.
+   --> test/xa6f6.t.sol:179:9:
+    |
+179 |         selfdestruct(payable(x3dab));
+    |         ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xa6f6.t.sol:151:9:
+    |
+151 |         uint256 v3 = I(xdac1).allowance(r, xb559);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xa6f6.t.sol:155:9:
+    |
+155 |         uint256 v4 = I(xa0b8).allowance(r, xb559);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xa6f6.t.sol:159:9:
+    |
+159 |         uint256 v5 = I(xa0b8).allowance(r, x13e5);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xa6f6.t.sol:176:9:
+    |
+176 |         uint256 v7 = I(xc02a).balanceOf(r);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xa6f6.t.sol:230:9:
+    |
+230 |         uint256 v1 = I(xdac1).balanceOf(xb559);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xa6f6.t.sol:233:9:
+    |
+233 |         uint256 v2 = I(xdac1).balanceOf(xb559);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xa6f6.t.sol:248:9:
+    |
+248 |         uint256 v1 = I(xdac1).balanceOf(xb559);
+    |         ^^^^^^^^^^
+
+
+Ran 2 tests for test/xa6f6.t.sol:X5061
+[FAIL: EvmError: Revert] test1() (gas: 1040429517)
+Logs:
+  0xa6f63fcb6bec8818864d96a5b1bb19e8bd85ee37b2cc916412e720988440b2aa
+
+Traces:
+  [4365] X5061::setUp()
+    ├─ [0] console::log("0xa6f63fcb6bec8818864d96a5b1bb19e8bd85ee37b2cc916412e720988440b2aa") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [1040429517] X5061::test1()
+    ├─ [0] VM::createSelectFork("<rpc url>", 16542147 [1.654e7])
+    │   └─ ← [Return] 0
+    ├─ [1040423954] X5061::x1642ab50()
+    │   ├─ [14269] 0xdAC17F958D2ee523a2206206994597C13D831ec7::transfer(0x13e557c51C0a37E25E051491037Ee546597c689F, 500000 [5e5])
+    │   │   └─ ← [InvalidFEOpcode] EvmError: InvalidFEOpcode
+    │   └─ ← [Revert] EvmError: Revert
+    └─ ← [Revert] EvmError: Revert
+
+Backtrace:
+  at 0xdAC17F958D2ee523a2206206994597C13D831ec7.transfer
+  at X5061.x1642ab50
+  at X5061.test1
+
+[FAIL: EvmError: Revert] test2() (gas: 1040429516)
+Logs:
+  0xa6f63fcb6bec8818864d96a5b1bb19e8bd85ee37b2cc916412e720988440b2aa
+
+Traces:
+  [4365] X5061::setUp()
+    ├─ [0] console::log("0xa6f63fcb6bec8818864d96a5b1bb19e8bd85ee37b2cc916412e720988440b2aa") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [1040429516] X5061::test2()
+    ├─ [0] VM::createSelectFork("<rpc url>", 16542092 [1.654e7])
+    │   └─ ← [Return] 0
+    ├─ [1040423975] X5061::x1642ab50()
+    │   ├─ [14269] 0xdAC17F958D2ee523a2206206994597C13D831ec7::transfer(0x13e557c51C0a37E25E051491037Ee546597c689F, 500000 [5e5])
+    │   │   └─ ← [InvalidFEOpcode] EvmError: InvalidFEOpcode
+    │   └─ ← [Revert] EvmError: Revert
+    └─ ← [Revert] EvmError: Revert
+
+Backtrace:
+  at 0xdAC17F958D2ee523a2206206994597C13D831ec7.transfer
+  at X5061.x1642ab50
+  at X5061.test2
+
+Suite result: FAILED. 0 passed; 2 failed; 0 skipped; finished in 25.21ms (47.99ms CPU time)
+
+Ran 1 test suite in 29.71ms (25.21ms CPU time): 0 tests passed, 2 failed, 0 skipped (2 total tests)
+
+Failing tests:
+Encountered 2 failing tests in test/xa6f6.t.sol:X5061
+[FAIL: EvmError: Revert] test1() (gas: 1040429517)
+[FAIL: EvmError: Revert] test2() (gas: 1040429516)
+
+Encountered a total of 2 failing tests, 0 tests succeeded

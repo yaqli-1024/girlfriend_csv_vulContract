@@ -1,0 +1,19 @@
+{
+  "0x91c49Cc7FBfE8f70AceEb075952cD64817f9d82c": {
+    "name": "X91c4",
+    "addr": "0x91c49Cc7FBfE8f70AceEb075952cD64817f9d82c",
+    "setup_constructor": null,
+    "ordered_sub_contracts": [],
+    "named_addresses": {},
+    "test1_calls": [],
+    "test2_calls": [],
+    "test3_calls": [],
+    "ordered_functions": [],
+    "counters": [],
+    "fallback": {},
+    "is_receiver": true,
+    "is_inner": false,
+    "token_addrs": []
+  }
+}
+

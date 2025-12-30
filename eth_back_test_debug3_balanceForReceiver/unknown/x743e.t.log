@@ -1,0 +1,4 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 912.00ms
+Error: Compiler run failed:
+Error: Compiler error (/solidity/libsolidity/codegen/CompilerUtils.cpp:1464): Stack too deep. Try compiling with `--via-ir` (cli) or the equivalent `viaIR: true` (standard JSON) while enabling the optimizer. Otherwise, try removing local variables.

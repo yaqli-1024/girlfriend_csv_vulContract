@@ -9,6 +9,11 @@ edition = "2021"
 alloy-primitives = "0.6"
 alloy-dyn-abi = { version = "0.6", features = ["arbitrary", "eip712"] }
 alloy-json-abi = "0.6"
+# 新增一行
+arbitrary = { version = "1", features = ["derive"] }
+# 新增一行
+once_cell = "1"
+
 handlebars = "5.1"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
@@ -24,6 +29,7 @@ rand = "0.8"
 lazy_static = "1.4"
 clap = { version = "4.5", features = ["derive"] }
 toml = "0.8"
+csv = "1.4.0"
 
 [dev-dependencies]
 tempfile = "3.6"

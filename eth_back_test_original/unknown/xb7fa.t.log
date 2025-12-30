@@ -1,0 +1,141 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 1.21s
+Compiler run successful with warnings:
+Warning (9302): Return value of low-level calls not used.
+   --> test/xb7fa.t.sol:449:13:
+    |
+449 |             x67b6.call{value: 3396699186603790851014}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/xb7fa.t.sol:457:13:
+    |
+457 |             x67b6.call{value: 3396177988979252982961}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/xb7fa.t.sol:465:13:
+    |
+465 |             x67b6.call{value: 3395664542631732219405}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/xb7fa.t.sol:473:13:
+    |
+473 |             x67b6.call{value: 3535158706911402375420}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/xb7fa.t.sol:481:13:
+    |
+481 |             x67b6.call{value: 3818902213498721194864}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (6321): Unnamed return variable can remain unassigned. Add an explicit return with value to all non-reverting code paths or name the variable.
+   --> test/xb7fa.t.sol:371:49:
+    |
+371 |     function balanceOf(address) public returns (uint256) {
+    |                                                 ^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xb7fa.t.sol:209:13:
+    |
+209 |             uint256 v1 = I(xc02a).balanceOf(x1e04);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xb7fa.t.sol:241:13:
+    |
+241 |             uint256 v1 = I(xc02a).balanceOf(x1e04);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xb7fa.t.sol:273:13:
+    |
+273 |             uint256 v1 = I(xc02a).balanceOf(x1e04);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xb7fa.t.sol:305:13:
+    |
+305 |             uint256 v1 = I(xc02a).balanceOf(x1e04);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xb7fa.t.sol:337:13:
+    |
+337 |             uint256 v1 = I(xc02a).balanceOf(x1e04);
+    |             ^^^^^^^^^^
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/xb7fa.t.sol:436:5:
+    |
+436 |     function transfer(address, uint256) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/xb7fa.t.sol:488:5:
+    |
+488 |     function transferFrom(address, address, uint256) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 2 tests for test/xb7fa.t.sol:X2f75
+[FAIL: not eoa] test1() (gas: 19402)
+Logs:
+  0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519
+
+Traces:
+  [4387] X2f75::setUp()
+    ├─ [0] console::log("0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [19402] X2f75::test1()
+    ├─ [0] VM::createSelectFork("<rpc url>", 12394249 [1.239e7])
+    │   └─ ← [Return] 0
+    ├─ [13802] X2f75::x870f0387()
+    │   ├─ [582] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::work{value: 1000000000}(0, 0x9EED7274Ea4b614ACC217e46727d377f7e6F9b24, 0, 100000000000000000000000 [1e23], 0x00000000000000000000000081796c4602b82054a727527cd16119807b8c7608000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000600000000000000000000000007fa9385be102ac3eac297483dd6233d62b3e149600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+    │   │   └─ ← [Revert] not eoa
+    │   └─ ← [Revert] not eoa
+    └─ ← [Revert] not eoa
+
+Backtrace:
+  at 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A.work
+  at X2f75.x870f0387
+  at X2f75.test1
+
+[FAIL: not eoa] test2() (gas: 19380)
+Logs:
+  0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519
+
+Traces:
+  [4387] X2f75::setUp()
+    ├─ [0] console::log("0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [19380] X2f75::test2()
+    ├─ [0] VM::createSelectFork("<rpc url>", 12394241 [1.239e7])
+    │   └─ ← [Return] 0
+    ├─ [13802] X2f75::x870f0387()
+    │   ├─ [582] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::work{value: 1000000000}(0, 0x9EED7274Ea4b614ACC217e46727d377f7e6F9b24, 0, 100000000000000000000000 [1e23], 0x00000000000000000000000081796c4602b82054a727527cd16119807b8c7608000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000600000000000000000000000007fa9385be102ac3eac297483dd6233d62b3e149600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+    │   │   └─ ← [Revert] not eoa
+    │   └─ ← [Revert] not eoa
+    └─ ← [Revert] not eoa
+
+Backtrace:
+  at 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A.work
+  at X2f75.x870f0387
+  at X2f75.test2
+
+Suite result: FAILED. 0 passed; 2 failed; 0 skipped; finished in 14.16ms (25.29ms CPU time)
+
+Ran 1 test suite in 17.88ms (14.16ms CPU time): 0 tests passed, 2 failed, 0 skipped (2 total tests)
+
+Failing tests:
+Encountered 2 failing tests in test/xb7fa.t.sol:X2f75
+[FAIL: not eoa] test1() (gas: 19402)
+[FAIL: not eoa] test2() (gas: 19380)
+
+Encountered a total of 2 failing tests, 0 tests succeeded

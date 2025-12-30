@@ -1,0 +1,352 @@
+Compiling 19 files with Solc 0.8.30
+Solc 0.8.30 finished in 1.13s
+Compiler run successful with warnings:
+Warning (9302): Return value of low-level calls not used.
+   --> test/xb7fa.t.sol:467:13:
+    |
+467 |             x67b6.call{value: 3396699186603790851014}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/xb7fa.t.sol:475:13:
+    |
+475 |             x67b6.call{value: 3396177988979252982961}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/xb7fa.t.sol:483:13:
+    |
+483 |             x67b6.call{value: 3395664542631732219405}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/xb7fa.t.sol:491:13:
+    |
+491 |             x67b6.call{value: 3535158706911402375420}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/xb7fa.t.sol:499:13:
+    |
+499 |             x67b6.call{value: 3818902213498721194864}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (6321): Unnamed return variable can remain unassigned. Add an explicit return with value to all non-reverting code paths or name the variable.
+   --> test/xb7fa.t.sol:396:49:
+    |
+396 |     function balanceOf(address) public returns (uint256) {
+    |                                                 ^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xb7fa.t.sol:227:13:
+    |
+227 |             uint256 v1 = I(xc02a).balanceOf(x1e04);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xb7fa.t.sol:259:13:
+    |
+259 |             uint256 v1 = I(xc02a).balanceOf(x1e04);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xb7fa.t.sol:291:13:
+    |
+291 |             uint256 v1 = I(xc02a).balanceOf(x1e04);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xb7fa.t.sol:323:13:
+    |
+323 |             uint256 v1 = I(xc02a).balanceOf(x1e04);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xb7fa.t.sol:355:13:
+    |
+355 |             uint256 v1 = I(xc02a).balanceOf(x1e04);
+    |             ^^^^^^^^^^
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/xb7fa.t.sol:215:5:
+    |
+215 |     function transferFrom(address, address, uint256) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/xb7fa.t.sol:387:5:
+    |
+387 |     function transfer(address, uint256) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 3 tests for test/xb7fa.t.sol:X2f75
+[FAIL: not eoa] test1() (gas: 19446)
+Logs:
+  0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519
+
+Traces:
+  [4409] X2f75::setUp()
+    ├─ [0] console::log("0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [19446] X2f75::test1()
+    ├─ [0] VM::createSelectFork("<rpc url>", 12394249 [1.239e7])
+    │   └─ ← [Return] 0
+    ├─ [13824] X2f75::x870f0387()
+    │   ├─ [582] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::work{value: 1000000000}(0, 0x9EED7274Ea4b614ACC217e46727d377f7e6F9b24, 0, 100000000000000000000000 [1e23], 0x00000000000000000000000081796c4602b82054a727527cd16119807b8c7608000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000600000000000000000000000007fa9385be102ac3eac297483dd6233d62b3e149600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+    │   │   └─ ← [Revert] not eoa
+    │   └─ ← [Revert] not eoa
+    └─ ← [Revert] not eoa
+
+Backtrace:
+  at 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A.work
+  at X2f75.x870f0387
+  at X2f75.test1
+
+[FAIL: not eoa] test2() (gas: 19424)
+Logs:
+  0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519
+
+Traces:
+  [4409] X2f75::setUp()
+    ├─ [0] console::log("0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [19424] X2f75::test2()
+    ├─ [0] VM::createSelectFork("<rpc url>", 12394241 [1.239e7])
+    │   └─ ← [Return] 0
+    ├─ [13824] X2f75::x870f0387()
+    │   ├─ [582] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::work{value: 1000000000}(0, 0x9EED7274Ea4b614ACC217e46727d377f7e6F9b24, 0, 100000000000000000000000 [1e23], 0x00000000000000000000000081796c4602b82054a727527cd16119807b8c7608000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000600000000000000000000000007fa9385be102ac3eac297483dd6233d62b3e149600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+    │   │   └─ ← [Revert] not eoa
+    │   └─ ← [Revert] not eoa
+    └─ ← [Revert] not eoa
+
+Backtrace:
+  at 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A.work
+  at X2f75.x870f0387
+  at X2f75.test2
+
+[FAIL: Your REPT balance is too low for a withdrawal of this amount.] test3() (gas: 363763)
+Logs:
+  0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519
+
+Traces:
+  [4409] X2f75::setUp()
+    ├─ [0] console::log("0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [363763] X2f75::test3()
+    ├─ [0] VM::createSelectFork("<rpc url>", 12394249 [1.239e7])
+    │   └─ ← [Return] 0
+    ├─ [0] VM::warp(1620484707 [1.62e9])
+    │   └─ ← [Return]
+    ├─ [0] VM::roll(12394250 [1.239e7])
+    │   └─ ← [Return]
+    ├─ [348114] X2f75::donate{value: 3454000000000000000000}()
+    │   ├─ [142100] 0xD6e194aF3d9674b62D1b30Ec676030C23961275e::balanceOf(X2f75: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
+    │   │   ├─ [134824] 0xEC260f5a7A729bB3D0C42d292DE159b4cB1844a3::balanceOf(X2f75: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   │   ├─ [9617] 0xCda4770d65B4211364Cb870aD6bE19E7Ef1D65f4::totalSupply() [staticcall]
+    │   │   │   │   ├─ [2344] 0xB849Daff8045fc295aF2f6b4E27874914b5911C6::totalSupply() [delegatecall]
+    │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000f9b4fd4b12efed913b
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000f9b4fd4b12efed913b
+    │   │   │   ├─ [3329] 0xCda4770d65B4211364Cb870aD6bE19E7Ef1D65f4::balanceOf(X2f75: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   │   │   │   ├─ [2553] 0xB849Daff8045fc295aF2f6b4E27874914b5911C6::balanceOf(X2f75: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   │   │   │   └─ ← [Return] 0
+    │   │   │   │   └─ ← [Return] 0
+    │   │   │   ├─ [2810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(0) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [2810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(1) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [2810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(2) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [2810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(3) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [2810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(4) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   ├─ [17482] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::_getPoolBalance(4)
+    │   │   │   │   ├─ [13645] 0xED2CD60C0000a990A5ffAf0E7ddc70A37d7C623f::getBalance() [delegatecall]
+    │   │   │   │   │   ├─ [2344] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::totalSupply() [staticcall]
+    │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000020398e70f04575921237
+    │   │   │   │   │   ├─ [4643] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::totalETH() [staticcall]
+    │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000002225e92aee68acdc2357
+    │   │   │   │   │   ├─ [2491] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::balanceOf(0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6) [staticcall]
+    │   │   │   │   │   │   └─ ← [Return] 1718231156813725631041 [1.718e21]
+    │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000062b46460a49bb81cf2
+    │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000062b46460a49bb81cf2
+    │   │   │   ├─ [2810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(5) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(0) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(1) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(2) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(3) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(4) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   ├─ [4482] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::_getPoolBalance(4)
+    │   │   │   │   ├─ [3145] 0xED2CD60C0000a990A5ffAf0E7ddc70A37d7C623f::getBalance() [delegatecall]
+    │   │   │   │   │   ├─ [344] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::totalSupply() [staticcall]
+    │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000020398e70f04575921237
+    │   │   │   │   │   ├─ [643] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::totalETH() [staticcall]
+    │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000002225e92aee68acdc2357
+    │   │   │   │   │   ├─ [491] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::balanceOf(0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6) [staticcall]
+    │   │   │   │   │   │   └─ ← [Return] 1718231156813725631041 [1.718e21]
+    │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000062b46460a49bb81cf2
+    │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000062b46460a49bb81cf2
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(5) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(0) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(1) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(2) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(3) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(4) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   ├─ [4482] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::_getPoolBalance(4)
+    │   │   │   │   ├─ [3145] 0xED2CD60C0000a990A5ffAf0E7ddc70A37d7C623f::getBalance() [delegatecall]
+    │   │   │   │   │   ├─ [344] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::totalSupply() [staticcall]
+    │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000020398e70f04575921237
+    │   │   │   │   │   ├─ [643] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::totalETH() [staticcall]
+    │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000002225e92aee68acdc2357
+    │   │   │   │   │   ├─ [491] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::balanceOf(0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6) [staticcall]
+    │   │   │   │   │   │   └─ ← [Return] 1718231156813725631041 [1.718e21]
+    │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000062b46460a49bb81cf2
+    │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000062b46460a49bb81cf2
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(5) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   └─ ← [Return] 0
+    │   │   └─ ← [Return] 0
+    │   ├─ [177312] 0xD6e194aF3d9674b62D1b30Ec676030C23961275e::withdraw(32177988979252982963 [3.217e19])
+    │   │   ├─ [176517] 0xEC260f5a7A729bB3D0C42d292DE159b4cB1844a3::withdraw(32177988979252982963 [3.217e19]) [delegatecall]
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(5) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(0) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(1) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(2) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(3) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(4) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   ├─ [4482] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::_getPoolBalance(4)
+    │   │   │   │   ├─ [3145] 0xED2CD60C0000a990A5ffAf0E7ddc70A37d7C623f::getBalance() [delegatecall]
+    │   │   │   │   │   ├─ [344] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::totalSupply() [staticcall]
+    │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000020398e70f04575921237
+    │   │   │   │   │   ├─ [643] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::totalETH() [staticcall]
+    │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000002225e92aee68acdc2357
+    │   │   │   │   │   ├─ [491] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::balanceOf(0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6) [staticcall]
+    │   │   │   │   │   │   └─ ← [Return] 1718231156813725631041 [1.718e21]
+    │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000062b46460a49bb81cf2
+    │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000062b46460a49bb81cf2
+    │   │   │   ├─ [57292] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::withdrawFromPoolKnowingBalance(4, 32177988979252982963 [3.217e19], 1820779539908137590002 [1.82e21])
+    │   │   │   │   ├─ [51633] 0xED2CD60C0000a990A5ffAf0E7ddc70A37d7C623f::withdraw(32177988979252982963 [3.217e19]) [delegatecall]
+    │   │   │   │   │   ├─ [643] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::totalETH() [staticcall]
+    │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000002225e92aee68acdc2357
+    │   │   │   │   │   ├─ [344] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::totalSupply() [staticcall]
+    │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000020398e70f04575921237
+    │   │   │   │   │   ├─ [48547] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::withdraw(30365687891325180748 [3.036e19])
+    │   │   │   │   │   │   ├─ [6239] 0x97A49F8eeC63C0dFeB9dB4C791229477962dc692::getInterestRate(90592313390117101756719 [9.059e22], 70669655725772851606746 [7.066e22]) [staticcall]
+    │   │   │   │   │   │   │   ├─ [881] 0xcb1792b0552a718c16A03cefD6b1db30362dbDae::getInterestRate(90592313390117101756719 [9.059e22], 70669655725772851606746 [7.066e22]) [staticcall]
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000084b8d4ac
+    │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000084b8d4ac
+    │   │   │   │   │   │   ├─ [2366] 0x97A49F8eeC63C0dFeB9dB4C791229477962dc692::getReservePoolBps() [staticcall]
+    │   │   │   │   │   │   │   └─ ← [Return] 0x00000000000000000000000000000000000000000000000000000000000003e8
+    │   │   │   │   │   │   ├─ emit Transfer(param0: 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6, param1: 0x0000000000000000000000000000000000000000, param2: 30365687891325180748 [3.036e19])
+    │   │   │   │   │   │   ├─ [40] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::fallback{value: 32177989740014886562}()
+    │   │   │   │   │   │   │   └─ ← [Stop]
+    │   │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   │   @ 12: 0x000000000000000000000000000000000000000000000000000000006096a24e → 0x000000000000000000000000000000000000000000000000000000006096a263
+    │   │   │   │   │   │   │   @ 11: 0x00000000000000000000000000000000000000000000132f04e6f9aa0977e12f → 0x00000000000000000000000000000000000000000000132f04f606705d8c65a2
+    │   │   │   │   │   │   │   @ 2: 0x0000000000000000000000000000000000000000000020398e70f04575921237 → 0x000000000000000000000000000000000000000000002037e9085804bac0b6eb
+    │   │   │   │   │   │   │   @ 13: 0x0000000000000000000000000000000000000000000000001e389df66d9332b2 → 0x0000000000000000000000000000000000000000000000001e3a1f3d75fba657
+    │   │   │   │   │   │   │   @ 3: 38892 → 38893
+    │   │   │   │   │   │   │   @ 0x6474eb42ca804484e569324eb74ae1c63bee1aa1adcce9af5a87ae8c45295de8: 0x00000000000000000000000000000000000000000000005d253f558b129f0241 → 0x00000000000000000000000000000000000000000000005b7fd6bd4a57cda6f5
+    │   │   │   │   │   │   └─ ← [Stop]
+    │   │   │   │   │   └─ ← [Stop]
+    │   │   │   │   ├─  emit topic 0: 0x9e17470c2398acb1637f3cd25310210eb4c04c2f91adee1cef82fd1230f1f6ad
+    │   │   │   │   │        topic 1: 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   │   │        topic 2: 0x0000000000000000000000000000000000000000000000000000000000000004
+    │   │   │   │   │           data: 0x000000000000000000000000000000000000000000000001be8f2e7d86cef4b3
+    │   │   │   │   └─ ← [Stop]
+    │   │   │   ├─ [1117] 0xCda4770d65B4211364Cb870aD6bE19E7Ef1D65f4::totalSupply() [staticcall]
+    │   │   │   │   ├─ [344] 0xB849Daff8045fc295aF2f6b4E27874914b5911C6::totalSupply() [delegatecall]
+    │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000f9b4fd4b12efed913b
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000f9b4fd4b12efed913b
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(0) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(1) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(2) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(3) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(4) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(5) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(0) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(1) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(2) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(3) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(4) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(5) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(0) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(1) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(2) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(3) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(4) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   ├─ [810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(5) [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [1329] 0xCda4770d65B4211364Cb870aD6bE19E7Ef1D65f4::balanceOf(X2f75: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   │   │   │   ├─ [553] 0xB849Daff8045fc295aF2f6b4E27874914b5911C6::balanceOf(X2f75: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   │   │   │   └─ ← [Return] 0
+    │   │   │   │   └─ ← [Return] 0
+    │   │   │   ├─  storage changes:
+    │   │   │   │   @ 109: 0 → 0x0000000000000000000000010000000000000000000000000000000000000000
+    │   │   │   │   @ 0xca2a5765a425f846dd707e1c99d8ffc648fd205988f6a0ae9e74a56b20630390: 0 → 0x000000000000000000000000000000000000000000000060f5d5322714e9283f
+    │   │   │   └─ ← [Revert] Your REPT balance is too low for a withdrawal of this amount.
+    │   │   └─ ← [Revert] Your REPT balance is too low for a withdrawal of this amount.
+    │   ├─  storage changes:
+    │   │   @ 33: 0 → 1
+    │   └─ ← [Revert] Your REPT balance is too low for a withdrawal of this amount.
+    └─ ← [Revert] Your REPT balance is too low for a withdrawal of this amount.
+
+Backtrace:
+  at 0xEC260f5a7A729bB3D0C42d292DE159b4cB1844a3.withdraw
+  at 0xD6e194aF3d9674b62D1b30Ec676030C23961275e.withdraw
+  at X2f75.donate
+  at X2f75.test3
+
+Suite result: FAILED. 0 passed; 3 failed; 0 skipped; finished in 102.73ms (143.80ms CPU time)
+
+Ran 1 test suite in 2.88s (102.73ms CPU time): 0 tests passed, 3 failed, 0 skipped (3 total tests)
+
+Failing tests:
+Encountered 3 failing tests in test/xb7fa.t.sol:X2f75
+[FAIL: not eoa] test1() (gas: 19446)
+[FAIL: not eoa] test2() (gas: 19424)
+[FAIL: Your REPT balance is too low for a withdrawal of this amount.] test3() (gas: 363763)
+
+Encountered a total of 3 failing tests, 0 tests succeeded

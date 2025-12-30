@@ -1,0 +1,26 @@
+Compiler run failed:
+Warning (9302): Return value of low-level calls not used.
+   --> test/x192e.t.sol:391:9:
+    |
+391 |         address(tx.origin).call("");
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x192e.t.sol:443:13:
+    |
+443 |             x9522.call{value: 170739008724604193}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x192e.t.sol:524:13:
+    |
+524 |             x690b.call{value: 4720766793716038}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error (6675): Member "exchange" not unique after argument-dependent lookup in contract I.
+   --> test/x192e.t.sol:529:13:
+    |
+529 |             I(x838a).exchange(0, 1, 4849465769994420713, 0);
+    |             ^^^^^^^^^^^^^^^^^
+
+Error: Compilation failed

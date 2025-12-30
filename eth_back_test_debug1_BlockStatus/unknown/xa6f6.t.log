@@ -1,0 +1,198 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 819.61ms
+Compiler run successful with warnings:
+Warning (5159): "selfdestruct" has been deprecated. Note that, starting from the Cancun hard fork, the underlying opcode no longer deletes the code and data associated with an account and only transfers its Ether to the beneficiary, unless executed in the same transaction in which the contract was created (see EIP-6780). Any use in newly deployed contracts is strongly discouraged even if the new behavior is taken into account. Future changes to the EVM might further reduce the functionality of the opcode.
+   --> test/xa6f6.t.sol:206:9:
+    |
+206 |         selfdestruct(payable(x3dab));
+    |         ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xa6f6.t.sol:178:9:
+    |
+178 |         uint256 v3 = I(xdac1).allowance(r, xb559);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xa6f6.t.sol:182:9:
+    |
+182 |         uint256 v4 = I(xa0b8).allowance(r, xb559);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xa6f6.t.sol:186:9:
+    |
+186 |         uint256 v5 = I(xa0b8).allowance(r, x13e5);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xa6f6.t.sol:203:9:
+    |
+203 |         uint256 v7 = I(xc02a).balanceOf(r);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xa6f6.t.sol:231:9:
+    |
+231 |         uint256 v1 = I(xdac1).balanceOf(xb559);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xa6f6.t.sol:253:9:
+    |
+253 |         uint256 v1 = I(xdac1).balanceOf(xb559);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xa6f6.t.sol:256:9:
+    |
+256 |         uint256 v2 = I(xdac1).balanceOf(xb559);
+    |         ^^^^^^^^^^
+
+
+Ran 3 tests for test/xa6f6.t.sol:X5061
+[FAIL: EvmError: Revert] test1() (gas: 1040429518)
+Logs:
+  0xa6f63fcb6bec8818864d96a5b1bb19e8bd85ee37b2cc916412e720988440b2aa
+
+Traces:
+  [4387] X5061::setUp()
+    ├─ [0] console::log("0xa6f63fcb6bec8818864d96a5b1bb19e8bd85ee37b2cc916412e720988440b2aa") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [1040429518] X5061::test1()
+    ├─ [0] VM::createSelectFork("<rpc url>", 16542147 [1.654e7])
+    │   └─ ← [Return] 0
+    ├─ [1040423933] X5061::x1642ab50()
+    │   ├─ [14269] 0xdAC17F958D2ee523a2206206994597C13D831ec7::transfer(0x13e557c51C0a37E25E051491037Ee546597c689F, 500000 [5e5])
+    │   │   └─ ← [InvalidFEOpcode] EvmError: InvalidFEOpcode
+    │   └─ ← [Revert] EvmError: Revert
+    └─ ← [Revert] EvmError: Revert
+
+Backtrace:
+  at 0xdAC17F958D2ee523a2206206994597C13D831ec7.transfer
+  at X5061.x1642ab50
+  at X5061.test1
+
+[FAIL: EvmError: Revert] test2() (gas: 1040429517)
+Logs:
+  0xa6f63fcb6bec8818864d96a5b1bb19e8bd85ee37b2cc916412e720988440b2aa
+
+Traces:
+  [4387] X5061::setUp()
+    ├─ [0] console::log("0xa6f63fcb6bec8818864d96a5b1bb19e8bd85ee37b2cc916412e720988440b2aa") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [1040429517] X5061::test2()
+    ├─ [0] VM::createSelectFork("<rpc url>", 16542092 [1.654e7])
+    │   └─ ← [Return] 0
+    ├─ [1040423954] X5061::x1642ab50()
+    │   ├─ [14269] 0xdAC17F958D2ee523a2206206994597C13D831ec7::transfer(0x13e557c51C0a37E25E051491037Ee546597c689F, 500000 [5e5])
+    │   │   └─ ← [InvalidFEOpcode] EvmError: InvalidFEOpcode
+    │   └─ ← [Revert] EvmError: Revert
+    └─ ← [Revert] EvmError: Revert
+
+Backtrace:
+  at 0xdAC17F958D2ee523a2206206994597C13D831ec7.transfer
+  at X5061.x1642ab50
+  at X5061.test2
+
+[FAIL: ERC20: transfer amount exceeds balance] test3() (gas: 159728)
+Logs:
+  0xa6f63fcb6bec8818864d96a5b1bb19e8bd85ee37b2cc916412e720988440b2aa
+  I(x0d4a).token0()	-> 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+  I(x0d4a).token1()	-> 0xdAC17F958D2ee523a2206206994597C13D831ec7
+  I(xdac1).allowance(r, xb559)	-> 0
+  I(xa0b8).allowance(r, xb559)	-> 0
+  I(xa0b8).allowance(r, x13e5)	-> 0
+
+Traces:
+  [4387] X5061::setUp()
+    ├─ [0] console::log("0xa6f63fcb6bec8818864d96a5b1bb19e8bd85ee37b2cc916412e720988440b2aa") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [159728] X5061::test3()
+    ├─ [0] VM::createSelectFork("<rpc url>", 16542147 [1.654e7])
+    │   └─ ← [Return] 0
+    ├─ [0] VM::warp(1675353395 [1.675e9])
+    │   └─ ← [Return]
+    ├─ [0] VM::roll(16542148 [1.654e7])
+    │   └─ ← [Return]
+    ├─ [2381] 0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852::token0()
+    │   └─ ← [Return] 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+    ├─ [0] console::log("I(x0d4a).token0()\t->", 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) [staticcall]
+    │   └─ ← [Stop]
+    ├─ [2357] 0x0d4a11d5EEaaC28EC3F61d100daF4d40471f1852::token1()
+    │   └─ ← [Return] 0xdAC17F958D2ee523a2206206994597C13D831ec7
+    ├─ [0] console::log("I(x0d4a).token1()\t->", 0xdAC17F958D2ee523a2206206994597C13D831ec7) [staticcall]
+    │   └─ ← [Stop]
+    ├─ [5356] 0xdAC17F958D2ee523a2206206994597C13D831ec7::allowance(X5061: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0xb5599f568D3f3e6113B286d010d2BCa40A7745AA)
+    │   └─ ← [Return] 0
+    ├─ [0] console::log("I(xdac1).allowance(r, xb559)\t->", 0) [staticcall]
+    │   └─ ← [Stop]
+    ├─ [22953] 0xdAC17F958D2ee523a2206206994597C13D831ec7::approve(0xb5599f568D3f3e6113B286d010d2BCa40A7745AA, 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─ emit Approval(param0: X5061: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param1: 0xb5599f568D3f3e6113B286d010d2BCa40A7745AA, param2: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─  storage changes:
+    │   │   @ 0x063d4d565cd7eb29d73096b8bebe260ea004cb8b188ddbb54bc8ff7ac9905901: 0 → 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    │   └─ ← [Stop]
+    ├─ [9926] 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48::allowance(X5061: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0xb5599f568D3f3e6113B286d010d2BCa40A7745AA)
+    │   ├─ [2637] 0xa2327a938Febf5FEC13baCFb16Ae10EcBc4cbDCF::allowance(X5061: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0xb5599f568D3f3e6113B286d010d2BCa40A7745AA) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] console::log("I(xa0b8).allowance(r, xb559)\t->", 0) [staticcall]
+    │   └─ ← [Stop]
+    ├─ [29767] 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48::approve(0xb5599f568D3f3e6113B286d010d2BCa40A7745AA, 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─ [28978] 0xa2327a938Febf5FEC13baCFb16Ae10EcBc4cbDCF::approve(0xb5599f568D3f3e6113B286d010d2BCa40A7745AA, 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77]) [delegatecall]
+    │   │   ├─ emit Approval(param0: X5061: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param1: 0xb5599f568D3f3e6113B286d010d2BCa40A7745AA, param2: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   │   ├─  storage changes:
+    │   │   │   @ 0xf62b26535fc396a24aa6a463fa0d921a401c46cf2ab29d54699425374f4292cf: 0 → 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    ├─ [3426] 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48::allowance(X5061: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0x13e557c51C0a37E25E051491037Ee546597c689F)
+    │   ├─ [2637] 0xa2327a938Febf5FEC13baCFb16Ae10EcBc4cbDCF::allowance(X5061: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0x13e557c51C0a37E25E051491037Ee546597c689F) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] console::log("I(xa0b8).allowance(r, x13e5)\t->", 0) [staticcall]
+    │   └─ ← [Stop]
+    ├─ [25767] 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48::approve(0x13e557c51C0a37E25E051491037Ee546597c689F, 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   ├─ [24978] 0xa2327a938Febf5FEC13baCFb16Ae10EcBc4cbDCF::approve(0x13e557c51C0a37E25E051491037Ee546597c689F, 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77]) [delegatecall]
+    │   │   ├─ emit Approval(param0: X5061: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param1: 0x13e557c51C0a37E25E051491037Ee546597c689F, param2: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   │   ├─  storage changes:
+    │   │   │   @ 0x05473a560ab72cb5982c07981aa068dd8e77ef2b90deed9b45e5faac372a15da: 0 → 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    ├─ [17707] 0xb5599f568D3f3e6113B286d010d2BCa40A7745AA::depositAsset(0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48, 500000 [5e5])
+    │   ├─ [10409] 0x98a877bb507f19Eb43130B688F522a13885Cf604::depositAsset(0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48, 500000 [5e5]) [delegatecall]
+    │   │   ├─ [3315] 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48::balanceOf(0xb5599f568D3f3e6113B286d010d2BCa40A7745AA) [staticcall]
+    │   │   │   ├─ [2529] 0xa2327a938Febf5FEC13baCFb16Ae10EcBc4cbDCF::balanceOf(0xb5599f568D3f3e6113B286d010d2BCa40A7745AA) [delegatecall]
+    │   │   │   │   └─ ← [Return] 542050350213 [5.42e11]
+    │   │   │   └─ ← [Return] 542050350213 [5.42e11]
+    │   │   ├─ [4553] 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48::transferFrom(X5061: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0xb5599f568D3f3e6113B286d010d2BCa40A7745AA, 500000 [5e5])
+    │   │   │   ├─ [3742] 0xa2327a938Febf5FEC13baCFb16Ae10EcBc4cbDCF::transferFrom(X5061: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0xb5599f568D3f3e6113B286d010d2BCa40A7745AA, 500000 [5e5]) [delegatecall]
+    │   │   │   │   └─ ← [Revert] ERC20: transfer amount exceeds balance
+    │   │   │   └─ ← [Revert] ERC20: transfer amount exceeds balance
+    │   │   └─ ← [Revert] ERC20: transfer amount exceeds balance
+    │   └─ ← [Revert] ERC20: transfer amount exceeds balance
+    └─ ← [Revert] ERC20: transfer amount exceeds balance
+
+Backtrace:
+  at 0xa2327a938Febf5FEC13baCFb16Ae10EcBc4cbDCF.transferFrom
+  at 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48.transferFrom
+  at 0x98a877bb507f19Eb43130B688F522a13885Cf604.depositAsset
+  at 0xb5599f568D3f3e6113B286d010d2BCa40A7745AA.depositAsset
+  at X5061.test3
+
+Suite result: FAILED. 0 passed; 3 failed; 0 skipped; finished in 113.69ms (210.71ms CPU time)
+
+Ran 1 test suite in 122.84ms (113.69ms CPU time): 0 tests passed, 3 failed, 0 skipped (3 total tests)
+
+Failing tests:
+Encountered 3 failing tests in test/xa6f6.t.sol:X5061
+[FAIL: EvmError: Revert] test1() (gas: 1040429518)
+[FAIL: EvmError: Revert] test2() (gas: 1040429517)
+[FAIL: ERC20: transfer amount exceeds balance] test3() (gas: 159728)
+
+Encountered a total of 3 failing tests, 0 tests succeeded

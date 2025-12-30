@@ -1,0 +1,1926 @@
+Warning: Found unknown `rpc_endpoints` config for profile `default` defined in foundry.toml.
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 1.78s
+Compiler run successful with warnings:
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:146:9:
+    |
+146 |         uint256 v1 = I(x1f98).balanceOf(r);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:149:9:
+    |
+149 |         uint256 v2 = I(x1f98).balanceOf(x936e);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:157:9:
+    |
+157 |         uint256 v4 = I(x1f98).balanceOf(r);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:160:9:
+    |
+160 |         uint256 v5 = I(x1f98).balanceOf(x936e);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:168:9:
+    |
+168 |         uint256 v7 = I(x1f98).balanceOf(r);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:171:9:
+    |
+171 |         uint256 v8 = I(x1f98).balanceOf(x936e);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:179:9:
+    |
+179 |         uint256 v10 = I(x1f98).balanceOf(r);
+    |         ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:182:9:
+    |
+182 |         uint256 v11 = I(x1f98).balanceOf(x936e);
+    |         ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:185:9:
+    |
+185 |         uint256 v12 = I(x1f98).balanceOf(x936e);
+    |         ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:190:9:
+    |
+190 |         uint256 v13 = I(x1f98).balanceOf(r);
+    |         ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:193:9:
+    |
+193 |         uint256 v14 = I(x1f98).balanceOf(x936e);
+    |         ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:196:9:
+    |
+196 |         uint256 v15 = I(x1f98).balanceOf(x936e);
+    |         ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:201:9:
+    |
+201 |         uint256 v16 = I(x1f98).balanceOf(r);
+    |         ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:204:9:
+    |
+204 |         uint256 v17 = I(x1f98).balanceOf(x936e);
+    |         ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:207:9:
+    |
+207 |         uint256 v18 = I(x1f98).balanceOf(x936e);
+    |         ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:213:13:
+    |
+213 |             uint256 v19 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:216:13:
+    |
+216 |             uint256 v20 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:219:13:
+    |
+219 |             uint256 v21 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:224:13:
+    |
+224 |             uint256 v22 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:227:13:
+    |
+227 |             uint256 v23 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:230:13:
+    |
+230 |             uint256 v24 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:235:13:
+    |
+235 |             uint256 v25 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:238:13:
+    |
+238 |             uint256 v26 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:241:13:
+    |
+241 |             uint256 v27 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:246:13:
+    |
+246 |             uint256 v28 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:249:13:
+    |
+249 |             uint256 v29 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:252:13:
+    |
+252 |             uint256 v30 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:257:13:
+    |
+257 |             uint256 v31 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:260:13:
+    |
+260 |             uint256 v32 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:263:13:
+    |
+263 |             uint256 v33 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:268:13:
+    |
+268 |             uint256 v34 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:271:13:
+    |
+271 |             uint256 v35 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:274:13:
+    |
+274 |             uint256 v36 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:281:13:
+    |
+281 |             uint256 v37 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:284:13:
+    |
+284 |             uint256 v38 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:287:13:
+    |
+287 |             uint256 v39 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:292:13:
+    |
+292 |             uint256 v40 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:295:13:
+    |
+295 |             uint256 v41 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:298:13:
+    |
+298 |             uint256 v42 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:303:13:
+    |
+303 |             uint256 v43 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:306:13:
+    |
+306 |             uint256 v44 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:309:13:
+    |
+309 |             uint256 v45 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:314:13:
+    |
+314 |             uint256 v46 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:317:13:
+    |
+317 |             uint256 v47 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:320:13:
+    |
+320 |             uint256 v48 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:325:13:
+    |
+325 |             uint256 v49 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:328:13:
+    |
+328 |             uint256 v50 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:331:13:
+    |
+331 |             uint256 v51 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:336:13:
+    |
+336 |             uint256 v52 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:339:13:
+    |
+339 |             uint256 v53 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:342:13:
+    |
+342 |             uint256 v54 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:349:13:
+    |
+349 |             uint256 v55 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:352:13:
+    |
+352 |             uint256 v56 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:355:13:
+    |
+355 |             uint256 v57 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:360:13:
+    |
+360 |             uint256 v58 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:363:13:
+    |
+363 |             uint256 v59 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:366:13:
+    |
+366 |             uint256 v60 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:371:13:
+    |
+371 |             uint256 v61 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:374:13:
+    |
+374 |             uint256 v62 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:377:13:
+    |
+377 |             uint256 v63 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:382:13:
+    |
+382 |             uint256 v64 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:385:13:
+    |
+385 |             uint256 v65 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:388:13:
+    |
+388 |             uint256 v66 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:393:13:
+    |
+393 |             uint256 v67 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:396:13:
+    |
+396 |             uint256 v68 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:399:13:
+    |
+399 |             uint256 v69 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:404:13:
+    |
+404 |             uint256 v70 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:407:13:
+    |
+407 |             uint256 v71 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:410:13:
+    |
+410 |             uint256 v72 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:417:13:
+    |
+417 |             uint256 v73 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:420:13:
+    |
+420 |             uint256 v74 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:423:13:
+    |
+423 |             uint256 v75 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:428:13:
+    |
+428 |             uint256 v76 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:431:13:
+    |
+431 |             uint256 v77 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:434:13:
+    |
+434 |             uint256 v78 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:439:13:
+    |
+439 |             uint256 v79 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:442:13:
+    |
+442 |             uint256 v80 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:445:13:
+    |
+445 |             uint256 v81 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:450:13:
+    |
+450 |             uint256 v82 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:453:13:
+    |
+453 |             uint256 v83 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:456:13:
+    |
+456 |             uint256 v84 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:461:13:
+    |
+461 |             uint256 v85 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:464:13:
+    |
+464 |             uint256 v86 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:467:13:
+    |
+467 |             uint256 v87 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:472:13:
+    |
+472 |             uint256 v88 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:475:13:
+    |
+475 |             uint256 v89 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:478:13:
+    |
+478 |             uint256 v90 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:485:13:
+    |
+485 |             uint256 v91 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:488:13:
+    |
+488 |             uint256 v92 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:491:13:
+    |
+491 |             uint256 v93 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:496:13:
+    |
+496 |             uint256 v94 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:499:13:
+    |
+499 |             uint256 v95 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:502:13:
+    |
+502 |             uint256 v96 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:507:13:
+    |
+507 |             uint256 v97 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:510:13:
+    |
+510 |             uint256 v98 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:513:13:
+    |
+513 |             uint256 v99 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:518:13:
+    |
+518 |             uint256 v100 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:521:13:
+    |
+521 |             uint256 v101 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:524:13:
+    |
+524 |             uint256 v102 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:529:13:
+    |
+529 |             uint256 v103 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:532:13:
+    |
+532 |             uint256 v104 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:535:13:
+    |
+535 |             uint256 v105 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:540:13:
+    |
+540 |             uint256 v106 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:543:13:
+    |
+543 |             uint256 v107 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:546:13:
+    |
+546 |             uint256 v108 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:553:13:
+    |
+553 |             uint256 v109 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:556:13:
+    |
+556 |             uint256 v110 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:559:13:
+    |
+559 |             uint256 v111 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:564:13:
+    |
+564 |             uint256 v112 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:567:13:
+    |
+567 |             uint256 v113 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:570:13:
+    |
+570 |             uint256 v114 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:575:13:
+    |
+575 |             uint256 v115 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:578:13:
+    |
+578 |             uint256 v116 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:581:13:
+    |
+581 |             uint256 v117 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:586:13:
+    |
+586 |             uint256 v118 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:589:13:
+    |
+589 |             uint256 v119 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:592:13:
+    |
+592 |             uint256 v120 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:597:13:
+    |
+597 |             uint256 v121 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:600:13:
+    |
+600 |             uint256 v122 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:603:13:
+    |
+603 |             uint256 v123 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:608:13:
+    |
+608 |             uint256 v124 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:611:13:
+    |
+611 |             uint256 v125 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:614:13:
+    |
+614 |             uint256 v126 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:621:13:
+    |
+621 |             uint256 v127 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:624:13:
+    |
+624 |             uint256 v128 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:627:13:
+    |
+627 |             uint256 v129 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:632:13:
+    |
+632 |             uint256 v130 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:635:13:
+    |
+635 |             uint256 v131 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:638:13:
+    |
+638 |             uint256 v132 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:643:13:
+    |
+643 |             uint256 v133 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:646:13:
+    |
+646 |             uint256 v134 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:649:13:
+    |
+649 |             uint256 v135 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:654:13:
+    |
+654 |             uint256 v136 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:657:13:
+    |
+657 |             uint256 v137 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:660:13:
+    |
+660 |             uint256 v138 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:665:13:
+    |
+665 |             uint256 v139 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:668:13:
+    |
+668 |             uint256 v140 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:671:13:
+    |
+671 |             uint256 v141 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:676:13:
+    |
+676 |             uint256 v142 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:679:13:
+    |
+679 |             uint256 v143 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:682:13:
+    |
+682 |             uint256 v144 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:689:13:
+    |
+689 |             uint256 v145 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:692:13:
+    |
+692 |             uint256 v146 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:695:13:
+    |
+695 |             uint256 v147 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:700:13:
+    |
+700 |             uint256 v148 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:703:13:
+    |
+703 |             uint256 v149 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:706:13:
+    |
+706 |             uint256 v150 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:711:13:
+    |
+711 |             uint256 v151 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:714:13:
+    |
+714 |             uint256 v152 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:717:13:
+    |
+717 |             uint256 v153 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:722:13:
+    |
+722 |             uint256 v154 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:725:13:
+    |
+725 |             uint256 v155 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:728:13:
+    |
+728 |             uint256 v156 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:733:13:
+    |
+733 |             uint256 v157 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:736:13:
+    |
+736 |             uint256 v158 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:739:13:
+    |
+739 |             uint256 v159 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:744:13:
+    |
+744 |             uint256 v160 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:747:13:
+    |
+747 |             uint256 v161 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:750:13:
+    |
+750 |             uint256 v162 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:757:13:
+    |
+757 |             uint256 v163 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:760:13:
+    |
+760 |             uint256 v164 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:763:13:
+    |
+763 |             uint256 v165 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:768:13:
+    |
+768 |             uint256 v166 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:771:13:
+    |
+771 |             uint256 v167 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:774:13:
+    |
+774 |             uint256 v168 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:779:13:
+    |
+779 |             uint256 v169 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:782:13:
+    |
+782 |             uint256 v170 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:785:13:
+    |
+785 |             uint256 v171 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:790:13:
+    |
+790 |             uint256 v172 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:793:13:
+    |
+793 |             uint256 v173 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:796:13:
+    |
+796 |             uint256 v174 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:801:13:
+    |
+801 |             uint256 v175 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:804:13:
+    |
+804 |             uint256 v176 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:807:13:
+    |
+807 |             uint256 v177 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:812:13:
+    |
+812 |             uint256 v178 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:815:13:
+    |
+815 |             uint256 v179 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:818:13:
+    |
+818 |             uint256 v180 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:825:13:
+    |
+825 |             uint256 v181 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:828:13:
+    |
+828 |             uint256 v182 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:831:13:
+    |
+831 |             uint256 v183 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:836:13:
+    |
+836 |             uint256 v184 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:839:13:
+    |
+839 |             uint256 v185 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:842:13:
+    |
+842 |             uint256 v186 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:847:13:
+    |
+847 |             uint256 v187 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:850:13:
+    |
+850 |             uint256 v188 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:853:13:
+    |
+853 |             uint256 v189 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:858:13:
+    |
+858 |             uint256 v190 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:861:13:
+    |
+861 |             uint256 v191 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:864:13:
+    |
+864 |             uint256 v192 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:869:13:
+    |
+869 |             uint256 v193 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:872:13:
+    |
+872 |             uint256 v194 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:875:13:
+    |
+875 |             uint256 v195 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:880:13:
+    |
+880 |             uint256 v196 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:883:13:
+    |
+883 |             uint256 v197 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:886:13:
+    |
+886 |             uint256 v198 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:893:13:
+    |
+893 |             uint256 v199 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:896:13:
+    |
+896 |             uint256 v200 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:899:13:
+    |
+899 |             uint256 v201 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:904:13:
+    |
+904 |             uint256 v202 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:907:13:
+    |
+907 |             uint256 v203 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:910:13:
+    |
+910 |             uint256 v204 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:915:13:
+    |
+915 |             uint256 v205 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:918:13:
+    |
+918 |             uint256 v206 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:921:13:
+    |
+921 |             uint256 v207 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:926:13:
+    |
+926 |             uint256 v208 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:929:13:
+    |
+929 |             uint256 v209 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:932:13:
+    |
+932 |             uint256 v210 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:937:13:
+    |
+937 |             uint256 v211 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:940:13:
+    |
+940 |             uint256 v212 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:943:13:
+    |
+943 |             uint256 v213 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:948:13:
+    |
+948 |             uint256 v214 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:951:13:
+    |
+951 |             uint256 v215 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:954:13:
+    |
+954 |             uint256 v216 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:961:13:
+    |
+961 |             uint256 v217 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:964:13:
+    |
+964 |             uint256 v218 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:967:13:
+    |
+967 |             uint256 v219 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:972:13:
+    |
+972 |             uint256 v220 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:975:13:
+    |
+975 |             uint256 v221 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:978:13:
+    |
+978 |             uint256 v222 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:983:13:
+    |
+983 |             uint256 v223 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:986:13:
+    |
+986 |             uint256 v224 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:989:13:
+    |
+989 |             uint256 v225 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:994:13:
+    |
+994 |             uint256 v226 = I(x1f98).balanceOf(r);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x4b4f.t.sol:997:13:
+    |
+997 |             uint256 v227 = I(x1f98).balanceOf(x936e);
+    |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1000:13:
+     |
+1000 |             uint256 v228 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1005:13:
+     |
+1005 |             uint256 v229 = I(x1f98).balanceOf(r);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1008:13:
+     |
+1008 |             uint256 v230 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1011:13:
+     |
+1011 |             uint256 v231 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1016:13:
+     |
+1016 |             uint256 v232 = I(x1f98).balanceOf(r);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1019:13:
+     |
+1019 |             uint256 v233 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1022:13:
+     |
+1022 |             uint256 v234 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1029:13:
+     |
+1029 |             uint256 v235 = I(x1f98).balanceOf(r);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1032:13:
+     |
+1032 |             uint256 v236 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1035:13:
+     |
+1035 |             uint256 v237 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1040:13:
+     |
+1040 |             uint256 v238 = I(x1f98).balanceOf(r);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1043:13:
+     |
+1043 |             uint256 v239 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1046:13:
+     |
+1046 |             uint256 v240 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1051:13:
+     |
+1051 |             uint256 v241 = I(x1f98).balanceOf(r);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1054:13:
+     |
+1054 |             uint256 v242 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1057:13:
+     |
+1057 |             uint256 v243 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1062:13:
+     |
+1062 |             uint256 v244 = I(x1f98).balanceOf(r);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1065:13:
+     |
+1065 |             uint256 v245 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1068:13:
+     |
+1068 |             uint256 v246 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1073:13:
+     |
+1073 |             uint256 v247 = I(x1f98).balanceOf(r);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1076:13:
+     |
+1076 |             uint256 v248 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1079:13:
+     |
+1079 |             uint256 v249 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1084:13:
+     |
+1084 |             uint256 v250 = I(x1f98).balanceOf(r);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1087:13:
+     |
+1087 |             uint256 v251 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1090:13:
+     |
+1090 |             uint256 v252 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1097:13:
+     |
+1097 |             uint256 v253 = I(x1f98).balanceOf(r);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1100:13:
+     |
+1100 |             uint256 v254 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1103:13:
+     |
+1103 |             uint256 v255 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1108:13:
+     |
+1108 |             uint256 v256 = I(x1f98).balanceOf(r);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1111:13:
+     |
+1111 |             uint256 v257 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+    --> test/x4b4f.t.sol:1114:13:
+     |
+1114 |             uint256 v258 = I(x1f98).balanceOf(x936e);
+     |             ^^^^^^^^^^^^
+
+Warning (4591): There are more than 256 warnings. Ignoring the rest.
+
+Ran 3 tests for test/x4b4f.t.sol:Xe238
+[FAIL: Uni::_transferTokens: transfer amount exceeds balance] test1() (gas: 307467)
+Logs:
+  0x4b4fa751b2cb82ff9aa53406f48e83a44babb7c60d2354e13905efa7a2ddffe7
+
+Traces:
+  [3792] Xe238::setUp()
+    ├─ [0] console::log("0x4b4fa751b2cb82ff9aa53406f48e83a44babb7c60d2354e13905efa7a2ddffe7") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Stop]
+
+  [307467] Xe238::test1()
+    ├─ [0] VM::createSelectFork("<rpc url>", 17143706 [1.714e7])
+    │   └─ ← [Return] 0
+    ├─ [28771] Xe238::x7fc19b0a()
+    │   ├─ [25230] 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984::approve(0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF, 1000000000000000000 [1e18])
+    │   │   ├─ emit Approval(param0: Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param1: 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF, param2: 1000000000000000000 [1e18])
+    │   │   ├─  storage changes:
+    │   │   │   @ 0x21dc2c63b56876fb92db6df9b949391b531e7b953cfa6fd1821d91f0ada3419c: 0 → 0x0000000000000000000000000000000000000000000000000de0b6b3a7640000
+    │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   └─ ← [Stop]
+    ├─ [274290] Xe238::x8d3b8daa()
+    │   ├─ [270783] 0xdE7B3b2Fe0E7b4925107615A5b199a4EB40D9ca9::deposit(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4])
+    │   │   ├─ [263490] 0x37C7C524846BE7eFA12646FD4AFEBc6ACeF255E3::deposit(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4]) [delegatecall]
+    │   │   │   ├─ [260497] 0xdE7B3b2Fe0E7b4925107615A5b199a4EB40D9ca9::_deposit(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4], Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
+    │   │   │   │   ├─ [259701] 0x37C7C524846BE7eFA12646FD4AFEBc6ACeF255E3::_deposit(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4], Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   │   │   │   ├─ [10022] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::getFTokeAddress(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [staticcall]
+    │   │   │   │   │   │   ├─ [2751] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::getFTokeAddress(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [delegatecall]
+    │   │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000db694cb2b58f66c5e79ff272df37ecb46dc31add
+    │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000db694cb2b58f66c5e79ff272df37ecb46dc31add
+    │   │   │   │   │   ├─ [3437] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::marketsContains(0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD) [staticcall]
+    │   │   │   │   │   │   ├─ [2666] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::marketsContains(0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD) [delegatecall]
+    │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   │   │   ├─ [194085] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::mint(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 10000 [1e4])
+    │   │   │   │   │   │   ├─ [186757] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::mint(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 10000 [1e4]) [delegatecall]
+    │   │   │   │   │   │   │   ├─ [5233] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::getCashPrior(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [staticcall]
+    │   │   │   │   │   │   │   │   ├─ [4462] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::getCashPrior(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [delegatecall]
+    │   │   │   │   │   │   │   │   │   ├─ [3252] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::totalCash() [staticcall]
+    │   │   │   │   │   │   │   │   │   │   ├─ [2484] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::totalCash() [delegatecall]
+    │   │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   ├─ [4971] 0x341661a71bbCfEA48CdcF0A104aF3e708aABeBf9::getBorrowRate(10001 [1e4], 0, 0) [staticcall]
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000000000000023703e87b
+    │   │   │   │   │   │   │   ├─ [971] 0x341661a71bbCfEA48CdcF0A104aF3e708aABeBf9::getBorrowRate(10001 [1e4], 0, 0) [staticcall]
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000000000000023703e87b
+    │   │   │   │   │   │   │   ├─ [86693] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::mintCheck(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 10000 [1e4])
+    │   │   │   │   │   │   │   │   ├─ [85916] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::mintCheck(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 10000 [1e4]) [delegatecall]
+    │   │   │   │   │   │   │   │   │   ├─ [3209] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::totalSupply() [staticcall]
+    │   │   │   │   │   │   │   │   │   │   ├─ [2441] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::totalSupply() [delegatecall]
+    │   │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 10000 [1e4]
+    │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 10000 [1e4]
+    │   │   │   │   │   │   │   │   │   ├─ [6269] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::exchangeRateStored() [staticcall]
+    │   │   │   │   │   │   │   │   │   │   ├─ [5501] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::exchangeRateStored() [delegatecall]
+    │   │   │   │   │   │   │   │   │   │   │   ├─ [3233] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::getCashPrior(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [staticcall]
+    │   │   │   │   │   │   │   │   │   │   │   │   ├─ [2462] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::getCashPrior(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [delegatecall]
+    │   │   │   │   │   │   │   │   │   │   │   │   │   ├─ [1252] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::totalCash() [staticcall]
+    │   │   │   │   │   │   │   │   │   │   │   │   │   │   ├─ [484] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::totalCash() [delegatecall]
+    │   │   │   │   │   │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000de111a6b7de4000
+    │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000de111a6b7de4000
+    │   │   │   │   │   │   │   │   │   ├─ [1228] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::underlying() [staticcall]
+    │   │   │   │   │   │   │   │   │   │   ├─ [460] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::underlying() [delegatecall]
+    │   │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000001f9840a85d5af5bf1d1762f925bdaddc4201f984
+    │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000001f9840a85d5af5bf1d1762f925bdaddc4201f984
+    │   │   │   │   │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   │   │   │   │   @ 0xafcbcb2754dcca378f00b6508e95c1d5ad49637905fbe5c1c2d8cd3b1acf829f: 0 → 1
+    │   │   │   │   │   │   │   │   │   │   @ 0x55af5e8d2d443d93106faf34b00364cff3a2e2a2837e89e01b53be78c888d99a: 0 → 0x000000000000000000000000db694cb2b58f66c5e79ff272df37ecb46dc31add
+    │   │   │   │   │   │   │   │   │   │   @ 0xcdc49e637aab090daaa85eab434d212fa82461b9645970b8cb9110a69106a998: 0 → 1
+    │   │   │   │   │   │   │   │   │   └─ ← [Stop]
+    │   │   │   │   │   │   │   │   └─ ← [Return]
+    │   │   │   │   │   │   │   ├─ [3233] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::getCashPrior(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [staticcall]
+    │   │   │   │   │   │   │   │   ├─ [2462] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::getCashPrior(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [delegatecall]
+    │   │   │   │   │   │   │   │   │   ├─ [1252] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::totalCash() [staticcall]
+    │   │   │   │   │   │   │   │   │   │   ├─ [484] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::totalCash() [delegatecall]
+    │   │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   ├─ [2797] 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984::balanceOf(0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF) [staticcall]
+    │   │   │   │   │   │   │   │   └─ ← [Return] 10001 [1e4]
+    │   │   │   │   │   │   │   ├─ [3429] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::getCashAfter(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4]) [staticcall]
+    │   │   │   │   │   │   │   │   ├─ [2655] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::getCashAfter(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4]) [delegatecall]
+    │   │   │   │   │   │   │   │   │   ├─ [1252] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::totalCash() [staticcall]
+    │   │   │   │   │   │   │   │   │   │   ├─ [484] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::totalCash() [delegatecall]
+    │   │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000004e21
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000004e21
+    │   │   │   │   │   │   │   ├─ [971] 0x341661a71bbCfEA48CdcF0A104aF3e708aABeBf9::getBorrowRate(20001 [2e4], 0, 0) [staticcall]
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000000000000023703e87b
+    │   │   │   │   │   │   │   ├─ [1491] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::balanceOf(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   │   │   │   │   │   │   │   ├─ [720] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::balanceOf(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   │   │   │   │   │   │   │   └─ ← [Return] 9999
+    │   │   │   │   │   │   │   │   └─ ← [Return] 9999
+    │   │   │   │   │   │   │   ├─ emit Transfer(param0: 0x0000000000000000000000000000000000000000, param1: Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param2: 9999)
+    │   │   │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   │   │   @ 62: 0x0000000000000000000000000000000000000000000000000000000001059771 → 0x000000000000000000000000000000000000000000000000000000000105979a
+    │   │   │   │   │   │   │   │   @ 61: 0x0000000000000000000000000000000000000000000000000eb5ee6f9449767a → 0x0000000000000000000000000000000000000000000000000eb5eecfd7212e4d
+    │   │   │   │   │   │   │   │   @ 51: 10000 → 19999
+    │   │   │   │   │   │   │   │   @ 0xaaec4f7912e833078dd9c150fe5cfcdbbbd4ec1b6922eac3584e426ecfb59250: 0 → 9999
+    │   │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000001200000000000000000000000007fa9385be102ac3eac297483dd6233d62b3e14960000000000000000000000001f9840a85d5af5bf1d1762f925bdaddc4201f984000000000000000000000000db694cb2b58f66c5e79ff272df37ecb46dc31add000000000000000000000000000000000000000000000000000000000000270f00000000000000000000000000000000000000000000000000000000000027100000000000000000000000000000000000000000000000000de111a7e1e8029c000000000000000000000000000000000000000000000000000000023703e87b000000000000000000000000000000000000000000000000000000000000270f0000000000000000000000000000000000000000000000000000000000004e21
+    │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000001200000000000000000000000007fa9385be102ac3eac297483dd6233d62b3e14960000000000000000000000001f9840a85d5af5bf1d1762f925bdaddc4201f984000000000000000000000000db694cb2b58f66c5e79ff272df37ecb46dc31add000000000000000000000000000000000000000000000000000000000000270f00000000000000000000000000000000000000000000000000000000000027100000000000000000000000000000000000000000000000000de111a7e1e8029c000000000000000000000000000000000000000000000000000000023703e87b000000000000000000000000000000000000000000000000000000000000270f0000000000000000000000000000000000000000000000000000000000004e21
+    │   │   │   │   │   ├─ [35502] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::transferIn(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4])
+    │   │   │   │   │   │   ├─ [34706] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::transferIn(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4]) [delegatecall]
+    │   │   │   │   │   │   │   ├─ [797] 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984::balanceOf(0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF) [staticcall]
+    │   │   │   │   │   │   │   │   └─ ← [Return] 10001 [1e4]
+    │   │   │   │   │   │   │   ├─ [6817] 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984::transferFrom(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF, 10000 [1e4])
+    │   │   │   │   │   │   │   │   ├─ emit Approval(param0: Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param1: 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF, param2: 999999999999990000 [9.999e17])
+    │   │   │   │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   │   │   │   @ 0x21dc2c63b56876fb92db6df9b949391b531e7b953cfa6fd1821d91f0ada3419c: 0x0000000000000000000000000000000000000000000000000de0b6b3a7640000 → 0x0000000000000000000000000000000000000000000000000de0b6b3a763d8f0
+    │   │   │   │   │   │   │   │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    │   │   │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   │   │   @ 69: 0 → 1
+    │   │   │   │   │   │   │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    │   │   │   │   │   │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   @ 55: 0x000000000000000000000000aaaafae965e77c05b2519d1b4563c70e0a7eab51 → 0x000000000000000000000001aaaafae965e77c05b2519d1b4563c70e0a7eab51
+    │   │   │   │   │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    │   │   │   │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    │   │   │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    │   │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+
+Backtrace:
+  at 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984.transferFrom
+  at 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63.transferIn
+  at 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF.transferIn
+  at 0x37C7C524846BE7eFA12646FD4AFEBc6ACeF255E3._deposit
+  at 0xdE7B3b2Fe0E7b4925107615A5b199a4EB40D9ca9._deposit
+  at 0x37C7C524846BE7eFA12646FD4AFEBc6ACeF255E3.deposit
+  at 0xdE7B3b2Fe0E7b4925107615A5b199a4EB40D9ca9.deposit
+  at Xe238.x8d3b8daa (test/x4b4f.t.sol:1610:43)
+  at Xe238.test1 (test/x4b4f.t.sol:55:123)
+
+[FAIL: Uni::_transferTokens: transfer amount exceeds balance] test2() (gas: 318469)
+Logs:
+  0x4b4fa751b2cb82ff9aa53406f48e83a44babb7c60d2354e13905efa7a2ddffe7
+
+Traces:
+  [3792] Xe238::setUp()
+    ├─ [0] console::log("0x4b4fa751b2cb82ff9aa53406f48e83a44babb7c60d2354e13905efa7a2ddffe7") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Stop]
+
+  [318469] Xe238::test2()
+    ├─ [0] VM::createSelectFork("<rpc url>", 17141886 [1.714e7])
+    │   └─ ← [Return] 0
+    ├─ [28771] Xe238::x7fc19b0a()
+    │   ├─ [25230] 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984::approve(0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF, 1000000000000000000 [1e18])
+    │   │   ├─ emit Approval(param0: Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param1: 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF, param2: 1000000000000000000 [1e18])
+    │   │   ├─  storage changes:
+    │   │   │   @ 0x21dc2c63b56876fb92db6df9b949391b531e7b953cfa6fd1821d91f0ada3419c: 0 → 0x0000000000000000000000000000000000000000000000000de0b6b3a7640000
+    │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   └─ ← [Stop]
+    ├─ [0] VM::warp(1682652371 [1.682e9])
+    │   └─ ← [Return]
+    ├─ [0] VM::roll(17141945 [1.714e7])
+    │   └─ ← [Return]
+    ├─ [284092] Xe238::x8d3b8daa()
+    │   ├─ [280585] 0xdE7B3b2Fe0E7b4925107615A5b199a4EB40D9ca9::deposit(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4])
+    │   │   ├─ [273292] 0x37C7C524846BE7eFA12646FD4AFEBc6ACeF255E3::deposit(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4]) [delegatecall]
+    │   │   │   ├─ [270299] 0xdE7B3b2Fe0E7b4925107615A5b199a4EB40D9ca9::_deposit(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4], Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496])
+    │   │   │   │   ├─ [269503] 0x37C7C524846BE7eFA12646FD4AFEBc6ACeF255E3::_deposit(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4], Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   │   │   │   ├─ [10022] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::getFTokeAddress(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [staticcall]
+    │   │   │   │   │   │   ├─ [2751] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::getFTokeAddress(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [delegatecall]
+    │   │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000db694cb2b58f66c5e79ff272df37ecb46dc31add
+    │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000db694cb2b58f66c5e79ff272df37ecb46dc31add
+    │   │   │   │   │   ├─ [3437] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::marketsContains(0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD) [staticcall]
+    │   │   │   │   │   │   ├─ [2666] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::marketsContains(0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD) [delegatecall]
+    │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   │   │   ├─ [203887] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::mint(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 10000 [1e4])
+    │   │   │   │   │   │   ├─ [196559] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::mint(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 10000 [1e4]) [delegatecall]
+    │   │   │   │   │   │   │   ├─ [5233] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::getCashPrior(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [staticcall]
+    │   │   │   │   │   │   │   │   ├─ [4462] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::getCashPrior(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [delegatecall]
+    │   │   │   │   │   │   │   │   │   ├─ [3252] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::totalCash() [staticcall]
+    │   │   │   │   │   │   │   │   │   │   ├─ [2484] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::totalCash() [delegatecall]
+    │   │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   │   │   │   │   ├─ [4971] 0x341661a71bbCfEA48CdcF0A104aF3e708aABeBf9::getBorrowRate(0, 0, 0) [staticcall]
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000000000000023703e87b
+    │   │   │   │   │   │   │   ├─ [971] 0x341661a71bbCfEA48CdcF0A104aF3e708aABeBf9::getBorrowRate(0, 0, 0) [staticcall]
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000000000000023703e87b
+    │   │   │   │   │   │   │   ├─ [84045] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::mintCheck(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 10000 [1e4])
+    │   │   │   │   │   │   │   │   ├─ [83268] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::mintCheck(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 10000 [1e4]) [delegatecall]
+    │   │   │   │   │   │   │   │   │   ├─ [3209] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::totalSupply() [staticcall]
+    │   │   │   │   │   │   │   │   │   │   ├─ [2441] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::totalSupply() [delegatecall]
+    │   │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0
+    │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0
+    │   │   │   │   │   │   │   │   │   ├─ [3621] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::exchangeRateStored() [staticcall]
+    │   │   │   │   │   │   │   │   │   │   ├─ [2853] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::exchangeRateStored() [delegatecall]
+    │   │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000de0b6b3a7640000
+    │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000de0b6b3a7640000
+    │   │   │   │   │   │   │   │   │   ├─ [1228] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::underlying() [staticcall]
+    │   │   │   │   │   │   │   │   │   │   ├─ [460] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::underlying() [delegatecall]
+    │   │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000001f9840a85d5af5bf1d1762f925bdaddc4201f984
+    │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000001f9840a85d5af5bf1d1762f925bdaddc4201f984
+    │   │   │   │   │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   │   │   │   │   @ 0xafcbcb2754dcca378f00b6508e95c1d5ad49637905fbe5c1c2d8cd3b1acf829f: 0 → 1
+    │   │   │   │   │   │   │   │   │   │   @ 0x55af5e8d2d443d93106faf34b00364cff3a2e2a2837e89e01b53be78c888d99a: 0 → 0x000000000000000000000000db694cb2b58f66c5e79ff272df37ecb46dc31add
+    │   │   │   │   │   │   │   │   │   │   @ 0xcdc49e637aab090daaa85eab434d212fa82461b9645970b8cb9110a69106a998: 0 → 1
+    │   │   │   │   │   │   │   │   │   └─ ← [Stop]
+    │   │   │   │   │   │   │   │   └─ ← [Return]
+    │   │   │   │   │   │   │   ├─ [2797] 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984::balanceOf(0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF) [staticcall]
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0
+    │   │   │   │   │   │   │   ├─ [3429] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::getCashAfter(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4]) [staticcall]
+    │   │   │   │   │   │   │   │   ├─ [2655] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::getCashAfter(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4]) [delegatecall]
+    │   │   │   │   │   │   │   │   │   ├─ [1252] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::totalCash() [staticcall]
+    │   │   │   │   │   │   │   │   │   │   ├─ [484] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::totalCash() [delegatecall]
+    │   │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002710
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002710
+    │   │   │   │   │   │   │   ├─ [971] 0x341661a71bbCfEA48CdcF0A104aF3e708aABeBf9::getBorrowRate(10000 [1e4], 0, 0) [staticcall]
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000000000000023703e87b
+    │   │   │   │   │   │   │   ├─ [1491] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::balanceOf(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   │   │   │   │   │   │   │   ├─ [720] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::balanceOf(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   │   │   │   │   │   │   │   └─ ← [Return] 10000 [1e4]
+    │   │   │   │   │   │   │   │   └─ ← [Return] 10000 [1e4]
+    │   │   │   │   │   │   │   ├─ emit Transfer(param0: 0x0000000000000000000000000000000000000000, param1: Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param2: 10000 [1e4])
+    │   │   │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   │   │   @ 62: 0x0000000000000000000000000000000000000000000000000000000000b5e915 → 0x00000000000000000000000000000000000000000000000000000000010590b9
+    │   │   │   │   │   │   │   │   @ 61: 0x0000000000000000000000000000000000000000000000000e033433ce012ab6 → 0x0000000000000000000000000000000000000000000000000eb558307201577b
+    │   │   │   │   │   │   │   │   @ 51: 0 → 10000
+    │   │   │   │   │   │   │   │   @ 0xaaec4f7912e833078dd9c150fe5cfcdbbbd4ec1b6922eac3584e426ecfb59250: 0 → 10000
+    │   │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000001200000000000000000000000007fa9385be102ac3eac297483dd6233d62b3e14960000000000000000000000001f9840a85d5af5bf1d1762f925bdaddc4201f984000000000000000000000000db694cb2b58f66c5e79ff272df37ecb46dc31add000000000000000000000000000000000000000000000000000000000000271000000000000000000000000000000000000000000000000000000000000027100000000000000000000000000000000000000000000000000de0b6b3a7640000000000000000000000000000000000000000000000000000000000023703e87b00000000000000000000000000000000000000000000000000000000000027100000000000000000000000000000000000000000000000000000000000002710
+    │   │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000001200000000000000000000000007fa9385be102ac3eac297483dd6233d62b3e14960000000000000000000000001f9840a85d5af5bf1d1762f925bdaddc4201f984000000000000000000000000db694cb2b58f66c5e79ff272df37ecb46dc31add000000000000000000000000000000000000000000000000000000000000271000000000000000000000000000000000000000000000000000000000000027100000000000000000000000000000000000000000000000000de0b6b3a7640000000000000000000000000000000000000000000000000000000000023703e87b00000000000000000000000000000000000000000000000000000000000027100000000000000000000000000000000000000000000000000000000000002710
+    │   │   │   │   │   ├─ [35502] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::transferIn(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4])
+    │   │   │   │   │   │   ├─ [34706] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::transferIn(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 10000 [1e4]) [delegatecall]
+    │   │   │   │   │   │   │   ├─ [797] 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984::balanceOf(0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF) [staticcall]
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0
+    │   │   │   │   │   │   │   ├─ [6817] 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984::transferFrom(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF, 10000 [1e4])
+    │   │   │   │   │   │   │   │   ├─ emit Approval(param0: Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param1: 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF, param2: 999999999999990000 [9.999e17])
+    │   │   │   │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   │   │   │   @ 0x21dc2c63b56876fb92db6df9b949391b531e7b953cfa6fd1821d91f0ada3419c: 0x0000000000000000000000000000000000000000000000000de0b6b3a7640000 → 0x0000000000000000000000000000000000000000000000000de0b6b3a763d8f0
+    │   │   │   │   │   │   │   │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    │   │   │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   │   │   @ 69: 0 → 1
+    │   │   │   │   │   │   │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    │   │   │   │   │   │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    │   │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   │   @ 55: 0x000000000000000000000000aaaafae965e77c05b2519d1b4563c70e0a7eab51 → 0x000000000000000000000001aaaafae965e77c05b2519d1b4563c70e0a7eab51
+    │   │   │   │   │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    │   │   │   │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    │   │   │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    │   │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    │   └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+    └─ ← [Revert] Uni::_transferTokens: transfer amount exceeds balance
+
+Backtrace:
+  at 0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984.transferFrom
+  at 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63.transferIn
+  at 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF.transferIn
+  at 0x37C7C524846BE7eFA12646FD4AFEBc6ACeF255E3._deposit
+  at 0xdE7B3b2Fe0E7b4925107615A5b199a4EB40D9ca9._deposit
+  at 0x37C7C524846BE7eFA12646FD4AFEBc6ACeF255E3.deposit
+  at 0xdE7B3b2Fe0E7b4925107615A5b199a4EB40D9ca9.deposit
+  at Xe238.x8d3b8daa (test/x4b4f.t.sol:1610:43)
+  at Xe238.test2 (test/x4b4f.t.sol:79:123)
+
+[FAIL: SafeMath: subtraction overflow] test3() (gas: 144124)
+Logs:
+  0x4b4fa751b2cb82ff9aa53406f48e83a44babb7c60d2354e13905efa7a2ddffe7
+  fUNI.totalShares(totalSupply) 10000
+  msg.sender 0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38
+  fUNI.balanceOf(msg.sender) 0
+  address(this)) 0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496
+  fUNI.balanceOf(address(this)) 0
+  fUNI.balanceOf(real_Xe238) 10000
+
+Traces:
+  [3792] Xe238::setUp()
+    ├─ [0] console::log("0x4b4fa751b2cb82ff9aa53406f48e83a44babb7c60d2354e13905efa7a2ddffe7") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Stop]
+
+  [144124] Xe238::test3()
+    ├─ [0] VM::createSelectFork("<rpc url>", 17143706 [1.714e7])
+    │   └─ ← [Return] 0
+    ├─ [0] VM::warp(1682673767 [1.682e9])
+    │   └─ ← [Return]
+    ├─ [0] VM::roll(17143707 [1.714e7])
+    │   └─ ← [Return]
+    ├─ [9709] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::totalSupply() [staticcall]
+    │   ├─ [2441] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::totalSupply() [delegatecall]
+    │   │   └─ ← [Return] 10000 [1e4]
+    │   └─ ← [Return] 10000 [1e4]
+    ├─ [0] console::log("fUNI.totalShares(totalSupply)", 10000 [1e4]) [staticcall]
+    │   └─ ← [Stop]
+    ├─ [0] console::log("msg.sender", DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38]) [staticcall]
+    │   └─ ← [Stop]
+    ├─ [3491] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::balanceOf(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38]) [staticcall]
+    │   ├─ [2720] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::balanceOf(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] console::log("fUNI.balanceOf(msg.sender)", 0) [staticcall]
+    │   └─ ← [Stop]
+    ├─ [0] console::log("address(this))", Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   └─ ← [Stop]
+    ├─ [3491] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::balanceOf(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [2720] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::balanceOf(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] console::log("fUNI.balanceOf(address(this))", 0) [staticcall]
+    │   └─ ← [Stop]
+    ├─ [3491] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::balanceOf(0xe23817484777050a8c97D7A0741d515391111CD7) [staticcall]
+    │   ├─ [2720] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::balanceOf(0xe23817484777050a8c97D7A0741d515391111CD7) [delegatecall]
+    │   │   └─ ← [Return] 10000 [1e4]
+    │   └─ ← [Return] 10000 [1e4]
+    ├─ [0] console::log("fUNI.balanceOf(real_Xe238)", 10000 [1e4]) [staticcall]
+    │   └─ ← [Stop]
+    ├─ [101929] 0xdE7B3b2Fe0E7b4925107615A5b199a4EB40D9ca9::withdraw(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 9998)
+    │   ├─ [94642] 0x37C7C524846BE7eFA12646FD4AFEBc6ACeF255E3::withdraw(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984, 9998) [delegatecall]
+    │   │   ├─ [10022] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::getFTokeAddress(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [staticcall]
+    │   │   │   ├─ [2751] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::getFTokeAddress(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [delegatecall]
+    │   │   │   │   └─ ← [Return] 0x000000000000000000000000db694cb2b58f66c5e79ff272df37ecb46dc31add
+    │   │   │   └─ ← [Return] 0x000000000000000000000000db694cb2b58f66c5e79ff272df37ecb46dc31add
+    │   │   ├─ [3437] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::marketsContains(0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD) [staticcall]
+    │   │   │   ├─ [2666] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::marketsContains(0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD) [delegatecall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   ├─ [67042] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::withdraw(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 9998, 0)
+    │   │   │   ├─ [66252] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::withdraw(Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 9998, 0) [delegatecall]
+    │   │   │   │   ├─ [5233] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::getCashPrior(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [staticcall]
+    │   │   │   │   │   ├─ [4462] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::getCashPrior(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [delegatecall]
+    │   │   │   │   │   │   ├─ [3252] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::totalCash() [staticcall]
+    │   │   │   │   │   │   │   ├─ [2484] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::totalCash() [delegatecall]
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   ├─ [4971] 0x341661a71bbCfEA48CdcF0A104aF3e708aABeBf9::getBorrowRate(10001 [1e4], 0, 0) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000000000000023703e87b
+    │   │   │   │   ├─ [971] 0x341661a71bbCfEA48CdcF0A104aF3e708aABeBf9::getBorrowRate(10001 [1e4], 0, 0) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000000000000023703e87b
+    │   │   │   │   ├─ [3233] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::getCashPrior(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [staticcall]
+    │   │   │   │   │   ├─ [2462] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::getCashPrior(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984) [delegatecall]
+    │   │   │   │   │   │   ├─ [1252] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::totalCash() [staticcall]
+    │   │   │   │   │   │   │   ├─ [484] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::totalCash() [delegatecall]
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000002711
+    │   │   │   │   ├─ [8344] 0x936E6490eD786FD0e0f0C1b1e4E1540b9D41F9eF::withdrawCheck(0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD, Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 9998) [staticcall]
+    │   │   │   │   │   ├─ [7564] 0x033429a76D63a869Ee4aFd98c476EdB61A8faE63::withdrawCheck(0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD, Xe238: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 9998) [delegatecall]
+    │   │   │   │   │   │   ├─ [1228] 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD::underlying() [staticcall]
+    │   │   │   │   │   │   │   ├─ [460] 0x71d62518A562A4C48Ed28D9864cFb99ed6818143::underlying() [delegatecall]
+    │   │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000001f9840a85d5af5bf1d1762f925bdaddc4201f984
+    │   │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000001f9840a85d5af5bf1d1762f925bdaddc4201f984
+    │   │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   @ 68: 0x000000000000000000000001de7b3b2fe0e7b4925107615a5b199a4eb40d9ca9 → 0x000000000000000000000000de7b3b2fe0e7b4925107615a5b199a4eb40d9ca9
+    │   │   │   │   │   @ 61: 0x0000000000000000000000000000000000000000000000000eb5ee6f9449767a → 0x0000000000000000000000000000000000000000000000000eb5eed2302cafa9
+    │   │   │   │   │   @ 62: 0x0000000000000000000000000000000000000000000000000000000001059771 → 0x000000000000000000000000000000000000000000000000000000000105979b
+    │   │   │   │   └─ ← [Revert] SafeMath: subtraction overflow
+    │   │   │   └─ ← [Revert] SafeMath: subtraction overflow
+    │   │   ├─  storage changes:
+    │   │   │   @ 55: 0x000000000000000000000000aaaafae965e77c05b2519d1b4563c70e0a7eab51 → 0x000000000000000000000001aaaafae965e77c05b2519d1b4563c70e0a7eab51
+    │   │   └─ ← [Revert] SafeMath: subtraction overflow
+    │   └─ ← [Revert] SafeMath: subtraction overflow
+    └─ ← [Revert] SafeMath: subtraction overflow
+
+Backtrace:
+  at 0x71d62518A562A4C48Ed28D9864cFb99ed6818143.withdraw
+  at 0xDb694CB2B58F66C5E79fF272dF37ECb46Dc31ADD.withdraw
+  at 0x37C7C524846BE7eFA12646FD4AFEBc6ACeF255E3.withdraw
+  at 0xdE7B3b2Fe0E7b4925107615A5b199a4EB40D9ca9.withdraw
+  at Xe238.test3 (test/x4b4f.t.sol:143:32)
+
+Suite result: FAILED. 0 passed; 3 failed; 0 skipped; finished in 31.11ms (67.48ms CPU time)
+
+Ran 1 test suite in 2.83s (31.11ms CPU time): 0 tests passed, 3 failed, 0 skipped (3 total tests)
+
+Failing tests:
+Encountered 3 failing tests in test/x4b4f.t.sol:Xe238
+[FAIL: Uni::_transferTokens: transfer amount exceeds balance] test1() (gas: 307467)
+[FAIL: Uni::_transferTokens: transfer amount exceeds balance] test2() (gas: 318469)
+[FAIL: SafeMath: subtraction overflow] test3() (gas: 144124)
+
+Encountered a total of 3 failing tests, 0 tests succeeded

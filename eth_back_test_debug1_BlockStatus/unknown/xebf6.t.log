@@ -1,0 +1,134 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 671.26ms
+Compiler run successful!
+
+Ran 3 tests for test/xebf6.t.sol:X150f
+[FAIL: EvmError: Revert] test1() (gas: 1040429520)
+Logs:
+  0xebf6bfdef7c5c13a303f71e5eea9b13917c0b478db8a8ad86397cd3781e6df5d
+
+Traces:
+  [4387] X150f::setUp()
+    ├─ [0] console::log("0xebf6bfdef7c5c13a303f71e5eea9b13917c0b478db8a8ad86397cd3781e6df5d") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [1040429520] X150f::test1()
+    ├─ [0] VM::createSelectFork("<rpc url>", 17301807 [1.73e7])
+    │   └─ ← [Return] 0
+    ├─ [1040424042] X150f::x0771cfaf()
+    │   ├─ [14269] 0xdAC17F958D2ee523a2206206994597C13D831ec7::transfer(0x9316b7a2CBf0762E974029D48a4Ca678a89c64DA, 400134937976 [4.001e11])
+    │   │   └─ ← [InvalidFEOpcode] EvmError: InvalidFEOpcode
+    │   └─ ← [Revert] EvmError: Revert
+    └─ ← [Revert] EvmError: Revert
+
+Backtrace:
+  at 0xdAC17F958D2ee523a2206206994597C13D831ec7.transfer
+  at X150f.x0771cfaf
+  at X150f.test1
+
+[FAIL: EvmError: Revert] test2() (gas: 1040429520)
+Logs:
+  0xebf6bfdef7c5c13a303f71e5eea9b13917c0b478db8a8ad86397cd3781e6df5d
+
+Traces:
+  [4387] X150f::setUp()
+    ├─ [0] console::log("0xebf6bfdef7c5c13a303f71e5eea9b13917c0b478db8a8ad86397cd3781e6df5d") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [1040429520] X150f::test2()
+    ├─ [0] VM::createSelectFork("<rpc url>", 17299114 [1.729e7])
+    │   └─ ← [Return] 0
+    ├─ [1040424064] X150f::x0771cfaf()
+    │   ├─ [14269] 0xdAC17F958D2ee523a2206206994597C13D831ec7::transfer(0x9316b7a2CBf0762E974029D48a4Ca678a89c64DA, 400134937976 [4.001e11])
+    │   │   └─ ← [InvalidFEOpcode] EvmError: InvalidFEOpcode
+    │   └─ ← [Revert] EvmError: Revert
+    └─ ← [Revert] EvmError: Revert
+
+Backtrace:
+  at 0xdAC17F958D2ee523a2206206994597C13D831ec7.transfer
+  at X150f.x0771cfaf
+  at X150f.test2
+
+[FAIL: Stargate: slippage too high] test3() (gas: 191197)
+Logs:
+  0xebf6bfdef7c5c13a303f71e5eea9b13917c0b478db8a8ad86397cd3781e6df5d
+
+Traces:
+  [4387] X150f::setUp()
+    ├─ [0] console::log("0xebf6bfdef7c5c13a303f71e5eea9b13917c0b478db8a8ad86397cd3781e6df5d") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [191197] X150f::test3()
+    ├─ [0] VM::createSelectFork("<rpc url>", 17301807 [1.73e7])
+    │   └─ ← [Return] 0
+    ├─ [0] VM::warp(1684599899 [1.684e9])
+    │   └─ ← [Return]
+    ├─ [0] VM::roll(17301808 [1.73e7])
+    │   └─ ← [Return]
+    ├─ [174777] X150f::swapETH{value: 1100150000000000000000}(110, DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38], 0x013b646fe54562a3ff6e3469fcc8c4efc2337656, 1100000000000000000000 [1.1e21], 1100000000000000000000 [1.1e21])
+    │   ├─ [28795] 0x72E2F4830b9E45d52F80aC08CB2bEC0FeF72eD9c::deposit{value: 1100000000000000000000}()
+    │   │   ├─ emit Deposit(param0: X150f: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param1: 1100000000000000000000 [1.1e21])
+    │   │   ├─  storage changes:
+    │   │   │   @ 0x1da434b76eba4736d6e760bfd78cbf883a0776ee1666a9157f99ab1b97923a3c: 0 → 0x00000000000000000000000000000000000000000000003ba1910bf341b00000
+    │   │   │   @ 2: 0x0000000000000000000000000000000000000000000000c497dddf324eb3656d → 0x000000000000000000000000000000000000000000000100396eeb259063656d
+    │   │   └─ ← [Stop]
+    │   ├─ [24423] 0x72E2F4830b9E45d52F80aC08CB2bEC0FeF72eD9c::approve(0x8731d54E9D02c286767d56ac03e8037C07e01e98, 1100000000000000000000 [1.1e21])
+    │   │   ├─ emit Approval(param0: X150f: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param1: 0x8731d54E9D02c286767d56ac03e8037C07e01e98, param2: 1100000000000000000000 [1.1e21])
+    │   │   ├─  storage changes:
+    │   │   │   @ 0x42f91edf05db6dd16136085cc9e41dd244ca998d2afa5babb7606804950443bf: 0 → 0x00000000000000000000000000000000000000000000003ba1910bf341b00000
+    │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   ├─ [95221] 0x8731d54E9D02c286767d56ac03e8037C07e01e98::swap{value: 150000000000000000}(110, 13, 13, DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38], 1100000000000000000000 [1.1e21], 1100000000000000000000 [1.1e21], S1({ p1: 0, p2: 0, p3: 0x3078 }), 0x013b646fe54562a3ff6e3469fcc8c4efc2337656, 0x)
+    │   │   ├─ [2514] 0x06D538690AF257Da524f25D0CD52fD85b1c2173E::getPool(13) [staticcall]
+    │   │   │   └─ ← [Return] 0x000000000000000000000000101816545f6bd2b1076434b54383a1e633390a2e
+    │   │   ├─ [360] 0x101816545F6bd2b1076434B54383a1E633390A2E::convertRate() [staticcall]
+    │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   ├─ [76153] 0x101816545F6bd2b1076434B54383a1E633390A2E::swap(110, 13, X150f: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 1100000000000000000000 [1.1e21], 1100000000000000000000 [1.1e21], true)
+    │   │   │   ├─ [52425] 0x6FaF1AB85FFbe7B3A557F4864046ff861734afd0::getFees(13, 13, 110, X150f: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 1100000000000000000000 [1.1e21])
+    │   │   │   │   ├─ [514] 0x06D538690AF257Da524f25D0CD52fD85b1c2173E::getPool(13) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000101816545f6bd2b1076434b54383a1e633390a2e
+    │   │   │   │   ├─ [360] 0x101816545F6bd2b1076434B54383a1E633390A2E::convertRate() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   │   ├─ [362] 0x101816545F6bd2b1076434B54383a1E633390A2E::token() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0x00000000000000000000000072e2f4830b9e45d52f80ac08cb2bec0fef72ed9c
+    │   │   │   │   ├─ [2513] 0x72E2F4830b9E45d52F80aC08CB2bEC0FeF72eD9c::balanceOf(0x101816545F6bd2b1076434B54383a1E633390A2E) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000c497dddf324eb3656d
+    │   │   │   │   ├─ [2463] 0x101816545F6bd2b1076434B54383a1E633390A2E::totalLiquidity() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0x00000000000000000000000000000000000000000000018b4cb3ad143e12bd99
+    │   │   │   │   ├─ [2418] 0x101816545F6bd2b1076434B54383a1E633390A2E::eqFeePool() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000001e0ece0b46286b5c
+    │   │   │   │   ├─ [514] 0x06D538690AF257Da524f25D0CD52fD85b1c2173E::getPool(13) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000101816545f6bd2b1076434b54383a1e633390a2e
+    │   │   │   │   ├─ [12377] 0x101816545F6bd2b1076434B54383a1E633390A2E::getChainPath(110, 13) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000006e000000000000000000000000000000000000000000000000000000000000000d0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000082aa1d7c54fffe2f7f00000000000000000000000000000000000000000000005d1ebc3adb2db92a890000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000082c55183d8b0b6af7f
+    │   │   │   │   ├─ [11060] 0xB0D502E938ed5f4df2E681fE6E419ff29631d62b::poolInfo(0) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000df0770df86a8034b3efef0a1bb3c889b8332ff560000000000000000000000000000000000000000000000000000000000000f6e000000000000000000000000000000000000000000000000000000000107fefe0000000000000000000000000000000000000000000013206037d4694fb8c549
+    │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000649420a92e728b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000928ca80cfc200000000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─  storage changes:
+    │   │   │   │   @ 8: 1 → 2
+    │   │   │   └─ ← [Revert] Stargate: slippage too high
+    │   │   ├─  storage changes:
+    │   │   │   @ 1: 1 → 2
+    │   │   └─ ← [Revert] Stargate: slippage too high
+    │   └─ ← [Revert] Stargate: slippage too high
+    └─ ← [Revert] Stargate: slippage too high
+
+Backtrace:
+  at 0x101816545F6bd2b1076434B54383a1E633390A2E.swap
+  at 0x8731d54E9D02c286767d56ac03e8037C07e01e98.swap
+  at X150f.swapETH
+  at X150f.test3
+
+Suite result: FAILED. 0 passed; 3 failed; 0 skipped; finished in 118.83ms (170.84ms CPU time)
+
+Ran 1 test suite in 1.36s (118.83ms CPU time): 0 tests passed, 3 failed, 0 skipped (3 total tests)
+
+Failing tests:
+Encountered 3 failing tests in test/xebf6.t.sol:X150f
+[FAIL: EvmError: Revert] test1() (gas: 1040429520)
+[FAIL: EvmError: Revert] test2() (gas: 1040429520)
+[FAIL: Stargate: slippage too high] test3() (gas: 191197)
+
+Encountered a total of 3 failing tests, 0 tests succeeded

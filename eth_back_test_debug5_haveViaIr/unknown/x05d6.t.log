@@ -1,0 +1,9 @@
+Compiling 1 files with Solc 0.8.30
+Solc 0.8.30 finished in 1.94s
+Error: Compiler run failed:
+Error: Cannot swap Variable expr_115 with Variable expr_44129_mpos: too deep in the stack by 2 slots in [ RET expr_43993_mpos expr_44001_mpos expr_115 var_s1122_mpos var_s1121_mpos var_s1120_mpos var_s1119_mpos var_s1118_mpos var_s1117_mpos var_s1116_mpos var_s1115_mpos var_s1114_mpos var_s1113_mpos var_s1112_mpos var_s1105_mpos var_s1111_mpos var_s1110_mpos var_s1109_mpos var_s1108_mpos expr_116 expr_44129_mpos ]
+No memoryguard was present. Consider using memory-safe assembly only and annotating it via 'assembly ("memory-safe") { ... }'.
+    --> test/x05d6.t.sol:1261:31:
+     |
+1261 |             S1 memory s1123 = S1(5251, true);
+     |                               ^^^^^^^^^^^^^^

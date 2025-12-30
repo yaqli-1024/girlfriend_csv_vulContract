@@ -1,0 +1,387 @@
+Compiling 1 files with Solc 0.8.28
+Solc 0.8.28 finished in 4.62s
+Compiler run successful with warnings:
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:299:13:
+    |
+299 |             x4838.call{value: 20535967029136}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:300:13:
+    |
+300 |             address(tx.origin).call{value: 1954076247319805}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:322:13:
+    |
+322 |             x4838.call{value: 48917184580935}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:323:13:
+    |
+323 |             address(tx.origin).call{value: 2595254954937999}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:345:13:
+    |
+345 |             x4838.call{value: 32559735569912}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:346:13:
+    |
+346 |             address(tx.origin).call{value: 2361538468100438}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:368:13:
+    |
+368 |             xdafe.call{value: 28613311560372}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:369:13:
+    |
+369 |             address(tx.origin).call{value: 2139061806654923}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:391:13:
+    |
+391 |             x4838.call{value: 17075195047641}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:392:13:
+    |
+392 |             address(tx.origin).call{value: 1945590902384466}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:414:13:
+    |
+414 |             x1f90.call{value: 13685656301444}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:415:13:
+    |
+415 |             address(tx.origin).call{value: 1787058593898225}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:437:13:
+    |
+437 |             x4838.call{value: 1467394099119}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:438:13:
+    |
+438 |             address(tx.origin).call{value: 1628970493813351}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:454:13:
+    |
+454 |             x9522.call{value: 12454865794042}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:455:13:
+    |
+455 |             address(tx.origin).call{value: 2098539336595733}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:460:13:
+    |
+460 |             x9522.call{value: 96600000000000}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:461:13:
+    |
+461 |             address(tx.origin).call{value: 2903400000000322}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:466:13:
+    |
+466 |             x0d16.call(
+    |             ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:469:13:
+    |
+469 |             x0d16.call(
+    |             ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:472:13:
+    |
+472 |             x0d16.call(
+    |             ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:479:13:
+    |
+479 |             x25b7.call{value: 169267446979085204912}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:480:13:
+    |
+480 |             address(tx.origin).call{value: 135522375483660068}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:694:13:
+    |
+694 |             xc02a.call{value: 26552274899976246}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:813:9:
+    |
+813 |         x3aa2.call(
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/x7ac4.t.sol:829:9:
+    |
+829 |         x3aa2.call(
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2072): Unused local variable.
+   --> test/x7ac4.t.sol:296:13:
+    |
+296 |             uint256 v1 = I(xc02a).balanceOf(r);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x7ac4.t.sol:319:13:
+    |
+319 |             uint256 v1 = I(xc02a).balanceOf(r);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x7ac4.t.sol:342:13:
+    |
+342 |             uint256 v1 = I(xc02a).balanceOf(r);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x7ac4.t.sol:365:13:
+    |
+365 |             uint256 v1 = I(xc02a).balanceOf(r);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x7ac4.t.sol:388:13:
+    |
+388 |             uint256 v1 = I(xc02a).balanceOf(r);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x7ac4.t.sol:411:13:
+    |
+411 |             uint256 v1 = I(xc02a).balanceOf(r);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x7ac4.t.sol:434:13:
+    |
+434 |             uint256 v1 = I(xc02a).balanceOf(r);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/x7ac4.t.sol:476:13:
+    |
+476 |             uint256 v1 = I(xc02a).balanceOf(r);
+    |             ^^^^^^^^^^
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x7ac4.t.sol:503:5:
+    |
+503 |     function onERC721Received(address, address, uint256, bytes memory) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/x7ac4.t.sol:803:5:
+    |
+803 |     function onERC721Received(address, address, uint256, bytes memory) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 3 tests for test/x7ac4.t.sol:X3aa2
+[FAIL: TransferHelper: TRANSFER_FROM_FAILED] test1() (gas: 153201)
+Logs:
+  0x7ac4a98599596adbf12fffa2bd23e2a2d2ac7e8989b6ea043fcc412a29126555
+
+Traces:
+  [3559] X3aa2::setUp()
+    ├─ [0] console::log("0x7ac4a98599596adbf12fffa2bd23e2a2d2ac7e8989b6ea043fcc412a29126555") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Stop]
+
+  [153201] X3aa2::test1()
+    ├─ [0] VM::createSelectFork("<rpc url>", 18342120 [1.834e7])
+    │   └─ ← [Return] 0
+    ├─ [149364] X3aa2::x3a3fbc14()
+    │   ├─ [141871] X3aa2::TyForTheMEV{value: 104}()
+    │   │   ├─ [24634] 0x637f415687b7b2545Ef2Cd8dCc1614e1CC175850::approve(0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D, 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   │   │   ├─ emit Approval(param0: X3aa2: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param1: 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D, param2: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   │   │   ├─  storage changes:
+    │   │   │   │   @ 0xd930737ffa814cd96da69b30a93006de9a36dee6fce4901ef0447c9b8df79eee: 0 → 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   ├─ [86214] 0xBA12222222228d8Ba445958a75a0704d566BF2C8::flashLoan(X3aa2: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], [0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2], [50855038208294649302093 [5.085e22]], 0x04000001187a250d5630b4cf539739df2c5dacb4c659f2488d5c11d795000000000000000000000000000000000000000000000ac4db6de0e760478c4d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000003aa228a80f50763045bdfc45012da124bd0a6809000000000000000000000000000000000000000000000000000000006528dcaf0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000637f415687b7b2545ef2cd8dcc1614e1cc1758500400000058637f415687b7b2545ef2cd8dcc1614e1cc175850a9059cbb000000000000000000000000983f44275ced0c187cbe4d4ac663bbca41a3da0a00000000000000000000000000000000000000000000824f2d9de75ba3389c6e0400000038983f44275ced0c187cbe4d4ac663bbca41a3da0abc25cf770000000000000000000000003aa228a80f50763045bdfc45012da124bd0a680904000001187a250d5630b4cf539739df2c5dacb4c659f2488d5c11d7950000000000000000000000000000000000000000000090c9c0e85665d1cd1f97000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000003aa228a80f50763045bdfc45012da124bd0a6809000000000000000000000000000000000000000000000000000000006528dcaf0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000637f415687b7b2545ef2cd8dcc1614e1cc175850000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20400000058c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2a9059cbb000000000000000000000000ba12222222228d8ba445958a75a0704d566bf2c8000000000000000000000000000000000000000000000ac4db6de0e760478c4d04)
+    │   │   │   ├─ [2534] 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2::balanceOf(0xBA12222222228d8Ba445958a75a0704d566BF2C8) [staticcall]
+    │   │   │   │   └─ ← [Return] 51839453315062827170285 [5.183e22]
+    │   │   │   ├─ [2350] 0xce88686553686DA562CE7Cea497CE749DA109f9F::getFlashLoanFeePercentage() [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [27962] 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2::transfer(X3aa2: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 50855038208294649302093 [5.085e22])
+    │   │   │   │   ├─ emit Transfer(param0: 0xBA12222222228d8Ba445958a75a0704d566BF2C8, param1: X3aa2: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param2: 50855038208294649302093 [5.085e22])
+    │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   @ 0x3a0f132b80eb284c2ac247698d2ec7dce851ca420b700161ad6082d0e9762150: 0x000000000000000000000000000000000000000000000afa38eee4dacdc1b9ed → 0x0000000000000000000000000000000000000000000000355d8103f36d7a2da0
+    │   │   │   │   │   @ 0x1da434b76eba4736d6e760bfd78cbf883a0776ee1666a9157f99ab1b97923a3c: 0 → 0x000000000000000000000000000000000000000000000ac4db6de0e760478c4d
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   ├─ [34286] X3aa2::receiveFlashLoan([0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2], [50855038208294649302093 [5.085e22]], [0], 0x04000001187a250d5630b4cf539739df2c5dacb4c659f2488d5c11d795000000000000000000000000000000000000000000000ac4db6de0e760478c4d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000003aa228a80f50763045bdfc45012da124bd0a6809000000000000000000000000000000000000000000000000000000006528dcaf0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000637f415687b7b2545ef2cd8dcc1614e1cc1758500400000058637f415687b7b2545ef2cd8dcc1614e1cc175850a9059cbb000000000000000000000000983f44275ced0c187cbe4d4ac663bbca41a3da0a00000000000000000000000000000000000000000000824f2d9de75ba3389c6e0400000038983f44275ced0c187cbe4d4ac663bbca41a3da0abc25cf770000000000000000000000003aa228a80f50763045bdfc45012da124bd0a680904000001187a250d5630b4cf539739df2c5dacb4c659f2488d5c11d7950000000000000000000000000000000000000000000090c9c0e85665d1cd1f97000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000003aa228a80f50763045bdfc45012da124bd0a6809000000000000000000000000000000000000000000000000000000006528dcaf0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000637f415687b7b2545ef2cd8dcc1614e1cc175850000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20400000058c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2a9059cbb000000000000000000000000ba12222222228d8ba445958a75a0704d566bf2c8000000000000000000000000000000000000000000000ac4db6de0e760478c4d04)
+    │   │   │   │   ├─ [5509] 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D::swapExactTokensForTokensSupportingFeeOnTransferTokens(50855038208294649302093 [5.085e22], 0, [0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2, 0x637f415687b7b2545Ef2Cd8dCc1614e1CC175850], X3aa2: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 1697207952 [1.697e9])
+    │   │   │   │   │   ├─ [3172] 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2::transferFrom(X3aa2: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0x983f44275ced0C187cbe4D4aC663BBca41A3DA0a, 50855038208294649302093 [5.085e22])
+    │   │   │   │   │   │   └─ ← [Revert] EvmError: Revert
+    │   │   │   │   │   └─ ← [Revert] TransferHelper: TRANSFER_FROM_FAILED
+    │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   @ 33: 0 → 1
+    │   │   │   │   └─ ← [Revert] TransferHelper: TRANSFER_FROM_FAILED
+    │   │   │   ├─  storage changes:
+    │   │   │   │   @ 0: 1 → 2
+    │   │   │   └─ ← [Revert] TransferHelper: TRANSFER_FROM_FAILED
+    │   │   ├─  storage changes:
+    │   │   │   @ 32: 0 → 1
+    │   │   └─ ← [Revert] TransferHelper: TRANSFER_FROM_FAILED
+    │   └─ ← [Revert] TransferHelper: TRANSFER_FROM_FAILED
+    └─ ← [Revert] TransferHelper: TRANSFER_FROM_FAILED
+
+Backtrace:
+  at 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2.transferFrom
+  at 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D.swapExactTokensForTokensSupportingFeeOnTransferTokens
+  at X3aa2.receiveFlashLoan
+  at 0xBA12222222228d8Ba445958a75a0704d566BF2C8.flashLoan
+  at X3aa2.TyForTheMEV
+  at X3aa2.x3a3fbc14
+  at X3aa2.test1
+
+[FAIL: TransferHelper: TRANSFER_FROM_FAILED] test2() (gas: 153179)
+Logs:
+  0x7ac4a98599596adbf12fffa2bd23e2a2d2ac7e8989b6ea043fcc412a29126555
+
+Traces:
+  [3559] X3aa2::setUp()
+    ├─ [0] console::log("0x7ac4a98599596adbf12fffa2bd23e2a2d2ac7e8989b6ea043fcc412a29126555") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Stop]
+
+  [153179] X3aa2::test2()
+    ├─ [0] VM::createSelectFork("<rpc url>", 18339540 [1.833e7])
+    │   └─ ← [Return] 0
+    ├─ [149364] X3aa2::x3a3fbc14()
+    │   ├─ [141871] X3aa2::TyForTheMEV{value: 104}()
+    │   │   ├─ [24634] 0x637f415687b7b2545Ef2Cd8dCc1614e1CC175850::approve(0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D, 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   │   │   ├─ emit Approval(param0: X3aa2: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param1: 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D, param2: 115792089237316195423570985008687907853269984665640564039457584007913129639935 [1.157e77])
+    │   │   │   ├─  storage changes:
+    │   │   │   │   @ 0xd930737ffa814cd96da69b30a93006de9a36dee6fce4901ef0447c9b8df79eee: 0 → 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   ├─ [86214] 0xBA12222222228d8Ba445958a75a0704d566BF2C8::flashLoan(X3aa2: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], [0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2], [50855038208294649302093 [5.085e22]], 0x04000001187a250d5630b4cf539739df2c5dacb4c659f2488d5c11d795000000000000000000000000000000000000000000000ac4db6de0e760478c4d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000003aa228a80f50763045bdfc45012da124bd0a6809000000000000000000000000000000000000000000000000000000006528dcaf0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000637f415687b7b2545ef2cd8dcc1614e1cc1758500400000058637f415687b7b2545ef2cd8dcc1614e1cc175850a9059cbb000000000000000000000000983f44275ced0c187cbe4d4ac663bbca41a3da0a00000000000000000000000000000000000000000000824f2d9de75ba3389c6e0400000038983f44275ced0c187cbe4d4ac663bbca41a3da0abc25cf770000000000000000000000003aa228a80f50763045bdfc45012da124bd0a680904000001187a250d5630b4cf539739df2c5dacb4c659f2488d5c11d7950000000000000000000000000000000000000000000090c9c0e85665d1cd1f97000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000003aa228a80f50763045bdfc45012da124bd0a6809000000000000000000000000000000000000000000000000000000006528dcaf0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000637f415687b7b2545ef2cd8dcc1614e1cc175850000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20400000058c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2a9059cbb000000000000000000000000ba12222222228d8ba445958a75a0704d566bf2c8000000000000000000000000000000000000000000000ac4db6de0e760478c4d04)
+    │   │   │   ├─ [2534] 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2::balanceOf(0xBA12222222228d8Ba445958a75a0704d566BF2C8) [staticcall]
+    │   │   │   │   └─ ← [Return] 50855038208294649302093 [5.085e22]
+    │   │   │   ├─ [2350] 0xce88686553686DA562CE7Cea497CE749DA109f9F::getFlashLoanFeePercentage() [staticcall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   │   ├─ [27962] 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2::transfer(X3aa2: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 50855038208294649302093 [5.085e22])
+    │   │   │   │   ├─ emit Transfer(param0: 0xBA12222222228d8Ba445958a75a0704d566BF2C8, param1: X3aa2: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param2: 50855038208294649302093 [5.085e22])
+    │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   @ 0x3a0f132b80eb284c2ac247698d2ec7dce851ca420b700161ad6082d0e9762150: 0x000000000000000000000000000000000000000000000ac4db6de0e760478c4d → 0
+    │   │   │   │   │   @ 0x1da434b76eba4736d6e760bfd78cbf883a0776ee1666a9157f99ab1b97923a3c: 0 → 0x000000000000000000000000000000000000000000000ac4db6de0e760478c4d
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   │   ├─ [34286] X3aa2::receiveFlashLoan([0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2], [50855038208294649302093 [5.085e22]], [0], 0x04000001187a250d5630b4cf539739df2c5dacb4c659f2488d5c11d795000000000000000000000000000000000000000000000ac4db6de0e760478c4d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000003aa228a80f50763045bdfc45012da124bd0a6809000000000000000000000000000000000000000000000000000000006528dcaf0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000000000000000000000000637f415687b7b2545ef2cd8dcc1614e1cc1758500400000058637f415687b7b2545ef2cd8dcc1614e1cc175850a9059cbb000000000000000000000000983f44275ced0c187cbe4d4ac663bbca41a3da0a00000000000000000000000000000000000000000000824f2d9de75ba3389c6e0400000038983f44275ced0c187cbe4d4ac663bbca41a3da0abc25cf770000000000000000000000003aa228a80f50763045bdfc45012da124bd0a680904000001187a250d5630b4cf539739df2c5dacb4c659f2488d5c11d7950000000000000000000000000000000000000000000090c9c0e85665d1cd1f97000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000003aa228a80f50763045bdfc45012da124bd0a6809000000000000000000000000000000000000000000000000000000006528dcaf0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000637f415687b7b2545ef2cd8dcc1614e1cc175850000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20400000058c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2a9059cbb000000000000000000000000ba12222222228d8ba445958a75a0704d566bf2c8000000000000000000000000000000000000000000000ac4db6de0e760478c4d04)
+    │   │   │   │   ├─ [5509] 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D::swapExactTokensForTokensSupportingFeeOnTransferTokens(50855038208294649302093 [5.085e22], 0, [0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2, 0x637f415687b7b2545Ef2Cd8dCc1614e1CC175850], X3aa2: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 1697176740 [1.697e9])
+    │   │   │   │   │   ├─ [3172] 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2::transferFrom(X3aa2: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 0x983f44275ced0C187cbe4D4aC663BBca41A3DA0a, 50855038208294649302093 [5.085e22])
+    │   │   │   │   │   │   └─ ← [Revert] EvmError: Revert
+    │   │   │   │   │   └─ ← [Revert] TransferHelper: TRANSFER_FROM_FAILED
+    │   │   │   │   ├─  storage changes:
+    │   │   │   │   │   @ 33: 0 → 1
+    │   │   │   │   └─ ← [Revert] TransferHelper: TRANSFER_FROM_FAILED
+    │   │   │   ├─  storage changes:
+    │   │   │   │   @ 0: 1 → 2
+    │   │   │   └─ ← [Revert] TransferHelper: TRANSFER_FROM_FAILED
+    │   │   ├─  storage changes:
+    │   │   │   @ 32: 0 → 1
+    │   │   └─ ← [Revert] TransferHelper: TRANSFER_FROM_FAILED
+    │   └─ ← [Revert] TransferHelper: TRANSFER_FROM_FAILED
+    └─ ← [Revert] TransferHelper: TRANSFER_FROM_FAILED
+
+Backtrace:
+  at 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2.transferFrom
+  at 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D.swapExactTokensForTokensSupportingFeeOnTransferTokens
+  at X3aa2.receiveFlashLoan
+  at 0xBA12222222228d8Ba445958a75a0704d566BF2C8.flashLoan
+  at X3aa2.TyForTheMEV
+  at X3aa2.x3a3fbc14
+  at X3aa2.test2
+
+[FAIL: EvmError: Revert] test3() (gas: 10353)
+Logs:
+  0x7ac4a98599596adbf12fffa2bd23e2a2d2ac7e8989b6ea043fcc412a29126555
+
+Traces:
+  [3559] X3aa2::setUp()
+    ├─ [0] console::log("0x7ac4a98599596adbf12fffa2bd23e2a2d2ac7e8989b6ea043fcc412a29126555") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Stop]
+
+  [10353] X3aa2::test3()
+    ├─ [0] VM::createSelectFork("<rpc url>", 18342120 [1.834e7])
+    │   └─ ← [Return] 0
+    ├─ [0] VM::warp(1697207963 [1.697e9])
+    │   └─ ← [Return]
+    ├─ [0] VM::roll(18342121 [1.834e7])
+    │   └─ ← [Return]
+    ├─ [0] VM::deal(X3aa2: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 10000000000000000000 [1e19])
+    │   └─ ← [Return]
+    ├─ [0] VM::store(0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599, 0x5ff10565516c110180bb9cc111cdbc2b0a68e09ff7fac17290373c3aa4a1bb03, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [0] VM::store(0x637f415687b7b2545Ef2Cd8dCc1614e1CC175850, 0x5ff10565516c110180bb9cc111cdbc2b0a68e09ff7fac17290373c3aa4a1bb03, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [0] VM::store(0x6B175474E89094C44Da98b954EedeAC495271d0F, 0x6e10ff27cae71a13525bd61167857e5c982b4674c8e654900e4e9d5035811f78, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [0] VM::store(0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0, 0x5ff10565516c110180bb9cc111cdbc2b0a68e09ff7fac17290373c3aa4a1bb03, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [0] VM::snapshotState()
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0x84524bAa1951247b3A2617A843e6eCe915Bb9674, 0x5ff10565516c110180bb9cc111cdbc2b0a68e09ff7fac17290373c3aa4a1bb03, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [277] 0x84524bAa1951247b3A2617A843e6eCe915Bb9674::balanceOf(X3aa2: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   └─ ← [Revert] EvmError: Revert
+    └─ ← [Revert] EvmError: Revert
+
+Backtrace:
+  at 0x84524bAa1951247b3A2617A843e6eCe915Bb9674.balanceOf
+  at X3aa2.test3
+
+Suite result: FAILED. 0 passed; 3 failed; 0 skipped; finished in 19.00ms (40.72ms CPU time)
+
+Ran 1 test suite in 32.26ms (19.00ms CPU time): 0 tests passed, 3 failed, 0 skipped (3 total tests)
+
+Failing tests:
+Encountered 3 failing tests in test/x7ac4.t.sol:X3aa2
+[FAIL: TransferHelper: TRANSFER_FROM_FAILED] test1() (gas: 153201)
+[FAIL: TransferHelper: TRANSFER_FROM_FAILED] test2() (gas: 153179)
+[FAIL: EvmError: Revert] test3() (gas: 10353)
+
+Encountered a total of 3 failing tests, 0 tests succeeded

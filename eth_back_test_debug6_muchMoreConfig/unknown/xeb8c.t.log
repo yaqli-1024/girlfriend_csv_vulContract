@@ -1,0 +1,1345 @@
+Compiling 1 files with Solc 0.8.28
+Solc 0.8.28 finished in 1.75s
+Compiler run successful with warnings:
+Warning (2072): Unused local variable.
+   --> test/xeb8c.t.sol:272:9:
+    |
+272 |         uint256 v1 = I(xea47).balanceOf(r);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xeb8c.t.sol:279:9:
+    |
+279 |         uint256 v2 = I(xea47).balanceOf(r);
+    |         ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xeb8c.t.sol:319:9:
+    |
+319 |         uint256 v3 = I(x4d22).balanceOf(tx.origin);
+    |         ^^^^^^^^^^
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/xeb8c.t.sol:323:5:
+    |
+323 |     function onERC721Received(address, address, uint256, bytes memory) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 3 tests for test/xeb8c.t.sol:X3ebd
+[FAIL: ERC721: approve to caller] test1() (gas: 35865)
+Logs:
+  0xeb8c3bebed11e2e4fcd30cbfc2fb3c55c4ca166003c7f7d319e78eaab9747098
+
+Traces:
+  [3548] X3ebd::setUp()
+    ├─ [0] console::log("0xeb8c3bebed11e2e4fcd30cbfc2fb3c55c4ca166003c7f7d319e78eaab9747098") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Stop]
+
+  [35865] X3ebd::test1()
+    ├─ [0] VM::createSelectFork("<rpc url>", 14403948 [1.44e7])
+    │   └─ ← [Return] 0
+    ├─ [27733] X3ebd::xa4fe71ef()
+    │   ├─ [24619] 0x4d224452801ACEd8B2F0aebE155379bb5D594381::approve(0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D, 10000000000000000000000000000000000000000000000000 [1e49])
+    │   │   ├─ emit Approval(param0: X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param1: 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D, param2: 10000000000000000000000000000000000000000000000000 [1e49])
+    │   │   ├─  storage changes:
+    │   │   │   @ 0xd930737ffa814cd96da69b30a93006de9a36dee6fce4901ef0447c9b8df79eee: 0 → 0x000000000000000000000006d79f82328ea3da61e066ebb2f88a000000000000
+    │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   └─ ← [Stop]
+    ├─ [3955] X3ebd::x8a619275()
+    │   ├─ [561] 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D::setApprovalForAll(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], true)
+    │   │   └─ ← [Revert] ERC721: approve to caller
+    │   └─ ← [Revert] ERC721: approve to caller
+    └─ ← [Revert] ERC721: approve to caller
+
+Backtrace:
+  at 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D.setApprovalForAll
+  at X3ebd.x8a619275
+  at X3ebd.test1
+
+[FAIL: ERC721: approve to caller] test2() (gas: 36905)
+Logs:
+  0xeb8c3bebed11e2e4fcd30cbfc2fb3c55c4ca166003c7f7d319e78eaab9747098
+
+Traces:
+  [3548] X3ebd::setUp()
+    ├─ [0] console::log("0xeb8c3bebed11e2e4fcd30cbfc2fb3c55c4ca166003c7f7d319e78eaab9747098") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Stop]
+
+  [36905] X3ebd::test2()
+    ├─ [0] VM::createSelectFork("<rpc url>", 14403789 [1.44e7])
+    │   └─ ← [Return] 0
+    ├─ [27733] X3ebd::xa4fe71ef()
+    │   ├─ [24619] 0x4d224452801ACEd8B2F0aebE155379bb5D594381::approve(0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D, 10000000000000000000000000000000000000000000000000 [1e49])
+    │   │   ├─ emit Approval(param0: X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], param1: 0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D, param2: 10000000000000000000000000000000000000000000000000 [1e49])
+    │   │   ├─  storage changes:
+    │   │   │   @ 0xd930737ffa814cd96da69b30a93006de9a36dee6fce4901ef0447c9b8df79eee: 0 → 0x000000000000000000000006d79f82328ea3da61e066ebb2f88a000000000000
+    │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   └─ ← [Stop]
+    ├─ [0] VM::warp(1647517533 [1.647e9])
+    │   └─ ← [Return]
+    ├─ [0] VM::roll(14403830 [1.44e7])
+    │   └─ ← [Return]
+    ├─ [3955] X3ebd::x8a619275()
+    │   ├─ [561] 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D::setApprovalForAll(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], true)
+    │   │   └─ ← [Revert] ERC721: approve to caller
+    │   └─ ← [Revert] ERC721: approve to caller
+    └─ ← [Revert] ERC721: approve to caller
+
+Backtrace:
+  at 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D.setApprovalForAll
+  at X3ebd.x8a619275
+  at X3ebd.test2
+
+[FAIL: ERC721: transfer caller is not owner nor approved] test3() (gas: 2996649)
+Logs:
+  0xeb8c3bebed11e2e4fcd30cbfc2fb3c55c4ca166003c7f7d319e78eaab9747098
+
+Traces:
+  [3548] X3ebd::setUp()
+    ├─ [0] console::log("0xeb8c3bebed11e2e4fcd30cbfc2fb3c55c4ca166003c7f7d319e78eaab9747098") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Stop]
+
+  [2996649] X3ebd::test3()
+    ├─ [0] VM::createSelectFork("<rpc url>", 14403948 [1.44e7])
+    │   └─ ← [Return] 0
+    ├─ [0] VM::warp(1647519194 [1.647e9])
+    │   └─ ← [Return]
+    ├─ [0] VM::roll(14403949 [1.44e7])
+    │   └─ ← [Return]
+    ├─ [0] VM::deal(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 10000000000000000000 [1e19])
+    │   └─ ← [Return]
+    ├─ [0] VM::store(0x4d224452801ACEd8B2F0aebE155379bb5D594381, 0x5ff10565516c110180bb9cc111cdbc2b0a68e09ff7fac17290373c3aa4a1bb03, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [0] VM::store(0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D, 0xb38645331535d8a24250bd866c230d0d85c11b90105fdba49ccc7bb4d9c6bc96, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [0] VM::snapshotState()
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x5ff10565516c110180bb9cc111cdbc2b0a68e09ff7fac17290373c3aa4a1bb03, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xb38645331535d8a24250bd866c230d0d85c11b90105fdba49ccc7bb4d9c6bc96, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x6e10ff27cae71a13525bd61167857e5c982b4674c8e654900e4e9d5035811f78, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x1da434b76eba4736d6e760bfd78cbf883a0776ee1666a9157f99ab1b97923a3c, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x9a37937c0ede8c307bf0496ec60e131422d44420befc187978dc5326d56d38a4, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xcbca2c2e1a1577eb2e25b9dce980a2cead88d4a5422449a454760a1d38d5b82a, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xed79f5a6103cc2504e2b88abca652130eac5b790c6ddb9e498c6f724905db5d9, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x5223e63f0507f82c7e25e324cdfe3030bae704b36135ec7694b55330a3b5b731, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x3707462b181da5757afb393000713f9d89955f52c38cceeebf01e0b050d6ff3e, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xea80dd88ed2c8da1b3cfa53b6b2568ae58fe83d484d0c01324a62ba1aa9ffdac, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x2d54905f2886c13936added7edccb32207862f31b1e49ad77f933216b9848722, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x5f6eee5777689fac8d5a6d5f66349ac0b0aaf490b4d918486710d1c6412d3a72, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x0c629eb3c393d1a1823b74e4cc59232613764e287af71969da751500735b5f5d, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x2693936b7dd26548888d070d1ff4ae2403b4eb4731226afcaca7ee5f3fcb35a1, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x577503ff3bb2b9f068eba56b7e87365512d0bfb917f361765180fd6fc1c8d3af, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xc43a18728dee70c1cf76a513eef739350a6e2b673f21a950d1ef74884d13ae6e, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xa20c45dd8a851b8b8653a17982859bee31b444ff681134f34d4fa90171fb1a2a, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x16102f891729262ce67210a124a159646f7714794acb4ed5a594ecb524124440, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xf9ce09b108db692395053dd01a39433c7f523275c08f1ea50eeae7dbb44c41d3, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x5f21d542f0332bb92b33ba73723f2cea8c276868d9605c67d4d389183322fec1, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x23019135966ad9f2c91101d60f3678100e06cfe30a275e3d89cd89ea12346c10, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x755303852e9d37ba89f8d7ed329dac976d9b4e2d10c29c8c06b3e8c55a8b25d6, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x21284a7e3d76be98b82878f06f62c3846b9cfd0a98b63099a707264e9650f639, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x8dff8bcecde4bb68c024f5bff751106d2bd0f17bc9051c649ba782a5958f48ff, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x79790d49d0267d92ce6d90ec62fe2b266199a3c4ebbf94a8c72f1af22bb92368, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xdbbde71e1a4080345235257e965b73612794cf3c85775e62f0a4e44906b67515, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xaaefae1c29aadfde7a072833ada637ef8a721fd502832b3bf1331c65d0e16ffa, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x71536a2ec44df99339be9ca32cde4d0ccbb625f25b53f6b739ba67810fff0253, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x429557ab0e22d751cb6c51b096800e43eeca46056658def80d550e8b02992f9e, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x7eca8d69f46c70f4f9c16933c63ed8df9f5b0c1d07ac9972f81515e308ba23ef, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x8ea143f95a22bfdcc2637cb12679d5456298f4fdeff86a09957b7ce730db8a86, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xfcb18ef915b94c2f20b243f9a54944ebfc0246c7a352658e74e5a7ea2daeeb83, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xcd4eca9ef6941e1b603244c97dcaa169be3d40554401e67f3883367632c1801e, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x17e39f6d67c768c3bb0901b7cd906a16869edcadc9cb53c40eca89c1249defbf, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xe486d67c0de1d488fe04659493aee99afd0e451d06e26fce2063cfb3af259fff, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x3cd4f127070ea16adf26c37e3a9ce6e36c111b41c1ebd8ba2d882b1f13e0fb12, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x6ebc39023bffaa4049b5b272a3d8eb331ce9fb87f613fd4e862dcfe7c03aadfd, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xa29d0a03639d5d69b05137b31468e02f8684e946ef9e47fed7f1abaa6d6d2f37, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x6ff8d4f75745edd91531df5787ab2e042d1a8af03296ccffac03cd997ea1db68, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x0a4f802492ee7a1a3f77b99de11c9984f4d5b3bd6e2395acfdde69059d07cc5f, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xb4f983cb8fd5edd2a531c0dd5af603a27add7d60b6f988bc52710351ce23ffb4, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x120ce4416d7b4e566bca624cd4b2fc2db20d6c8635c48565fa608b38742622f0, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x31a9306ba4e2a80dc236cbf834823b61029a1d5279b86a93f3eb1e6bbde1f0bb, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x28a5d1a2f891dad25494bcf3fa364001fe2783d2a971c5bc8aa2503e8cc19656, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xd1f895d81e087b4b28b4543477a40fc5babd043a67f57e9be4ed06708ab44d77, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xbffcb10cd1dc2ea1cdb3522b5d12a3dbe467e673627cc11c258095cca932f5cc, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x14bf7dd124fce6d4d1f5bbb50a293b1a761dd532d8b4e9936baea7d331ddccdb, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x4293545439a05f5cf7bfccbab2e85c308149f103eca7b8b98a009df5202b09bb, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xb333b805621401467d478701e309a8508172992c6b74179c06b4452576b062de, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x304faf40dda65372b8c68f14571aba2e51b36d0fa68427ded3ed82c89dd9be1f, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x3ee9e002272bdd8f7edbe4a70ac083d691528b6a5c0c730771e1a1a1f9e0e319, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xf85b56951f6ca259eb015e4162809ffc1dd28bc06ffa5a7aa716f2780313bdca, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xa177ad5b1609a4e783625b46e3ee407279131ff23903962d9c5ce8a1440867a5, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x3c3f303012a85fd86f559fc2d8edcdaeca23134600f1d3d56b5813432ad58ecf, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x30b698fc7465d7b19810184578a0b52ab00044bef1b633b1e8579e49e90985e6, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xcdc49e637aab090daaa85eab434d212fa82461b9645970b8cb9110a69106a998, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x3268882d7289c984c08fa9b2f910b4cd54971c01a6ed84de52e4676495628b9f, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x8c29404b4337ce3acfcb4a1c4972ea236e240382246bd9706697fba899ba6cc3, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xbeef2ea5be986c2e4439b02b1816aca61a5aece0280ee0ce68ec83c1aba92611, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xda56609e0942181b7e3790bd5fa4ec7c871356f6a229eb985e6e4d1369839adc, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xa43a242f40378a2ad954292e892f15a14435dc9c9b75ddc13bb14ab3e7d47edf, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xcbc2e077ae776347cfe06d33a96935d43d65b0bc807448605c77df6add489b91, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xd011df7c1959ee312dba51bd4e7aecb4b224c8351c21f37b3f9461d0d0c6e5bf, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x3773d84fc25b14406e7bbe186f6423a1dde987a8ea9ca45048167fb0900cbc32, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x5c449f91771943be2d6766f7dbe6a66e788dc9c0b1f29d16bf007b3cfed4a9dc, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xaaec4f7912e833078dd9c150fe5cfcdbbbd4ec1b6922eac3584e426ecfb59250, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x5e3fa10b973351959f69e962e62293648f4ca85ef8cbba4fb64d6c3d76772290, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x128257ca7244922c4cc00654bfc26c1c9175d9159ced1d10ee4e17470c6c9c95, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x0651f7f55135255ad952c212ce5283e40f1baa3535f34710d0de8614bcf3a32e, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xd0dfdc76c933f9b6815c5b707c0be2b549331a72c21a6cfda44583a8a5971747, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x78ee63d16f0878b3517b3260bba7f3e12cb69a6521e05b86449a96cfd381a93c, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x77e79426a2e709f79adad17f703341a856e4fdf642da4cc97950bb1feaa81366, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x5bc3e39af890dcce9d3744cb9601e393a57f5186370a4d66d9a2b08700270ff9, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xba24a3ac0d57c89b3456327010ad8b83f9bc54e36290cedd870e4963bc25ad7d, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xc658420c44ba651d30b2a7367479d70183a0f7bbcbe7531ac9fdd0bdc6e60831, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x9115a1d3aa9eaab1bdadc9397d1d01051a62ec1211a80b9c76a523c24e2a3ec7, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xc2f5ed771915c03de45ab9eb940b5b2b9e5a70a96564844ffc13f7496cfff035, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xb3f0bcd3f59c5c58cd7e1f393374933316a9326bbcaeaaf19c9fa3286ef9a490, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x3386a42d42bcdf15a01409ef82b398361fdc8262391f6935b9f4b7f552f743e6, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x85f38cec54c4121e025ba695134f4203ae19b6687179c135685673ebec8bc119, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x1379da29f5da3e0b2f86e0a47c90e5e5408661a1f2b63cdc99a1432adda123c3, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xf486ab37ee7e6e9982512a0fd5313d477e7f57e58bc911968f68907947527ec5, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xe42bb30063397de40890ea9b6cb943de3ba55ffbd16846cedc9b6a7b6e211b08, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xe5d037cd303c9572ca99ddb6d61d62867633ae5dc1823f6bd72326fbff7fffa9, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x82053824573dede7c6df6e76b6a1827a06e1800e18165e46db27a39f2d4ad143, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xea3d63bf40ac39813410aacb57f053ffcd3c7ddfc3735e9faf03eb7f792140a3, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xfd58117b51ead6a644d05af182bd937f7959f75ad569583974c345995df408fa, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xdfed84696beacbba4062da2d171fd5a0cb0c0d86d147da1edf4d00c84d7fa75d, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x9c0385ad1f991a30c27cc70f612b73cdc882dc33b6782863267e50133fe32b06, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x797d6dbacbd6654ea906a54be60b619cf226f06861d4b00118d6406c1a91c138, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x4be613c8a5378c6cdde975509beb5f85772cb295b8cb634de53095cb4ecc8943, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xdd367a2679dc6bf58648296989f934a0a88f147747f8e5cd0a046dbddc44197c, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xe288bd93406d3674482fca0d3e8ce86568f68f20450587514180a94a5b520f15, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0xb7a7d1209cca50ecfa17b2d3b979002aada66f118e6ba33daa9bb5ba38e0d6a7, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x6189d443134850573310b1bfe41d9c44735a47d8de9265f0eb7fd97b7ce55e28, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x57bf6390b39af8a61744204c305bc95982b7c17f7c29d7e4b82d8ab3205faa32, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x4f851db2bff4c1d730e462678c5e56ee13aa36726dbfe6595446e808c7965f35, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x515390baa0cf2f14387a4f25038afc49383fad3b3719d97ba551f506ce33ad5f, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x34bcfa43ede61c70c3187a6ae20efffce77f4b2798345191c81e8d2c461c64df, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5, 0x1a3c1c6f10f83cacaa71cfd22889b3192cc53c4ca8a251c79d1fd4452046f0be, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [20135] 0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [9616] 0xBE86f647b167567525cCAAfcd6f881F1Ee558216::childImplementation() [staticcall]
+    │   │   ├─ [2376] 0x612447E8d0BDB922059cE048bb5a7CeF9e017812::childImplementation() [delegatecall]
+    │   │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   │   └─ ← [Return] 0x00000000000000000000000073d2ff81fcea9832fc9ee90521abde1150f6b52a
+    │   ├─ [2642] 0x73D2ff81fceA9832FC9Ee90521ABde1150F6b52a::balanceOf(X3ebd: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   └─ ← [Return] 0
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [748017] → new X7797@0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f
+    │   └─ ← [Return] 3736 bytes of code
+    ├─ [12902] 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D::transferFrom(DefaultSender: [0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38], X7797: [0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f], 1060)
+    │   └─ ← [Revert] ERC721: transfer caller is not owner nor approved
+    ├─  storage changes:
+    │   @ 31: 1 → 0x00000000000000000000005615deb798bb3e4dfa0139dfa1b3d433cc23b72f01
+    └─ ← [Revert] ERC721: transfer caller is not owner nor approved
+
+Backtrace:
+  at 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D.transferFrom
+  at X3ebd.test3
+
+Suite result: FAILED. 0 passed; 3 failed; 0 skipped; finished in 97.12ms (112.64ms CPU time)
+
+Ran 1 test suite in 2.42s (97.12ms CPU time): 0 tests passed, 3 failed, 0 skipped (3 total tests)
+
+Failing tests:
+Encountered 3 failing tests in test/xeb8c.t.sol:X3ebd
+[FAIL: ERC721: approve to caller] test1() (gas: 35865)
+[FAIL: ERC721: approve to caller] test2() (gas: 36905)
+[FAIL: ERC721: transfer caller is not owner nor approved] test3() (gas: 2996649)
+
+Encountered a total of 3 failing tests, 0 tests succeeded

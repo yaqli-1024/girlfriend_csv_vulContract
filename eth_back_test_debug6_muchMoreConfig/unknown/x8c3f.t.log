@@ -1,0 +1,87 @@
+Compiling 1 files with Solc 0.8.28
+Solc 0.8.28 finished in 1.02s
+Compiler run successful with warnings:
+Warning (2072): Unused local variable.
+  --> test/x8c3f.t.sol:63:9:
+   |
+63 |         uint256 v2 = I(xbcb8).balanceOf(r);
+   |         ^^^^^^^^^^
+
+
+Ran 2 tests for test/x8c3f.t.sol:X2df9
+[FAIL: only sender] test() (gas: 21821)
+Logs:
+  0x8c3f442fc6d640a6ff3ea0b12be64f1d4609ea94edd2966f42c01cd9bdcf04b5
+  I(xbcb8).balanceOf(xd286)	-> 321154865567124596801893 (321154.8655 ether)
+
+Traces:
+  [3539] X2df9::setUp()
+    ├─ [0] console::log("0x8c3f442fc6d640a6ff3ea0b12be64f1d4609ea94edd2966f42c01cd9bdcf04b5") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [21821] X2df9::test()
+    ├─ [0] VM::createSelectFork("<rpc url>", 15725066 [1.572e7])
+    │   └─ ← [Return] 0
+    ├─ [2624] 0xBcB8b7FC9197fEDa75C101fA69d3211b5a30dCD9::balanceOf(0xd2869042E12a3506100af1D192b5b04D65137941)
+    │   └─ ← [Return] 321154865567124596801893 [3.211e23]
+    ├─ [0] console::log("I(xbcb8).balanceOf(xd286)\t->", "321154865567124596801893 (321154.8655 ether)") [staticcall]
+    │   └─ ← [Stop]
+    ├─ [6316] 0xd2869042E12a3506100af1D192b5b04D65137941::migrateStake(0x9bdb04493aF17eB318A23BfeFe43f07b3E58EcFb, 321154865567124596801893 [3.211e23])
+    │   ├─ [3058] 0x9bdb04493aF17eB318A23BfeFe43f07b3E58EcFb::migrateWithdraw(X2df9: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 321154865567124596801893 [3.211e23])
+    │   │   └─ ← [Revert] only sender
+    │   └─ ← [Revert] only sender
+    └─ ← [Revert] only sender
+
+Backtrace:
+  at 0x9bdb04493aF17eB318A23BfeFe43f07b3E58EcFb.migrateWithdraw
+  at 0xd2869042E12a3506100af1D192b5b04D65137941.migrateStake
+  at X2df9.test
+
+[FAIL: only sender] test3() (gas: 21228)
+Logs:
+  0x8c3f442fc6d640a6ff3ea0b12be64f1d4609ea94edd2966f42c01cd9bdcf04b5
+  I(xbcb8).balanceOf(xd286)	-> 321154865567124596801893 (321154.8655 ether)
+
+Traces:
+  [3539] X2df9::setUp()
+    ├─ [0] console::log("0x8c3f442fc6d640a6ff3ea0b12be64f1d4609ea94edd2966f42c01cd9bdcf04b5") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Return]
+
+  [21228] X2df9::test3()
+    ├─ [0] VM::createSelectFork("<rpc url>", 15725066 [1.572e7])
+    │   └─ ← [Return] 0
+    ├─ [0] VM::warp(1665493715 [1.665e9])
+    │   └─ ← [Return]
+    ├─ [0] VM::roll(15725067 [1.572e7])
+    │   └─ ← [Return]
+    ├─ [0] VM::deal(X2df9: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 10000000000000000000 [1e19])
+    │   └─ ← [Return]
+    ├─ [0] VM::store(0xBcB8b7FC9197fEDa75C101fA69d3211b5a30dCD9, 0xb38645331535d8a24250bd866c230d0d85c11b90105fdba49ccc7bb4d9c6bc96, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [2624] 0xBcB8b7FC9197fEDa75C101fA69d3211b5a30dCD9::balanceOf(0xd2869042E12a3506100af1D192b5b04D65137941)
+    │   └─ ← [Return] 321154865567124596801893 [3.211e23]
+    ├─ [0] console::log("I(xbcb8).balanceOf(xd286)\t->", "321154865567124596801893 (321154.8655 ether)") [staticcall]
+    │   └─ ← [Stop]
+    ├─ [6316] 0xd2869042E12a3506100af1D192b5b04D65137941::migrateStake(0x9bdb04493aF17eB318A23BfeFe43f07b3E58EcFb, 321154865567124596801893 [3.211e23])
+    │   ├─ [3058] 0x9bdb04493aF17eB318A23BfeFe43f07b3E58EcFb::migrateWithdraw(X2df9: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 321154865567124596801893 [3.211e23])
+    │   │   └─ ← [Revert] only sender
+    │   └─ ← [Revert] only sender
+    └─ ← [Revert] only sender
+
+Backtrace:
+  at 0x9bdb04493aF17eB318A23BfeFe43f07b3E58EcFb.migrateWithdraw
+  at 0xd2869042E12a3506100af1D192b5b04D65137941.migrateStake
+  at X2df9.test3
+
+Suite result: FAILED. 0 passed; 2 failed; 0 skipped; finished in 7.42ms (13.14ms CPU time)
+
+Ran 1 test suite in 999.09ms (7.42ms CPU time): 0 tests passed, 2 failed, 0 skipped (2 total tests)
+
+Failing tests:
+Encountered 2 failing tests in test/x8c3f.t.sol:X2df9
+[FAIL: only sender] test() (gas: 21821)
+[FAIL: only sender] test3() (gas: 21228)
+
+Encountered a total of 2 failing tests, 0 tests succeeded

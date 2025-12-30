@@ -1,0 +1,20 @@
+[
+  "vm.createSelectFork(\"http://localhost:18545\", 18992907); // tx.blockNumber - 1",
+  "",
+  "address RECEIVER = address(this);",
+  "vm.warp(1705087763);",
+  "vm.roll(18992908);",
+  "// https://explorer.phalcon.xyz/tx/eth/0x04e16a79ff928db2fa88619cdd045cdfc7979a61d836c9c9e585b3d6f6d8bc31",
+  "vm.deal(RECEIVER, 10 ether);",
+  "vm.store(address(0x6b175474e89094c44da98b954eedeac495271d0f), keccak256(abi.encode(RECEIVER, uint256(2))), bytes32(uint256(1000000000000000000000000)));",
+  "vm.store(address(0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0), keccak256(abi.encode(RECEIVER, uint256(0))), bytes32(uint256(1000000000000000000000000)));",
+  "vm.store(address(0x898ca9b3ef8b6a30da5fc7202f70e7992b3602b3), keccak256(abi.encode(RECEIVER, uint256(51))), bytes32(uint256(1000000000000000000000000)));",
+  "vm.store(address(0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48), keccak256(abi.encode(RECEIVER, uint256(9))), bytes32(uint256(1000000000000000000000000)));",
+  "vm.store(address(0xae7ab96520de3a18e5e111b5eaab095312d7fe84), keccak256(abi.encode(RECEIVER, uint256(0))), bytes32(uint256(1000000000000000000000000)));",
+  "vm.store(address(0xb40b073d7e47986d3a45ca7fd30772c25a2ad57f), keccak256(abi.encode(RECEIVER, uint256(4))), bytes32(uint256(1000000000000000000000000)));",
+  "vm.store(address(0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), keccak256(abi.encode(RECEIVER, uint256(3))), bytes32(uint256(1000000000000000000000000)));",
+  "vm.store(address(0xc374f7ec85f8c7de3207a10bb1978ba104bda3b2), keccak256(abi.encode(RECEIVER, uint256(0))), bytes32(uint256(1000000000000000000000000)));",
+  "vm.store(address(0xdac17f958d2ee523a2206206994597c13d831ec7), keccak256(abi.encode(RECEIVER, uint256(2))), bytes32(uint256(1000000000000000000000000)));",
+  "x0826c023();"
+]
+

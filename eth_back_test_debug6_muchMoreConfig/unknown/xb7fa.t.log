@@ -1,0 +1,210 @@
+Compiling 19 files with Solc 0.8.28
+Solc 0.8.28 finished in 2.44s
+Compiler run successful with warnings:
+Warning (9302): Return value of low-level calls not used.
+   --> test/xb7fa.t.sol:419:13:
+    |
+419 |             x67b6.call{value: 3396699186603790851014}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/xb7fa.t.sol:427:13:
+    |
+427 |             x67b6.call{value: 3396177988979252982961}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/xb7fa.t.sol:435:13:
+    |
+435 |             x67b6.call{value: 3395664542631732219405}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/xb7fa.t.sol:443:13:
+    |
+443 |             x67b6.call{value: 3535158706911402375420}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (9302): Return value of low-level calls not used.
+   --> test/xb7fa.t.sol:451:13:
+    |
+451 |             x67b6.call{value: 3818902213498721194864}("");
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning (6321): Unnamed return variable can remain unassigned. Add an explicit return with value to all non-reverting code paths or name the variable.
+   --> test/xb7fa.t.sol:472:49:
+    |
+472 |     function balanceOf(address) public returns (uint256) {
+    |                                                 ^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xb7fa.t.sol:253:13:
+    |
+253 |             uint256 v1 = I(xc02a).balanceOf(x1e04);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xb7fa.t.sol:285:13:
+    |
+285 |             uint256 v1 = I(xc02a).balanceOf(x1e04);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xb7fa.t.sol:317:13:
+    |
+317 |             uint256 v1 = I(xc02a).balanceOf(x1e04);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xb7fa.t.sol:349:13:
+    |
+349 |             uint256 v1 = I(xc02a).balanceOf(x1e04);
+    |             ^^^^^^^^^^
+
+Warning (2072): Unused local variable.
+   --> test/xb7fa.t.sol:381:13:
+    |
+381 |             uint256 v1 = I(xc02a).balanceOf(x1e04);
+    |             ^^^^^^^^^^
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/xb7fa.t.sol:458:5:
+    |
+458 |     function transfer(address, uint256) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/xb7fa.t.sol:465:5:
+    |
+465 |     function transferFrom(address, address, uint256) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 3 tests for test/xb7fa.t.sol:X2f75
+[FAIL: not eoa] test1() (gas: 15274)
+Logs:
+  0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519
+
+Traces:
+  [3581] X2f75::setUp()
+    ├─ [0] console::log("0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Stop]
+
+  [15274] X2f75::test1()
+    ├─ [0] VM::createSelectFork("<rpc url>", 12394249 [1.239e7])
+    │   └─ ← [Return] 0
+    ├─ [11465] X2f75::x870f0387()
+    │   ├─ [582] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::work{value: 1000000000}(0, 0x9EED7274Ea4b614ACC217e46727d377f7e6F9b24, 0, 100000000000000000000000 [1e23], 0x00000000000000000000000081796c4602b82054a727527cd16119807b8c7608000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000600000000000000000000000007fa9385be102ac3eac297483dd6233d62b3e149600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+    │   │   └─ ← [Revert] not eoa
+    │   └─ ← [Revert] not eoa
+    └─ ← [Revert] not eoa
+
+Backtrace:
+  at 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A.work
+  at X2f75.x870f0387
+  at X2f75.test1
+
+[FAIL: not eoa] test2() (gas: 15252)
+Logs:
+  0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519
+
+Traces:
+  [3581] X2f75::setUp()
+    ├─ [0] console::log("0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Stop]
+
+  [15252] X2f75::test2()
+    ├─ [0] VM::createSelectFork("<rpc url>", 12394241 [1.239e7])
+    │   └─ ← [Return] 0
+    ├─ [11465] X2f75::x870f0387()
+    │   ├─ [582] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::work{value: 1000000000}(0, 0x9EED7274Ea4b614ACC217e46727d377f7e6F9b24, 0, 100000000000000000000000 [1e23], 0x00000000000000000000000081796c4602b82054a727527cd16119807b8c7608000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000600000000000000000000000007fa9385be102ac3eac297483dd6233d62b3e149600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+    │   │   └─ ← [Revert] not eoa
+    │   └─ ← [Revert] not eoa
+    └─ ← [Revert] not eoa
+
+Backtrace:
+  at 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A.work
+  at X2f75.x870f0387
+  at X2f75.test2
+
+[FAIL: EvmError: Revert] test3() (gas: 1040429569)
+Logs:
+  0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519
+
+Traces:
+  [3581] X2f75::setUp()
+    ├─ [0] console::log("0xb7faca63a73d5d0490dda1c390577db3f30414cd91ce462e45c1e7f37c258519") [staticcall]
+    │   └─ ← [Stop]
+    └─ ← [Stop]
+
+  [1040429569] X2f75::test3()
+    ├─ [0] VM::createSelectFork("<rpc url>", 12394249 [1.239e7])
+    │   └─ ← [Return] 0
+    ├─ [0] VM::warp(1620484707 [1.62e9])
+    │   └─ ← [Return]
+    ├─ [0] VM::roll(12394250 [1.239e7])
+    │   └─ ← [Return]
+    ├─ [0] VM::deal(X2f75: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 10000000000000000000 [1e19])
+    │   └─ ← [Return]
+    ├─ [0] VM::store(0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2, 0x1da434b76eba4736d6e760bfd78cbf883a0776ee1666a9157f99ab1b97923a3c, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [0] VM::snapshotState()
+    │   └─ ← [Return] 0
+    ├─ [0] VM::revertToState(0)
+    │   └─ ← [Return] true
+    ├─ [0] VM::store(0xD6e194aF3d9674b62D1b30Ec676030C23961275e, 0x5ff10565516c110180bb9cc111cdbc2b0a68e09ff7fac17290373c3aa4a1bb03, 0x00000000000000000000000000000000000000000000d3c21bcecceda1000000)
+    │   └─ ← [Return]
+    ├─ [1040421935] 0xD6e194aF3d9674b62D1b30Ec676030C23961275e::balanceOf(X2f75: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   ├─ [79305] 0xEC260f5a7A729bB3D0C42d292DE159b4cB1844a3::balanceOf(X2f75: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   ├─ [9617] 0xCda4770d65B4211364Cb870aD6bE19E7Ef1D65f4::totalSupply() [staticcall]
+    │   │   │   ├─ [2344] 0xB849Daff8045fc295aF2f6b4E27874914b5911C6::totalSupply() [delegatecall]
+    │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000f9b4fd4b12efed913b
+    │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000f9b4fd4b12efed913b
+    │   │   ├─ [3329] 0xCda4770d65B4211364Cb870aD6bE19E7Ef1D65f4::balanceOf(X2f75: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [staticcall]
+    │   │   │   ├─ [2553] 0xB849Daff8045fc295aF2f6b4E27874914b5911C6::balanceOf(X2f75: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496]) [delegatecall]
+    │   │   │   │   └─ ← [Return] 0
+    │   │   │   └─ ← [Return] 0
+    │   │   ├─ [2810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(0) [staticcall]
+    │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   ├─ [2810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(1) [staticcall]
+    │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   ├─ [2810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(2) [staticcall]
+    │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   ├─ [2810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(3) [staticcall]
+    │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   ├─ [2810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(4) [staticcall]
+    │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000001
+    │   │   ├─ [17482] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::_getPoolBalance(4)
+    │   │   │   ├─ [13645] 0xED2CD60C0000a990A5ffAf0E7ddc70A37d7C623f::getBalance() [delegatecall]
+    │   │   │   │   ├─ [2344] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::totalSupply() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000020398e70f04575921237
+    │   │   │   │   ├─ [4643] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::totalETH() [staticcall]
+    │   │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000002225e92aee68acdc2357
+    │   │   │   │   ├─ [2491] 0x67B66C99D3Eb37Fa76Aa3Ed1ff33E8e39F0b9c7A::balanceOf(0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6) [staticcall]
+    │   │   │   │   │   └─ ← [Return] 1718231156813725631041 [1.718e21]
+    │   │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000062b46460a49bb81cf2
+    │   │   │   └─ ← [Return] 0x000000000000000000000000000000000000000000000062b46460a49bb81cf2
+    │   │   ├─ [2810] 0xa422890cbBE5EAa8f1c88590fBab7F319D7e24B6::hasETHInPool(5) [staticcall]
+    │   │   │   └─ ← [Return] 0x0000000000000000000000000000000000000000000000000000000000000000
+    │   │   └─ ← [StateChangeDuringStaticCall] EvmError: StateChangeDuringStaticCall
+    │   └─ ← [Revert] EvmError: Revert
+    └─ ← [Revert] EvmError: Revert
+
+Backtrace:
+  at 0xEC260f5a7A729bB3D0C42d292DE159b4cB1844a3.balanceOf
+  at 0xD6e194aF3d9674b62D1b30Ec676030C23961275e.balanceOf
+  at X2f75.test3
+
+Suite result: FAILED. 0 passed; 3 failed; 0 skipped; finished in 15.42ms (32.43ms CPU time)
+
+Ran 1 test suite in 2.33s (15.42ms CPU time): 0 tests passed, 3 failed, 0 skipped (3 total tests)
+
+Failing tests:
+Encountered 3 failing tests in test/xb7fa.t.sol:X2f75
+[FAIL: not eoa] test1() (gas: 15274)
+[FAIL: not eoa] test2() (gas: 15252)
+[FAIL: EvmError: Revert] test3() (gas: 1040429569)
+
+Encountered a total of 3 failing tests, 0 tests succeeded
